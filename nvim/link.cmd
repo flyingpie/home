@@ -1,0 +1,1 @@
+mklink /j "%LocalAppData%\nvim" "."
