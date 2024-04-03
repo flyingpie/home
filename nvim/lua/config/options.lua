@@ -13,6 +13,7 @@ o.ignorecase = true
 o.list = true
 o.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 o.mouse = "a"
+o.fixeol = false
 o.number = true
 o.numberwidth = 4
 o.relativenumber = false
