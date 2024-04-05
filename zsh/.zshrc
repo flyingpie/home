@@ -49,7 +49,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Aliases
 alias ls='ls --hide=".*" -l --color=auto --human-readable'
 alias ll='ls -Al --color=auto --human-readable'
-alias ls='exa \
+alias ls='eza \
   --oneline \
   --long \
   --all \
