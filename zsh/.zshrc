@@ -1,3 +1,7 @@
+#if [ -z "$TMUX" ]; then
+#  exec tmux new-session -A -s workspace
+#fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -81,8 +85,10 @@ alias dnlabels='docker node inspect --format="{{.Spec.Labels}}"'
 alias zz="source ~/.zshrc;echo \"Reloaded zshrc\""
 
 alias vim="nvim"
+#alias nvim="flatpak run io.neovim.nvim"
+alias path="echo $PATH"
 
-export PATH=$HOME/.local/bin:/opt/nvim-linux64/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.home/nvim/app/bin:$PATH
 
 # Load version control information
 precmd() { vcs_info }
@@ -104,8 +110,8 @@ PROMPT='%F{white}%n@${HOSTNAME}$reset_color %F{green}${PWD/#$HOME/~} %F{cyan}${v
 
 # Path Variables
 #export TERM='xterm-256color'
-#export EDITOR='nvim'
-#export VISUAL='nvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 #export TERM=xterm-direct
 
 #HERE=$(realpath())
@@ -118,3 +124,14 @@ source ~/.home/zsh/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# inside your .bashrc or .zshrc (on the server side) add:
+
+# start tmux if we ssh into the box
+#if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]]; then
+#  tmux attach-session -t $USER || tmux new-session -s $USER
+#fi
+
+# this will attach to an ongoing tmux session or start a new one
+# the session name will be the name of the user ($USER)
+#
