@@ -7,8 +7,6 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- Use 'jj' to exit INSERT mode
 keymap("i", "jj", "<ESC>", opts)
@@ -29,4 +27,12 @@ keymap("n",		"<C-Up>",		":resize -2<CR>", opts)
 keymap("n",		"<C-Down>",		":resize +2<CR>", opts)
 keymap("n",		"<C-Left>",		":vertical resize -2<CR>", opts)
 keymap("n",		"<C-Right>",	":vertical resize +2<CR>", opts)
+
+-- Fuzzy Finder
+local builtin = require("telescope.builtin")
+vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
+vim.keymap.set("n",		"<leader>fg",	builtin.live_grep,		opts)
+
+--keymap('n', '<leader>fb', builtin.buffers, {})
+--keymap('n', '<leader>fh', builtin.help_tags, {})
 

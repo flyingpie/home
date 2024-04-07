@@ -1,9 +1,10 @@
 #!/bin/bash
 
 apt install -y \
-  build-essential \
-  tmux \
-  zsh
-
-chsh -s /bin/zsh
+	build-essential \
+	python3 \
+	python3-pip \
+	python3-pynvim \
+	tmux \
+	zsh
 
