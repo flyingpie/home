@@ -9,7 +9,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 
 -- Use 'jj' to exit INSERT mode
-keymap("i", "jj", "<ESC>", opts)
+--keymap("i", "jj", "<ESC>", opts)
 
 -- Open tree
 keymap("n", "<leader>e", "Neotree<cr>", opts)
