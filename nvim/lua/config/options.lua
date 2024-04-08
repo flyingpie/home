@@ -11,7 +11,7 @@ o.fileencoding = "utf-8"
 o.hlsearch = true
 o.ignorecase = true
 o.list = true
-o.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+o.listchars = { tab = "» ", trail = "·", nbsp = "␣", eol = "↲", space = "." }
 o.mouse = "a"
 o.fixeol = false
 o.number = true
