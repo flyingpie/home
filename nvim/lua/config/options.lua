@@ -16,7 +16,6 @@ o.mouse = "a"
 o.fixeol = false
 o.number = true
 o.numberwidth = 4
-o.relativenumber = false
 o.relativenumber = true
 o.scrolloff = 8
 o.showmode = false
