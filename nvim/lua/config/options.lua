@@ -11,7 +11,7 @@ o.fileencoding = "utf-8"
 o.hlsearch = true
 o.ignorecase = true
 o.list = true
-o.listchars = { tab = "» ", trail = "·", nbsp = "␣", eol = "↲", space = "." }
+o.listchars = { eol = "↲", tab = "»-", trail = "·", extends = "x", precedes = ".", nbsp = "␣", space = "." }
 o.mouse = "a"
 o.fixeol = false
 o.number = true
@@ -21,7 +21,7 @@ o.scrolloff = 8
 o.showmode = false
 o.sidescrolloff = 8
 o.signcolumn = "yes"
-o.smartindent = true
+o.smartindent = false
 o.smartcase = true
 o.splitbelow = true
 o.splitright = true
