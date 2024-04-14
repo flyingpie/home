@@ -162,4 +162,4 @@ source ~/.home/zsh/.p10k.zsh
 
 # this will attach to an ongoing tmux session or start a new one
 # the session name will be the name of the user ($USER)
-#
+
