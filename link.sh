@@ -7,6 +7,10 @@ ln -s $(pwd)/bin ~/.local/bin
 mkdir -p ~/.local/share
 ln -s $(pwd)/fonts ~/.local/share/fonts
 
+# SSH Agent
+mkdir -p ~/.config/systemd/user
+ln -s $(pwd)/ssh/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+
 # tmux
 ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 

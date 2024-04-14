@@ -1,7 +1,8 @@
 CARGO_ENV="$HOME/.cargo/env"
 
 if [ -f $CARGO_ENV ]; then
-	echo "sourcing '$CARGO_ENV'"
 	. $CARGO_ENV
 fi
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
