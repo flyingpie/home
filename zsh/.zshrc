@@ -122,7 +122,7 @@ export PATH=$HOME/.local/bin:$HOME/.home/nvim/app/bin:$PATH
 precmd() { vcs_info }
 
 # List directory after changing directories
-chpwd() { ls }
+chpwd() { clear; ls }
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats '%b'
