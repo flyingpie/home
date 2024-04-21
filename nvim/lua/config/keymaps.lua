@@ -6,8 +6,6 @@ local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 keymap("", "<Space>", "<Nop>", opts)
 
@@ -30,6 +28,8 @@ keymap("n",		"<C-Up>",		":resize -2<CR>", opts)
 keymap("n",		"<C-Down>",		":resize +2<CR>", opts)
 keymap("n",		"<C-Left>",		":vertical resize -2<CR>", opts)
 keymap("n",		"<C-Right>",	":vertical resize +2<CR>", opts)
+
+keymap("n",		"<leader>q",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 
 -- Fuzzy Finder
 local builtin = require("telescope.builtin")
