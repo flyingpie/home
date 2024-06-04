@@ -19,3 +19,5 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
+
+if [ -e /home/marco/.nix-profile/etc/profile.d/nix.sh ]; then . /home/marco/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
