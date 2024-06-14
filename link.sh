@@ -20,6 +20,7 @@ ln -s $(pwd)/user/.profile ~/.profile
 # Wezterm
 mkdir -p ~/.config/wezterm
 ln -s $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
+ln -s $(pwd)/wezterm/wezterm.lua ~/.wezterm.lua
 
 # Zsh
 ln -s $(pwd)/zsh/.zshenv ~/.zshenv

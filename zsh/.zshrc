@@ -1,3 +1,4 @@
+
 if [ -z "$TMUX" ]; then
 	exec tmux new-session -A -s workspace
 fi
@@ -10,10 +11,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Set up the prompt
-
 autoload -Uz colors && colors
 autoload -Uz promptinit
-autoload -Uz vcs_info
 
 promptinit
 
@@ -118,48 +117,21 @@ alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
 
 export PATH=$HOME/.local/bin:$HOME/.home/nvim/app/bin:$PATH
 
-# Load version control information
-precmd() { vcs_info }
-
 # List directory after changing directories
 chpwd() { clear; ls }
 
-# Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git:*' formats '%b'
-
-# Set up the prompt with git branch name
-setopt PROMPT_SUBST
-NEWLINE=$'\n'
-HOSTNAME=$(hostname)
-PROMPT='%F{white}%n@${HOSTNAME}$reset_color %F{green}${PWD/#$HOME/~} %F{cyan}${vcs_info_msg_0_} $reset_color ${NEWLINE}> '
-
-# Start or attach to TMUX
-#[[ $TERM != "screen" ]] && exec tmux attach
-
-# Path Variables
-#export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
-#export TERM=xterm-direct
 
-#HERE=$(realpath())
-#SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-#echo "SCRIPT DIR: $SCRIPT_DIR"
-#HERE=$(dirname $0:A)
-#source "/home/marco/.home/zsh/powerlevel10k/powerlevel10k.zsh-theme"
-source ~/.home/zsh/powerlevel10k/powerlevel10k.zsh-theme
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+source ~/.home/zsh/antidote/antidote.zsh
+antidote load ~/.home/zsh/.zsh_plugins.txt
+
 source ~/.home/zsh/.p10k.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# inside your .bashrc or .zshrc (on the server side) add:
-
-# start tmux if we ssh into the box
-#if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]]; then
-#  tmux attach-session -t $USER || tmux new-session -s $USER
-#fi
-
-# this will attach to an ongoing tmux session or start a new one
-# the session name will be the name of the user ($USER)
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
