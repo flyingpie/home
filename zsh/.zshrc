@@ -1,7 +1,13 @@
 
+# Tmux
 if [ -z "$TMUX" ]; then
 	exec tmux new-session -A -s workspace
 fi
+
+# Zellij
+#if [ -z "$ZELLIJ" ]; then
+#  zellij --session zellij-1
+#fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -50,6 +56,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 ####################################
 # Misc
 alias c="clear"
+alias cat="bat"
 alias lg="lazygit"
 alias path="echo $PATH"
 alias py="python3"
