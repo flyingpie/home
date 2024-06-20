@@ -87,8 +87,8 @@ alias ls2='ls \
 # Docker
 alias dl='docker logs --tail 100 -f'
 alias ds='docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"'
-alias dsp= 'docker system prune -f'
-alias dx= 'docker exec -it'
+alias dsp='docker system prune -f'
+alias dx='docker exec -it'
 
 alias dps='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.ID}}" | grep -v ^NAMES | sort'
 alias dpss='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.Image}}\t{{.ID}}" | grep -v ^NAMES | sort'
