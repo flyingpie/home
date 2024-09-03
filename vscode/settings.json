@@ -1,0 +1,86 @@
+{
+	"blender.executables": [
+		{
+			"path": "d:\\apps\\blender\\blender-4.1.1-windows-x64\\blender.exe",
+			"name": "",
+			"isDebug": false
+		}
+	],
+
+	"breadcrumbs.enabled": false,
+
+	"diffEditor.renderSideBySide": true,
+
+	"editor.copyWithSyntaxHighlighting": false,
+	"editor.cursorBlinking": "blink",
+	"editor.cursorStyle": "line-thin",
+	"editor.fontLigatures": true,
+	"editor.fontFamily": "Consolas",
+	"editor.insertSpaces": false,
+	"editor.links": false,
+	"editor.renderWhitespace": "boundary",
+	"editor.suggestSelection": "first",
+	"editor.wordWrap": "off",
+
+	"explorer.autoReveal": false,
+	"explorer.compactFolders": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.openEditors.visible": 0,
+
+	"extensions.ignoreRecommendations": true,
+
+	"files.autoSave": "off",
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.factorypath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/artifacts": true,
+		"**/bin": true,
+		"**/obj": true,
+		"**/TestResults": true,
+		"**/tools": true
+	},
+
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+
+	"spellright.documentTypes": ["markdown", "plaintext"],
+	"spellright.language": ["en", "nl"],
+
+	"vim.insertModeKeyBindings": [
+		{
+			"before": ["j", "j"],
+			"after": ["Esc"]
+		}
+	],
+
+	"workbench.colorTheme": "Tokyo Night",
+	"workbench.sideBar.location": "right",
+	"workbench.iconTheme": "helium-icon-theme",
+	"workbench.startupEditor": "none",
+
+	"window.commandCenter": false,
+	"window.zoomLevel": 0,
+
+	"update.mode": "manual",
+	"security.workspace.trust.enabled": false,
+	"workbench.editor.empty.hint": "hidden",
+	"xml.symbols.maxItemsComputed": 50000,
+
+	"[aspnetcorerazor]": {
+		"editor.defaultFormatter": "ms-dotnettools.csharp"
+	},
+	"[csharp]": {
+		"editor.defaultFormatter": "ms-dotnettools.csharp"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[xml]": {
+		"editor.defaultFormatter": "redhat.vscode-xml"
+	}
+}
