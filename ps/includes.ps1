@@ -1,0 +1,7 @@
+. "$PSScriptRoot\aliases.docker.ps1"
+. "$PSScriptRoot\aliases.files-and-folders.ps1"
+. "$PSScriptRoot\aliases.git.ps1"
+. "$PSScriptRoot\aliases.misc.ps1"
+. "$PSScriptRoot\aliases.nav.ps1"
+. "$PSScriptRoot\aliases.ssh.ps1"
+. "$PSScriptRoot\dotnetsuggest.ps1"
