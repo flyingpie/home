@@ -1,10 +1,13 @@
 code --install-extension asvetliakov.vscode-neovim
 code --install-extension ban.spellright
+code --install-extension bierner.markdown-mermaid
+code --install-extension dracula-theme.theme-dracula
 code --install-extension editorconfig.editorconfig
 code --install-extension enkia.tokyo-night
 code --install-extension github.vscode-pull-request-github
 code --install-extension hbenl.vscode-test-explorer
 code --install-extension helgardrichard.helium-icon-theme
+code --install-extension humao.rest-client
 code --install-extension jtlowe.vscode-icon-theme
 code --install-extension mechatroner.rainbow-csv
 code --install-extension mesonbuild.mesonbuild
@@ -21,5 +24,6 @@ code --install-extension redhat.vscode-yaml
 code --install-extension rust-lang.rust-analyzer
 code --install-extension swellaby.vscode-rust-test-adapter
 code --install-extension tamasfe.even-better-toml
+code --install-extension thinker.sort-json
 code --install-extension twxs.cmake
 code --install-extension yummygum.city-lights-icon-vsc
