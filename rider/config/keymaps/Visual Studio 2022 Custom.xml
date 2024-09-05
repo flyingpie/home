@@ -1,4 +1,4 @@
-<keymap version="1" name="Visual Studio 2022 copy" parent="Visual Studio 2022">
+<keymap version="1" name="Visual Studio 2022 Custom" parent="Visual Studio 2022">
   <action id="ChangesView.Rename" />
   <action id="Console.TableResult.MaximizeEditingCell" />
   <action id="Git.Rename.Local.Branch" />
