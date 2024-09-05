@@ -82,5 +82,8 @@
 	},
 	"[xml]": {
 		"editor.defaultFormatter": "redhat.vscode-xml"
+	},
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
 	}
 }
