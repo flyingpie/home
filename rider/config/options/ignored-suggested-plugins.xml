@@ -1,0 +1,10 @@
+<application>
+  <component name="IgnoredPluginSuggestions">
+    <option name="pluginIds">
+      <list>
+        <option value="fr.socolin.application-insights-debug-log-viewer" />
+        <option value="com.intellij.resharper.azure" />
+      </list>
+    </option>
+  </component>
+</application>
