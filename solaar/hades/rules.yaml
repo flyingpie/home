@@ -1,0 +1,13 @@
+%YAML 1.3
+---
+- Key: [Mouse Gesture Button, pressed]
+- Execute: media-playpause
+...
+---
+- Test: thumb_wheel_up
+- Execute: [qdbus6, org.kde.kglobalaccel, /component/kmix, invokeShortcut, increase_volume]
+...
+---
+- Test: thumb_wheel_down
+- Execute: [qdbus6, org.kde.kglobalaccel, /component/kmix, invokeShortcut, decrease_volume]
+...

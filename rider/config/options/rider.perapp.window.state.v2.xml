@@ -1,0 +1,249 @@
+<application>
+  <component name="RiderPerAppToolWindowLayoutV2"><![CDATA[{
+  "layouts": {
+    "Custom": {
+      "v2": [
+        {
+          "id": "Bookmarks",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Merge Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Pull Requests",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Settings Sync History",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Learn",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Structure",
+          "order": 2,
+          "weight": 0.42239583,
+          "isSplit": true
+        },
+        {
+          "id": "Unit Tests",
+          "order": 3,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.19941406
+        },
+        {
+          "id": "Test Coverage",
+          "order": 5,
+          "weight": 0.23847125
+        },
+        {
+          "id": "NuGet",
+          "order": 6,
+          "weight": 0.26542968
+        },
+        {
+          "id": "Tests",
+          "order": 8,
+          "isVisible": true,
+          "weight": 0.22050782
+        },
+        {
+          "id": "Database Changes",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "TypeScript",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Dynamic Program Analysis",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "TODO",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "dotTrace Profiler",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "File Transfer",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "dotMemory",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "dotMemory Profiler",
+          "anchor": "BOTTOM",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "Version Control",
+          "order": 0,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems",
+          "order": 1,
+          "anchor": "BOTTOM"
+        },
+        {
+          "id": "Problems View",
+          "order": 2,
+          "anchor": "BOTTOM",
+          "weight": 0.2162642
+        },
+        {
+          "id": "Terminal",
+          "order": 3,
+          "anchor": "BOTTOM",
+          "weight": 0.15305397
+        },
+        {
+          "id": "Build",
+          "order": 4,
+          "anchor": "BOTTOM",
+          "weight": 0.2162642
+        },
+        {
+          "id": "Debug",
+          "order": 4,
+          "anchor": "BOTTOM",
+          "isVisible": true,
+          "weight": 0.2162642
+        },
+        {
+          "id": "Run",
+          "order": 4,
+          "anchor": "BOTTOM",
+          "isVisible": true,
+          "weight": 0.2162642
+        },
+        {
+          "id": "Services",
+          "order": 4,
+          "anchor": "BOTTOM",
+          "weight": 0.1755698
+        },
+        {
+          "id": "Find",
+          "order": 4,
+          "anchor": "BOTTOM",
+          "isVisible": true,
+          "weight": 0.24893466
+        },
+        {
+          "id": "Endpoints",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "IL Viewer",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false
+        },
+        {
+          "id": "documentation.v2",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Coverage",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "isSplit": true
+        },
+        {
+          "id": "Project",
+          "order": 0,
+          "anchor": "RIGHT",
+          "contentUiType": "COMBO",
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.17089844
+        },
+        {
+          "id": "Notifications",
+          "order": 1,
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "weight": 0.22213542
+        },
+        {
+          "id": "Commit",
+          "order": 2,
+          "anchor": "RIGHT",
+          "weight": 0.13691406
+        },
+        {
+          "id": "AIAssistant",
+          "order": 3,
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "weight": 0.2408854
+        },
+        {
+          "id": "Database",
+          "order": 4,
+          "anchor": "RIGHT",
+          "isShowStripeButton": false,
+          "weight": 0.22213542
+        },
+        {
+          "id": "Gradle",
+          "order": 5,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Maven",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Unit Tests Coverage",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.21015625
+        },
+        {
+          "id": "Monitoring",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.17089844
+        },
+        {
+          "id": "IL",
+          "order": 6,
+          "anchor": "RIGHT",
+          "weight": 0.22213542
+        }
+      ],
+      "unifiedWeights": {
+        "top": 0.33,
+        "left": 0.19941406,
+        "bottom": 0.2162642,
+        "right": 0.17089844
+      }
+    }
+  }
+}]]></component>
+</application>
