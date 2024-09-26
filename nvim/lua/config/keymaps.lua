@@ -15,6 +15,8 @@ keymap("", "<Space>", "<Nop>", opts)
 -- Open tree
 keymap("n", "<leader>e", "Neotree<cr>", opts)
 
+keymap("n", "<A-z>", ":set wrap!<CR>", opts)
+
 -- Window split
 keymap("n", "<C-->", "<C-w>s", opts)		-- Split horizontally
 -- Window navigation
