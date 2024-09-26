@@ -65,6 +65,8 @@ alias python="python3"
 alias vim='nvim'
 
 # File System
+alias dus='du -sh * | sort -hr'
+
 alias ls='eza \
   --oneline \
   --long \
