@@ -62,9 +62,13 @@ alias lg="lazygit"
 alias path="echo $PATH"
 alias py="python3"
 alias python="python3"
-alias vim='nvim'
+alias vim="nvim"
+
+alias sc="systemctl"
+alias jc="journalctl"
 
 # File System
+alias lsdisk="lsblk -o NAME,MOUNTPOINT,FSTYPE,FSUSE%,SIZE,UUID,PARTUUID"
 alias dus='du -sh * | sort -hr'
 
 alias ls='eza \
@@ -110,7 +114,7 @@ alias dsps='docker service ps'
 alias gitba='git branch -a'
 alias gitc='git checkout'
 alias gitcl='git reset --hard && git clean -fdx && git remote prune origin'
-alias gitl='git log -n 6'
+alias gitl='git log -n 15'
 alias gitp='git pull'
 alias gitpcl='git reset --hard && git clean -fdx && git remote prune origin && git pull'
 alias gitpu='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
@@ -120,6 +124,21 @@ alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
 
+# Functions
+function up() {
+	count=${1-1}
+
+	for i in {1..$count}
+	do
+		if $i > 9
+		then
+			echo "Cancelling"
+			break
+		fi
+
+		cd ..
+	done
+}
 
 ####################################
 # /Aliases
