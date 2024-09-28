@@ -18,7 +18,9 @@ ln -s $(pwd)/ssh/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
 ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 
 # User
-ln -s $(pwd)/user/.profile ~/.profile
+ln -srf $(pwd)/user/.profile ~/.bash_profile
+ln -srf $(pwd)/user/.profile ~/.profile
+ln -srf $(pwd)/user/.profile ~/.zshenv
 
 # Wezterm
 mkdir -p ~/.config/wezterm
@@ -26,8 +28,7 @@ ln -s $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/wezterm/wezterm.lua ~/.wezterm.lua
 
 # Zsh
-ln -s $(pwd)/zsh/.zshenv ~/.zshenv
-ln -s $(pwd)/zsh/.zshrc ~/.zshrc
+ln -srf $(pwd)/zsh/.zshrc ~/.zshrc
 
 #fc-cache -fv
 

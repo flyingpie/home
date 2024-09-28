@@ -16,7 +16,19 @@ if [ -n "$BASH_VERSION" ]; then
 	fi
 fi
 
+CARGO_ENV="$HOME/.cargo/env"
+
+if [ -f $CARGO_ENV ]; then
+	. $CARGO_ENV
+fi
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 
+export DOTNET_ROOT=$HOME/.dotnet
+
+export PATH="$PATH:$HOME/cloud/apps/path"
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
