@@ -1,0 +1,119 @@
+3 screens: Height=1339
+3 screens: Width=2356
+Config Version=1
+First Time=false
+State=
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+Version=2.8.1
+
+[Archives]
+Supported Packers=tar,gzip,bzip2,lzma,xz,unzip,cpio,unrar,7z,rpm
+
+[Dependencies]
+7z=/usr/bin/7z
+bzip2=/usr/bin/bzip2
+checksum utility=/usr/bin/md5sum
+cpio=/usr/bin/cpio
+gzip=/usr/bin/gzip
+locate=/usr/bin/locate
+lzma=/usr/bin/lzma
+md5sum=/usr/bin/md5sum
+mount=/usr/bin/mount
+rm=/usr/bin/rm
+rpm=/usr/bin/rpm
+rpm2cpio=/usr/bin/rpm2cpio
+sha1sum=/usr/bin/sha1sum
+sha224sum=/usr/bin/sha224sum
+sha256sum=/usr/bin/sha256sum
+sha384sum=/usr/bin/sha384sum
+sha512sum=/usr/bin/sha512sum
+tar=/usr/bin/tar
+umount=/usr/bin/umount
+unrar=/usr/bin/unrar
+unzip=/usr/bin/unzip
+updatedb=/usr/bin/updatedb
+xz=/usr/bin/xz
+
+[JobManager]
+Queue Mode=false
+
+[KPropertiesDialog]
+3 screens: Height=502
+3 screens: Width=443
+
+[Konfigurator]
+Window Height=680
+Window Maximized=false
+Window Width=900
+
+[KrInterDetailedView]
+AutoResizeColumns=false
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=
+ShowPreviews=false
+Sort Column=0
+
+[ListPanelButtons]
+Icons=false
+
+[Look&Feel]
+Bookmarks Button Visible=false
+History Button Visible=false
+Sort method=16
+Tab Bar Position=top
+
+[MountMan]
+Last State=
+ShowOnlyRemovable=false
+Window Height=711
+Window Maximized=false
+Window Width=1074
+
+[PanelLayout]
+FrameColor=none
+FrameShadow=Plain
+FrameShape=NoFrame
+Layout=krusader:compact
+
+[Search]
+ContainsText Completion=
+ContainsText History=
+ExcludeFolderNames=
+ExcludeFolderNamesHistory=
+ExcludeFolderNamesUse=0
+SearchFor Completion=
+SearchFor History=
+Window Height=653
+Window Maximized=false
+Window Width=669
+
+[Search][ResultView]
+AutoResizeColumns=true
+Descending Sort Order=0
+Filter=3
+FilterApplysToDirs=false
+IconSize=22
+Saved State=
+ShowPreviews=false
+Sort Column=0
+
+[Shortcut Schemes]
+Current Scheme=Default
+
+[Startup]
+Left Side Is Active=true
+Show Cmd Line=false
+Show FN Keys=false
+Show Terminal Emulator=false
+Show status bar=false
+Splitter Sizes=958,958
+State=
+Terminal Emulator Splitter Sizes=100,100
+Vertical Mode=false
+
+[ViewerModule]
+FirstRun=false
