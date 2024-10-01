@@ -1,6 +1,5 @@
 local api = vim.api
 
----@class TSLanguageModule
 local M = {}
 
 ---@type table<string,string>
@@ -8,11 +7,15 @@ local ft_to_lang = {
   help = 'vimdoc',
 }
 
---- Get the filetypes associated with the parser named {lang}.
+--- Returns the filetypes for which a parser named {lang} is used.
+---
+--- The list includes {lang} itself plus all filetypes registered via
+--- |vim.treesitter.language.register()|.
+---
 --- @param lang string Name of parser
 --- @return string[] filetypes
 function M.get_filetypes(lang)
-  local r = {} ---@type string[]
+  local r = { lang } ---@type string[]
   for ft, p in pairs(ft_to_lang) do
     if p == lang then
       r[#r + 1] = ft
@@ -21,17 +24,33 @@ function M.get_filetypes(lang)
   return r
 end
 
+--- Returns the language name to be used when loading a parser for {filetype}.
+---
+--- If no language has been explicitly registered via |vim.treesitter.language.register()|,
+--- default to {filetype}. For composite filetypes like `html.glimmer`, only the main filetype is
+--- returned.
+---
 --- @param filetype string
 --- @return string|nil
 function M.get_lang(filetype)
   if filetype == '' then
     return
   end
-  return ft_to_lang[filetype]
+  if ft_to_lang[filetype] then
+    return ft_to_lang[filetype]
+  end
+  -- for subfiletypes like html.glimmer use only "main" filetype
+  filetype = vim.split(filetype, '.', { plain = true })[1]
+  return ft_to_lang[filetype] or filetype
 end
 
 ---@deprecated
 function M.require_language(lang, path, silent, symbol_name)
+  vim.deprecate(
+    'vim.treesitter.language.require_language()',
+    'vim.treesitter.language.add()',
+    '0.12'
+  )
   local opts = {
     silent = silent,
     path = path,
@@ -43,63 +62,83 @@ function M.require_language(lang, path, silent, symbol_name)
     return installed
   end
 
-  M.add(lang, opts)
-  return true
+  return M.add(lang, opts)
 end
 
----@class treesitter.RequireLangOpts
+--- Load wasm or native parser (wrapper)
+--- todo(clason): move to C
+---
+---@param path string Path of parser library
+---@param lang string Language name
+---@param symbol_name? string Internal symbol name for the language to load (default lang)
+---@return boolean? True if parser is loaded
+local function loadparser(path, lang, symbol_name)
+  if vim.endswith(path, '.wasm') then
+    return vim._ts_add_language_from_wasm and vim._ts_add_language_from_wasm(path, lang)
+  else
+    return vim._ts_add_language_from_object(path, lang, symbol_name)
+  end
+end
+
+---@class vim.treesitter.language.add.Opts
+---@inlinedoc
+---
+---Optional path the parser is located at
 ---@field path? string
----@field silent? boolean
----@field filetype? string|string[]
+---
+---Internal symbol name for the language to load
 ---@field symbol_name? string
 
 --- Load parser with name {lang}
 ---
---- Parsers are searched in the `parser` runtime directory, or the provided {path}
+--- Parsers are searched in the `parser` runtime directory, or the provided {path}.
+--- Can be used to check for available parsers before enabling treesitter features, e.g.,
+--- ```lua
+---   if vim.treesitter.language.add('markdown') then
+---     vim.treesitter.start(bufnr, 'markdown')
+---   end
+--- ```
 ---
 ---@param lang string Name of the parser (alphanumerical and `_` only)
----@param opts (table|nil) Options:
----                        - filetype (string|string[]) Default filetype the parser should be associated with.
----                          Defaults to {lang}.
----                        - path (string|nil) Optional path the parser is located at
----                        - symbol_name (string|nil) Internal symbol name for the language to load
+---@param opts? vim.treesitter.language.add.Opts Options:
+---@return boolean? True if parser is loaded
+---@return string? Error if parser cannot be loaded
 function M.add(lang, opts)
-  ---@cast opts treesitter.RequireLangOpts
   opts = opts or {}
   local path = opts.path
-  local filetype = opts.filetype or lang
   local symbol_name = opts.symbol_name
 
   vim.validate({
     lang = { lang, 'string' },
     path = { path, 'string', true },
     symbol_name = { symbol_name, 'string', true },
-    filetype = { filetype, { 'string', 'table' }, true },
   })
 
+  -- parser names are assumed to be lowercase (consistent behavior on case-insensitive file systems)
+  lang = lang:lower()
+
   if vim._ts_has_language(lang) then
-    M.register(lang, filetype)
-    return
+    return true
   end
 
   if path == nil then
+    -- allow only safe language names when looking for libraries to load
     if not (lang and lang:match('[%w_]+') == lang) then
-      error("'" .. lang .. "' is not a valid language name")
+      return nil, string.format('Invalid language name "%s"', lang)
     end
 
     local fname = 'parser/' .. lang .. '.*'
     local paths = api.nvim_get_runtime_file(fname, false)
     if #paths == 0 then
-      error("no parser for '" .. lang .. "' language, see :help treesitter-parsers")
+      return nil, string.format('No parser for language "%s"', lang)
     end
     path = paths[1]
   end
 
-  vim._ts_add_language(path, lang, symbol_name)
-  M.register(lang, filetype)
+  return loadparser(path, lang, symbol_name) or nil,
+    string.format('Cannot load parser %s for language "%s"', path, lang)
 end
 
---- @private
 --- @param x string|string[]
 --- @return string[]
 local function ensure_list(x)
@@ -110,6 +149,10 @@ local function ensure_list(x)
 end
 
 --- Register a parser named {lang} to be used for {filetype}(s).
+---
+--- Note: this adds or overrides the mapping for {filetype}, any existing mappings from other
+--- filetypes to {lang} will be preserved.
+---
 --- @param lang string Name of parser
 --- @param filetype string|string[] Filetype(s) to associate with lang
 function M.register(lang, filetype)
@@ -134,16 +177,6 @@ end
 function M.inspect(lang)
   M.add(lang)
   return vim._ts_inspect_language(lang)
-end
-
----@deprecated
-function M.inspect_language(...)
-  vim.deprecate(
-    'vim.treesitter.language.inspect_language()',
-    'vim.treesitter.language.inspect()',
-    '0.10'
-  )
-  return M.inspect(...)
 end
 
 return M
