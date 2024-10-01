@@ -69,8 +69,6 @@ method.  The value of the 'foldexpr' option is evaluated to get the foldlevel
 of a line.  Examples:
 This will create a fold for all consecutive lines that start with a tab: >
 	:set foldexpr=getline(v:lnum)[0]==\"\\t\"
-This will call a function to compute the fold level: >
-	:set foldexpr=MyFoldLevel(v:lnum)
 This will make a fold out of paragraphs separated by blank lines: >
 	:set foldexpr=getline(v:lnum)=~'^\\s*$'&&getline(v:lnum+1)=~'\\S'?'<1':1
 This does the same: >
@@ -78,6 +76,10 @@ This does the same: >
 
 Note that backslashes must be used to escape characters that ":set" handles
 differently (space, backslash, double quote, etc., see |option-backslash|).
+
+The most efficient is to call a function without arguments: >
+	:set foldexpr=MyFoldLevel()
+The function must use v:lnum.  See |expr-option-function|.
 
 These are the conditions with which the expression is evaluated:
 - The current buffer and window are set for the line.
@@ -253,7 +255,7 @@ This does not work properly when:
   know what to do.
 - Folds nearby use a level number in their marker which gets in the way.
 - The line is inside a comment, 'commentstring' isn't empty and nested
-  comments don't work.  For example with C: adding /* {{{ */ inside a comment
+  comments don't work.  For example with C: adding `/* {{{ */` inside a comment
   will truncate the existing comment.  Either put the marker before or after
   the comment, or add the marker manually.
 Generally it's not a good idea to let Vim create markers when you already have
@@ -346,7 +348,8 @@ zC		Close all folds under the cursor recursively.  Folds that
 		'foldenable' will be set.
 
 							*za*
-za		When on a closed fold: open it.  When folds are nested, you
+za		Summary: Toggle the fold under the cursor.
+		When on a closed fold: open it.  When folds are nested, you
 		may have to use "za" several times.  When a count is given,
 		that many closed folds are opened.
 		When on an open fold: close it and set 'foldenable'.  This
@@ -519,8 +522,10 @@ expression.  It can use these special Vim variables:
 			foldlevel.
 	v:foldlevel	the foldlevel of the fold
 
-In the result a TAB is replaced with a space and unprintable characters are
-made into printable characters.
+If the result is a |List|, it is parsed and drawn like "overlay" virtual text
+(see |nvim_buf_set_extmark()|), otherwise the result is converted to a string
+where a TAB is replaced with a space and unprintable characters are made into
+printable characters.
 
 The resulting line is truncated to fit in the window, it never wraps.
 When there is room after the text, it is filled with the character specified
