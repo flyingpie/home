@@ -11,6 +11,7 @@
 
 	"diffEditor.renderSideBySide": true,
 
+	/* Editor */
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "blink",
 	"editor.cursorStyle": "line-thin",
@@ -22,13 +23,19 @@
 	"editor.suggestSelection": "first",
 	"editor.wordWrap": "off",
 
+	/* Explorer */
 	"explorer.autoReveal": false,
 	"explorer.compactFolders": false,
 	"explorer.confirmDragAndDrop": false,
 	"explorer.openEditors.visible": 0,
 
+	/* Extensions */
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
 	"extensions.ignoreRecommendations": true,
 
+	/* Files */
 	"files.autoSave": "off",
 	"files.exclude": {
 		"**/.classpath": true,
@@ -42,29 +49,31 @@
 		"**/tools": true
 	},
 
+	/* Git */
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
 
+	/* Search */
+	"search.followSymlinks": false,
+
+	/* Security */
+	"security.workspace.trust.enabled": false,
+
+	/* Spell Right */
 	"spellright.documentTypes": ["markdown", "plaintext"],
 	"spellright.language": ["en", "nl"],
 
-	"vim.insertModeKeyBindings": [
-		{
-			"before": ["j", "j"],
-			"after": ["Esc"]
-		}
-	],
-
+	/* Workbench */
 	"workbench.colorTheme": "Tokyo Night",
 	"workbench.sideBar.location": "right",
 	"workbench.iconTheme": "helium-icon-theme",
 	"workbench.startupEditor": "none",
 
+	/* Window */
 	"window.commandCenter": false,
 	"window.zoomLevel": 0,
 
 	"update.mode": "manual",
-	"security.workspace.trust.enabled": false,
 	"workbench.editor.empty.hint": "hidden",
 	"xml.symbols.maxItemsComputed": 50000,
 
@@ -82,8 +91,5 @@
 	},
 	"[xml]": {
 		"editor.defaultFormatter": "redhat.vscode-xml"
-	},
-	"extensions.experimental.affinity": {
-		"asvetliakov.vscode-neovim": 1
 	}
 }
