@@ -1,7 +1,7 @@
 
 # Tmux
 if [ -z "$TMUX" ]; then
-	exec tmux new-session -A -s workspace
+#	exec tmux new-session -A -s workspace
 fi
 
 # Zellij
@@ -63,6 +63,7 @@ alias path="echo $PATH"
 alias py="python3"
 alias python="python3"
 alias vim="nvim"
+alias z="zellij"
 
 alias sc="systemctl"
 alias jc="journalctl"

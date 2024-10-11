@@ -10,6 +10,10 @@ ln -s $(pwd)/fonts ~/.local/share/fonts
 # Git
 ln -srf $(pwd)/.gitconfig ~/.gitconfig
 
+# LazyGit
+mkdir -p ~/.config/lazygit
+ln -srf $(pwd)/lazygit/config.yml ~/.config/lazygit/config.yml
+
 # SSH Agent
 mkdir -p ~/.config/systemd/user
 ln -s $(pwd)/ssh/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
@@ -26,6 +30,10 @@ ln -srf $(pwd)/user/.profile ~/.zshenv
 mkdir -p ~/.config/wezterm
 ln -s $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 ln -s $(pwd)/wezterm/wezterm.lua ~/.wezterm.lua
+
+# Zellij
+mkdir -p ~/.config/zellij
+ln -srf $(pwd)/zellij/config.kdl ~/.config/zellij/config.kdl
 
 # Zsh
 ln -srf $(pwd)/zsh/.zshrc ~/.zshrc
