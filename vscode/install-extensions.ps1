@@ -26,4 +26,5 @@ code --install-extension swellaby.vscode-rust-test-adapter
 code --install-extension tamasfe.even-better-toml
 code --install-extension thinker.sort-json
 code --install-extension twxs.cmake
+code --install-extension yinfei.luahelper
 code --install-extension yummygum.city-lights-icon-vsc
