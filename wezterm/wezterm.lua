@@ -14,4 +14,6 @@ config.font_size = 10.0
 config.window_background_image = wezterm.home_dir .. "/.home/img/bg.png"
 config.window_background_image_hsb = { brightness = 0.004 }
 
+config.hide_tab_bar_if_only_one_tab = true
+
 return config
