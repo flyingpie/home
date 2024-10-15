@@ -1,8 +1,8 @@
-// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        bind "Ctrl x" { Copy; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -30,6 +30,8 @@ keybinds clear-defaults=true {
         bind "n" { NewPane; SwitchToMode "Normal"; }
         bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "\\" { NewPane "Right"; SwitchToMode "Normal"; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
@@ -146,16 +148,35 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" {
         unbind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
+
+		bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt i" { MoveTab "Left"; }
         bind "Alt o" { MoveTab "Right"; }
-        bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
-        bind "Alt j" "Alt Down" { MoveFocus "Down"; }
-        bind "Alt k" "Alt Up" { MoveFocus "Up"; }
-        bind "Alt =" "Alt +" { Resize "Increase"; }
-        bind "Alt -" { Resize "Decrease"; }
+
+		// Move active tab/pane
+		bind "Alt h" { MoveFocusOrTab "Left"; }
+        bind "Alt l" { MoveFocusOrTab "Right"; }
+        bind "Alt j" { MoveFocus "Down"; }
+        bind "Alt k" { MoveFocus "Up"; }
+
+		//bind "Alt =" { Resize "Increase"; }
+        //bind "Alt -" { Resize "Decrease"; }
+        bind "Alt -" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "Alt \\" { NewPane "Right"; SwitchToMode "Normal"; }
+
+		// Resize pane
+        //bind "Alt h"   { Resize "Increase Left"; }
+        //bind "Alt l"   { Resize "Increase Right"; }
+        //bind "Alt j"   { Resize "Increase Down"; }
+        //bind "Alt k"   { Resize "Increase Up"; }
+        
+		//bind "Alt Left" { MoveFocusOrTab "Left"; }
+        //bind "Alt Right" { MoveFocusOrTab "Right"; }
+        //bind "Alt Down" { MoveFocus "Down"; }
+        //bind "Alt Up" { MoveFocus "Up"; }
+        //bind "Alt +" { Resize "Increase"; }
+
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
     }
@@ -199,13 +220,6 @@ plugins {
     }
 }
 
-// Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
-// eg. when terminal window with an active zellij session is closed
-// Options:
-//   - detach (Default)
-//   - quit
-//
-// on_force_close "quit"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:
@@ -279,7 +293,22 @@ plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-// theme "default"
+//theme "catppuccin-mocha"
+theme "tokyo-night"
+
+pane_frames false
+//pane_frames true
+
+mouse_mode true
+//copy_on_select true
+copy_on_select false
+
+ui {
+	pane_frames {
+		hide_session_name true
+		//rounded_corners true
+	}
+}
 
 // The name of the default layout to load on startup
 // Default: "default"
