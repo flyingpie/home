@@ -63,7 +63,7 @@ alias path="echo $PATH"
 alias py="python3"
 alias python="python3"
 alias vim="nvim"
-alias z="zellij"
+alias z="zellij attach -c"
 
 alias sc="systemctl"
 alias jc="journalctl"
