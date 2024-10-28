@@ -4,6 +4,9 @@
 rm -rf ~/.local/bin
 ln -s $(pwd)/bin ~/.local/bin
 
+# Dolphin
+ln -srf $(pwd)/dolphin/dolphinrc ~/.config/dolphinrc
+
 # Fonts
 rm -rf ~/.local/share/fonts
 mkdir -p ~/.local/share
