@@ -18,3 +18,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # PATH additions
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/syncthing/apps/path:$PATH"
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
