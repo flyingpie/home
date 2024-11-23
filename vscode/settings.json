@@ -71,6 +71,7 @@
 
 	/* Window */
 	"window.commandCenter": false,
+	"window.menuBarVisibility": "toggle",
 	"window.zoomLevel": 0,
 
 	"update.mode": "manual",
