@@ -1,1 +1,5 @@
-<code_scheme name="Default" version="173" />
+<code_scheme name="Default" version="173">
+  <stylecop>
+    <option name="ENABLED" value="true" />
+  </stylecop>
+</code_scheme>

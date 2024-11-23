@@ -1,0 +1,33 @@
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display,dolphin_directorysizemode.upd:convert-directorysizecount-to-directorysizemode
+
+[DetailsMode]
+PreviewSize=16
+
+[ExtractDialog]
+3 screens: Height=480
+3 screens: Width=862
+
+[General]
+BrowseThroughArchives=true
+DoubleClickViewAction=go_up
+EditableUrl=true
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+SplitView=true
+Version=202
+ViewPropsTimestamp=2024,9,24,19,56,27.581
+
+[IconsMode]
+PreviewSize=16
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gdk-pixbuf-thumbnailer,gsthumbnail,rawthumbnail,svgthumbnail,ffmpegthumbs,gsf-office
