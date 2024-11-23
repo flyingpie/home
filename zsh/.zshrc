@@ -75,7 +75,21 @@ alias dus='du -sh * | sort -hr'
 alias ls='eza \
   --oneline \
   --long \
-  --all \
+  --binary \
+  --color-scale \
+  --git \
+  --git-repos \
+  --group \
+  --group-directories-first \
+  --header \
+  --icons \
+  --modified \
+  --octal-permissions \
+  --time-style long-iso'
+
+alias lsa='eza \
+  --oneline \
+  --long \
   --binary \
   --color-scale \
   --git \
@@ -91,6 +105,9 @@ alias ls='eza \
 alias ls2='ls \
   --tree \
   --level 2'
+
+alias ws="cd ~/workspace"
+alias st="cd ~/syncthing"
 
 # Docker
 alias dl='docker logs --tail 100 -f'
