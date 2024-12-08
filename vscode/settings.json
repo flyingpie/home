@@ -91,5 +91,7 @@
 	},
 	"[xml]": {
 		"editor.defaultFormatter": "redhat.vscode-xml"
-	}
+	},
+	"window.menuBarVisibility": "toggle",
+	"editor.acceptSuggestionOnCommitCharacter": false
 }
