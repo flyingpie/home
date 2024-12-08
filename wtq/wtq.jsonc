@@ -1,0 +1,80 @@
+{
+	"$schema": "wtq.schema.json",
+
+	"Apps": [
+		// WezTerm
+		{
+			"Name": "WezTerm",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D1" }],
+			"FileName": "wezterm-gui",
+			"Opacity": 90,
+			"OffScreenLocations": ["Above"]
+		},
+
+		// Dolphin
+		{
+			"Name": "Dolphin",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D2" }],
+			"FileName": "dolphin",
+			"HorizontalScreenCoverage": 80,
+			"OffScreenLocations": ["Left"]
+		},
+
+		// System Info
+		{
+			"Name": "System Monitor",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D3" }],
+			"FileName": "plasma-systemmonitor",
+			"OffScreenLocations": ["Below"]
+		},
+
+		// KeePass
+		{
+			"Name": "KeePass",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D4" }],
+			"FileName": "keepassxc",
+			"HorizontalAlign": "Right",
+			"HorizontalScreenCoverage": 50,
+			"AlwaysOnTop": true,
+			"HideOnFocusLost": false,
+			"OffScreenLocations": ["Right"]
+		},
+
+		// Spotify
+		{
+			"Name": "Spotify",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D5" }],
+			"FileName": "com.spotify.Client",
+			"ProcessName": "Spotify"
+		},
+
+		// Discord
+		{
+			"Name": "Discord",
+			"Hotkeys": [{ "Modifiers": "Control", "Key": "D6" }],
+			"FileName": "vesktop",
+			"HorizontalAlign": "Right",
+			"HorizontalScreenCoverage": 70,
+			"AlwaysOnTop": true,
+			"HideOnFocusLost": false,
+			"OffScreenLocations": ["Right"]
+		}
+	],
+
+	"AnimationDurationMs": 200,
+	"AnimationTargetFps": 60,
+
+	// Hot keys that toggle the most recent app (or the first one if none has been active yet).
+	"Hotkeys": [ { "Modifiers": "Control", "Key": "Q" } ],
+
+	// What monitor to preferably drop the terminal.
+	// "WithCursor" (default), "Primary" or "AtIndex".
+	// Can be overridden per app.
+	"PreferMonitor": "WithCursor",
+
+	// Horizontal screen coverage, as a percentage (defaults to 95).
+	"HorizontalScreenCoverage": 95,
+
+	// Vertical screen coverage, as a percentage (defaults to 95).
+	"VerticalScreenCoverage": 95
+}
