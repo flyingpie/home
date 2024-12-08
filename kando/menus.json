@@ -1,0 +1,104 @@
+{
+  "menus": [
+    {
+      "shortcut": "Control+Space",
+      "shortcutID": "example-menu",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "Main",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "command",
+            "data": {
+              "command": "",
+              "delayed": false
+            },
+            "name": "",
+            "icon": "circle",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"WezTerm\"",
+              "delayed": false
+            },
+            "name": "Terminal",
+            "icon": "terminal",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"Dolphin\"",
+              "delayed": false
+            },
+            "name": "File Browser",
+            "icon": "folder_copy",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 315
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"System Monitor\"",
+              "delayed": false
+            },
+            "name": "System Monitor",
+            "icon": "monitor_heart",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 0
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"KeePass\"",
+              "delayed": false
+            },
+            "name": "KeePassXC",
+            "icon": "keepassxc",
+            "iconTheme": "simple-icons",
+            "angle": 45
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"Spotify\"",
+              "delayed": false
+            },
+            "name": "Spotify",
+            "icon": "spotify",
+            "iconTheme": "simple-icons",
+            "angle": 90
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "qdbus6 wtq.svc /wtq/kwin wtq.kwin.ToggleApp \"Discord\"",
+              "delayed": false
+            },
+            "name": "Run Command",
+            "icon": "discord",
+            "iconTheme": "simple-icons",
+            "angle": 135
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "",
+              "delayed": false
+            },
+            "name": "",
+            "icon": "circle",
+            "iconTheme": "material-symbols-rounded"
+          }
+        ]
+      }
+    }
+  ],
+  "templates": []
+}
