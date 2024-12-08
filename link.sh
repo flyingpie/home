@@ -15,6 +15,11 @@ ln -srf $(pwd)/fonts ~/.local/share/fonts
 # Git
 ln -srf $(pwd)/.gitconfig ~/.gitconfig
 
+# Kando
+mkdir -p ~/.config/kando
+ln -srf $(pwd)/kando/config.json ~/.config/kando/config.json
+ln -srf $(pwd)/kando/menus.json ~/.config/kando/menus.json
+
 # LazyGit
 mkdir -p ~/.config/lazygit
 ln -srf $(pwd)/lazygit/config.yml ~/.config/lazygit/config.yml
@@ -47,6 +52,10 @@ ln -s $(pwd)/vscode/settings.json ~/.config/Code/User/settings.json
 mkdir -p ~/.config/wezterm
 ln -srf $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 #ln -srf $(pwd)/wezterm/wezterm.lua ~/.wezterm.lua
+
+# WTQ
+mkdir -p ~/.config/wtq
+ln -srf $(pwd)/wtq/wtq.jsonc ~/.config/wtq/wtq.jsonc
 
 # Zellij
 mkdir -p ~/.config/zellij
