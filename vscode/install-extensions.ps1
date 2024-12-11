@@ -1,4 +1,3 @@
-code --install-extension asvetliakov.vscode-neovim
 code --install-extension ban.spellright
 code --install-extension bierner.markdown-mermaid
 code --install-extension dracula-theme.theme-dracula
@@ -22,6 +21,7 @@ code --install-extension ms-vscode.test-adapter-converter
 code --install-extension redhat.vscode-xml
 code --install-extension redhat.vscode-yaml
 code --install-extension rust-lang.rust-analyzer
+code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension swellaby.vscode-rust-test-adapter
 code --install-extension tamasfe.even-better-toml
 code --install-extension thinker.sort-json
