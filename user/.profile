@@ -8,15 +8,24 @@ fi
 
 # Rust
 CARGO_ENV="$HOME/.cargo/env"
-
 if [ -f $CARGO_ENV ]; then
 	. $CARGO_ENV
 fi
 
+unset SSH_AUTH_SOCK
+
 # SSH Agent Socket for use by KeePassXC
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# Only set if not set already (e.g. by SSH forwarding)
+if [[ ${SSH_AUTH_SOCK:-"unset"} == "unset" ]]
+then
+	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
 
 # PATH additions
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/syncthing/apps/path:$PATH"
+export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.home/bin"
+export PATH="$PATH:$HOME/syncthing/apps/path"
+export PATH="$PATH:$HOME/syncthing/work/apps/path"
 
+# Disable .Net Telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
