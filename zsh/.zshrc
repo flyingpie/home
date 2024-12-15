@@ -1,19 +1,8 @@
-
-# Tmux
-if [ -z "$TMUX" ]; then
-#	exec tmux new-session -A -s workspace
-fi
-
-# Zellij
-#if [ -z "$ZELLIJ" ]; then
-#  zellij --session zellij-1
-#fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Set up the prompt
@@ -149,9 +138,8 @@ function up() {
 
 	for i in {1..$count}
 	do
-		if $i > 9
+		if [ "$i" -gt 9 ]
 		then
-			echo "Cancelling"
 			break
 		fi
 
@@ -162,8 +150,6 @@ function up() {
 ####################################
 # /Aliases
 ####################################
-
-export PATH=$HOME/.local/bin:$HOME/.home/nvim/app/bin:$PATH
 
 # List directory after changing directories
 chpwd() { clear; ls }
@@ -183,41 +169,39 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
-#export DOTNET_ROOT=$HOME/.dotnet
-#export PATH=$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH
-#export PATH="$PATH:$HOME/cloud/apps/path"
-#export PATH=$HOME/.dotnet:$PATH
-
 _dotnet_zsh_complete()
 {
-    # Get full path to script because dotnet-suggest needs it
-    # NOTE: this requires a command registered with dotnet-suggest be on the PATH
-    full_path=`which ${words[1]}` # zsh arrays are 1-indexed
+	# Get full path to script because dotnet-suggest needs it
+	# NOTE: this requires a command registered with dotnet-suggest be on the PATH
+	full_path=`which ${words[1]}` # zsh arrays are 1-indexed
 
-    # Get the full line
-    # $words array when quoted like this gets expanded out into the full line
-    full_line="$words"
+	# Get the full line
+	# $words array when quoted like this gets expanded out into the full line
+	full_line="$words"
 
-    # Get the completion results, will be newline-delimited
-    completions=$(dotnet-suggest get --executable "$full_path" -- "$full_line")
-    # explode the completions by linefeed instead of by spaces into the descriptions for the
-    # _values helper function.
-    
-    exploded=(${(f)completions})
-    # for later - once we have descriptions from dotnet suggest, we can stitch them
-    # together like so:
-    # described=()
-    # for i in {1..$#exploded}; do
-    #     argument="${exploded[$i]}"
-    #     description="hello description $i"
-    #     entry=($argument"["$description"]")
-    #     described+=("$entry")
-    # done
-    _values 'suggestions' $exploded
+	# Get the completion results, will be newline-delimited
+	completions=$(dotnet-suggest get --executable "$full_path" -- "$full_line")
+	# explode the completions by linefeed instead of by spaces into the descriptions for the
+	# _values helper function.
+	
+	exploded=(${(f)completions})
+	# for later - once we have descriptions from dotnet suggest, we can stitch them
+	# together like so:
+	# described=()
+	# for i in {1..$#exploded}; do
+	#     argument="${exploded[$i]}"
+	#     description="hello description $i"
+	#     entry=($argument"["$description"]")
+	#     described+=("$entry")
+	# done
+	_values 'suggestions' $exploded
 }
 
-# apply this function to each command the dotnet-suggest knows about
-compdef _dotnet_zsh_complete $(dotnet-suggest list)
+# If "dotnet-suggest" is installed, activate it.
+if command -v dotnet-suggest &> /dev/null
+then
+	compdef _dotnet_zsh_complete $(dotnet-suggest list)
+fi
 
 export DOTNET_SUGGEST_SCRIPT_VERSION="1.0.0"
 
