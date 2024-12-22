@@ -25,6 +25,7 @@ o.smartindent = false
 o.smartcase = true
 o.splitbelow = true
 o.splitright = true
+o.statuscolumn = "%s %l  %r "
 o.swapfile = false
 o.tabstop = 4
 o.termguicolors = true
