@@ -14,8 +14,7 @@ return {
 				never_show = {},
 				show_hidden_count = true,
 				use_libuv_file_watcher = false,
-			}
-		}
-	}
+			},
+		},
+	},
 }
-
