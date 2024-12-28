@@ -44,6 +44,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Aliases
 ####################################
 # Misc
+alias b="./build.sh"
 alias c="clear"
 alias cat="bat"
 alias clip="wl-copy"
@@ -128,6 +129,7 @@ alias gitpcl='git reset --hard && git clean -fdx && git remote prune origin && g
 alias gitpu='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 alias gits='git status'
 alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'
+alias gitws='git commit -m "Workspace"'
 
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
