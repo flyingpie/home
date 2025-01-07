@@ -1,7 +1,6 @@
 AngularJS
 Docker
 JSIntentionPowerPack
-JavaScript
 JavaScriptDebugger
 Karma
 NodeJS
