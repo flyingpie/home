@@ -119,6 +119,10 @@ alias dsi='docker service inspect'
 alias dsls='docker service ls'
 alias dsps='docker service ps'
 
+# Dotnet
+alias dn='dotnet'
+alias dnb='dotnet build'
+
 # Git
 alias gitba='git branch -a'
 alias gitc='git checkout'
@@ -148,6 +152,11 @@ function up() {
 		cd ..
 	done
 }
+
+alias up1='up 1'
+alias up2='up 2'
+alias up3='up 3'
+alias up4='up 4'
 
 ####################################
 # /Aliases
