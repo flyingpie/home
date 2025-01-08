@@ -46,7 +46,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Misc
 alias b="./build.sh"
 alias c="clear"
-alias cat="bat"
+alias cat="bat --tabs 2"
 alias clip="wl-copy"
 alias lg="lazygit"
 alias path="echo $PATH"
@@ -157,6 +157,16 @@ alias up1='up 1'
 alias up2='up 2'
 alias up3='up 3'
 alias up4='up 4'
+
+# Yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 ####################################
 # /Aliases
