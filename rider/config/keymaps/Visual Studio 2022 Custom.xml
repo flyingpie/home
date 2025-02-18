@@ -31,6 +31,7 @@
   <action id="RiderCoveringTestsPopupRunAllTestsAction" />
   <action id="RiderUnitTestDebugContextAction">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="r" />
+    <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="ctrl t" />
   </action>
   <action id="RiderUnitTestRunContextAction">
     <keyboard-shortcut first-keystroke="ctrl r" second-keystroke="t" />
