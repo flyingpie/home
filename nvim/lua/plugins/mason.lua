@@ -13,6 +13,7 @@ return {
 			"netcoredbg",
 			"stylua",
 			"shfmt",
+			"xmlformatter",
 		},
 	},
 	---@param opts MasonSettings | {ensure_installed: string[]}
