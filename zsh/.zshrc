@@ -134,6 +134,7 @@ alias gitpu='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 alias gits='git status'
 alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'
 alias gitws='git commit -m "Workspace"'
+alias gitcm='git commit -m'
 
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
