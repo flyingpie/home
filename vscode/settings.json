@@ -43,8 +43,6 @@
 		"**/.project": true,
 		"**/.settings": true,
 		"**/artifacts": true,
-		"**/bin": true,
-		"**/obj": true,
 		"**/TestResults": true,
 		"**/tools": true
 	},

@@ -1,6 +1,7 @@
 {
+  "locale": "auto",
   "menuTheme": "neon-lights",
-  "darkMenuTheme": "default",
+  "darkMenuTheme": "neon-lights",
   "menuThemeColors": {
     "neon-lights": {
       "glow-color": "rgba(60, 0, 255, 1)",
@@ -11,8 +12,12 @@
     }
   },
   "darkMenuThemeColors": {},
-  "enableDarkModeForMenuThemes": false,
+  "enableDarkModeForMenuThemes": true,
+  "soundTheme": "none",
+  "soundVolume": 0.5,
   "sidebarVisible": false,
+  "ignoreWriteProtectedConfigFiles": false,
+  "trayIconFlavor": "light",
   "enableVersionCheck": true,
   "zoomFactor": 1,
   "menuOptions": {
