@@ -17,8 +17,10 @@ ln -srf $(pwd)/.gitconfig ~/.gitconfig
 
 # Kando
 mkdir -p ~/.config/kando
-ln -srf $(pwd)/kando/config.json ~/.config/kando/config.json
-ln -srf $(pwd)/kando/menus.json ~/.config/kando/menus.json
+ln -srf $(pwd)/kando/config.json	~/.config/kando/config.json
+ln -srf $(pwd)/kando/menus.json		~/.config/kando/menus.json
+ln -srf $(pwd)/kando/config.json	~/.var/app/menu.kando.Kando/config/kando/config.json
+ln -srf $(pwd)/kando/menus.json		~/.var/app/menu.kando.Kando/config/kando/menus.json
 
 # LazyGit
 mkdir -p ~/.config/lazygit
