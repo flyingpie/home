@@ -99,6 +99,9 @@ alias ls2='ls \
   --level 2'
 
 alias ws="cd ~/workspace"
+alias wsf="cd ~/workspace/flyingpie"
+alias wsi="cd ~/workspace/isres"
+alias wss="cd ~/workspace/sandbox"
 alias st="cd ~/syncthing"
 
 # Docker
@@ -119,6 +122,7 @@ alias dsl='docker service logs -f --tail 100'
 alias dsi='docker service inspect'
 alias dsls='docker service ls'
 alias dsps='docker service ps'
+alias dc='docker compose'
 
 # Dotnet
 alias dn='dotnet'
@@ -136,6 +140,9 @@ alias gits='git status'
 alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'
 alias gitws='git commit -m "Workspace"'
 alias gitcm='git commit -m'
+
+alias k='kubectl --kubeconfig ~/.kube/local'
+alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
 
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
@@ -228,3 +235,5 @@ fi
 
 export DOTNET_SUGGEST_SCRIPT_VERSION="1.0.0"
 
+# JBang
+export PATH="$HOME/.jbang/bin:$PATH"
