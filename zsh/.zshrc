@@ -69,7 +69,7 @@ alias ls='eza \
   --binary \
   --color-scale \
   --git \
-  --git-repos \
+  --git-repos-no-status \
   --group \
   --group-directories-first \
   --header \
@@ -85,7 +85,7 @@ alias lsa='eza \
   --binary \
   --color-scale \
   --git \
-  --git-repos \
+  --git-repos-no-status \
   --group \
   --group-directories-first \
   --header \
