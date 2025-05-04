@@ -13,7 +13,7 @@
   <option name="CONSOLE_FONT_NAME" value="CaskaydiaMono Nerd Font" />
   <option name="CONSOLE_FONT_SIZE" value="11" />
   <colors>
-    <option name="CONSOLE_BACKGROUND_KEY" value="0" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="000000" />
     <option name="WHITESPACES" value="333333" />
   </colors>
   <attributes>
