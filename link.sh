@@ -32,6 +32,10 @@ ln -srf $(pwd)/nvim ~/.config/nvim
 mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $(pwd)/nvim ~/.var/app/io.neovim.nvim/config/nvim
 
+# PowerShell
+rm -rf ~/.config/powershell
+ln -srf $(pwd)/ps ~/.config/powershell
+
 # Rofi
 rm -rf ~/.config/rofi
 ln -srf $(pwd)/rofi ~/.config/rofi
