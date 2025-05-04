@@ -13,7 +13,7 @@ mkdir -p ~/.local/share
 ln -srf $(pwd)/fonts ~/.local/share/fonts
 
 # Git
-ln -srf $(pwd)/.gitconfig ~/.gitconfig
+# ln -srf $(pwd)/.gitconfig ~/.gitconfig
 
 # Kando
 mkdir -p ~/.config/kando
@@ -31,6 +31,10 @@ rm -rf ~/.config/nvim
 ln -srf $(pwd)/nvim ~/.config/nvim
 mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $(pwd)/nvim ~/.var/app/io.neovim.nvim/config/nvim
+
+# Rofi
+rm -rf ~/.config/rofi
+ln -srf $(pwd)/rofi ~/.config/rofi
 
 # SSH Agent
 mkdir -p ~/.config/systemd/user
