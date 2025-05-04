@@ -7,7 +7,7 @@
 			"Name": "WezTerm",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D1" }],
 			"FileName": "wezterm-gui",
-			"HideOnFocusLost": false,
+			"HideOnFocusLost": "Never",
 			"Opacity": 90,
 			"OffScreenLocations": ["Above"]
 		},
@@ -17,6 +17,7 @@
 			"Name": "Dolphin",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D2" }],
 			"FileName": "dolphin",
+			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 80,
 			"OffScreenLocations": ["Above"]
 		},
@@ -38,7 +39,7 @@
 			"HorizontalScreenCoverage": 50,
 			"AlwaysOnTop": true,
 			"HideOnFocusLost": false,
-			"OffScreenLocations": ["Below"]
+			"OffScreenLocations": ["Right"]
 		},
 
 		// Spotify
@@ -64,7 +65,7 @@
 		}
 	],
 
-	"AnimationDurationMs": 200,
+	"AnimationDurationMs": 150,
 	"AnimationTargetFps": 60,
 
 	// Hot keys that toggle the most recent app (or the first one if none has been active yet).
