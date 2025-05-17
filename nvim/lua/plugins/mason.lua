@@ -6,14 +6,20 @@ return {
 	opts_extend = { "ensure_installed" },
 	opts = {
 		ensure_installed = {
-			"csharp-language-server",
 			"csharpier",
+			"html-lsp",
 			"json-lsp",
 			"lua-language-server",
 			"netcoredbg",
-			"stylua",
+			"roslyn",
+			"rzls",
 			"shfmt",
+			"stylua",
 			"xmlformatter",
+		},
+		registries = {
+			"github:mason-org/mason-registry",
+			"github:Crashdummyy/mason-registry",
 		},
 	},
 	---@param opts MasonSettings | {ensure_installed: string[]}
