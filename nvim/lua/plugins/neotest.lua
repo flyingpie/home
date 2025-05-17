@@ -1,11 +1,12 @@
 return {
 	"nvim-neotest/neotest",
-	event = { "BufReadPost", "BufNewFile" },
+	lazy = false,
 	dependencies = {
-		"nvim-neotest/nvim-nio",
-		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
-		"nvim-treesitter/nvim-treesitter",
+		"Issafalcon/neotest-dotnet",
+		"nvim-lua/plenary.nvim",
 		"nvim-neotest/neotest-jest",
+		"nvim-neotest/nvim-nio",
+		"nvim-treesitter/nvim-treesitter",
 	},
 }
