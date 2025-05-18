@@ -11,6 +11,7 @@ return {
 			"json-lsp",
 			"lua-language-server",
 			"netcoredbg",
+			"powershell-editor-services",
 			"roslyn",
 			"rzls",
 			"shfmt",
