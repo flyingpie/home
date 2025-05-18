@@ -1,13 +1,16 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	tag = "v0.9.3",
 	opts = {
 		ensure_installed = {
 			"bash",
-			"c_sharp",
 			"c",
+			"c_sharp",
 			"cpp",
 			"css",
+			"gitignore",
 			"html",
+			"http",
 			"javascript",
 			"json",
 			"lua",
@@ -16,6 +19,9 @@ return {
 			"python",
 			"query",
 			"regex",
+			"scss",
+			"sql",
+			"svelte",
 			"typescript",
 			"vim",
 			"vue",

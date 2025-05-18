@@ -1,5 +1,6 @@
 <application>
   <component name="RiderCodeCompletionExtraSettings">
     <option name="allowToCompleteWithWhitespace" value="false" />
+    <option name="parenthesesInsertType" value="None" />
   </component>
 </application>
