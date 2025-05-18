@@ -14,6 +14,9 @@ return {
 					dotnet_show_completion_items_from_unimported_namespaces = true,
 					dotnet_show_name_completion_suggestions = false,
 				},
+				["csharp|formatting"] = {
+					dotnet_organize_imports_on_format = true,
+				},
 				["csharp|inlay_hints"] = {
 					csharp_enable_inlay_hints_for_implicit_object_creation = false,
 					csharp_enable_inlay_hints_for_implicit_variable_types = true,
@@ -30,5 +33,17 @@ return {
 				},
 			}
 		}
-	}
+	},
+	config = function()
+		vim.api.nvim_create_autocmd("VimEnter", {
+			callback = function()
+				local cwd = vim.fn.getcwd()
+				local has_sln = vim.fn.globpath(cwd, "*.sln") ~= ""
+				local has_csproj = vim.fn.globpath(cwd, "*.csproj") ~= ""
+				if has_sln or has_csproj then
+					print("VIM ENTER")
+				end
+			end,
+		})
+	end,
 }

@@ -44,9 +44,14 @@ keymap("n",		"<C-w>",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 
 -- Fuzzy Finder
 local builtin = require("telescope.builtin")
-vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
+--vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
 vim.keymap.set("n",		"<leader>fg",	builtin.live_grep,		opts)
 vim.keymap.set("n",		"<leader>fc",	builtin.commands,		opts)
+--vim.keymap.set("n",		"<leader>fs",	builtin.symbols,		opts)
+
+vim.keymap.set("n",		"<leader>ff",	Snacks.picker.files,		opts)
+vim.keymap.set("n",		"<leader>ft",	Snacks.picker.colorschemes,		opts)
+vim.keymap.set("n",		"<leader>fs",	Snacks.picker.lsp_workspace_symbols,		opts)
 --keymap('n', '<leader>fb', builtin.buffers, {})
 --keymap('n', '<leader>fh', builtin.help_tags, {})
 
