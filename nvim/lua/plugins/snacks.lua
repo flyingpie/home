@@ -7,7 +7,7 @@ return {
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
 		explorer = {
-			enabled = true
+			enabled = true,
 		},
 		indent = { enabled = true },
 		input = { enabled = true },
@@ -41,7 +41,7 @@ return {
 		words = { enabled = true },
 		styles = {
 			notification = {
-				-- wo = { wrap = true } -- Wrap notifications
+				relative = "editor"
 			}
 		}
 	},
