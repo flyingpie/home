@@ -72,11 +72,12 @@
 	/* Window */
 	"window.commandCenter": false,
 	"window.menuBarVisibility": "toggle",
-	"window.zoomLevel": 0,
 
 	"update.mode": "manual",
 	"workbench.editor.empty.hint": "hidden",
 	"xml.symbols.maxItemsComputed": 50000,
+
+	"window.zoomLevel": 0,
 
 	"[aspnetcorerazor]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
@@ -94,5 +95,7 @@
 		"editor.defaultFormatter": "redhat.vscode-xml"
 	},
 	"window.menuBarVisibility": "toggle",
-	"editor.acceptSuggestionOnCommitCharacter": false
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"redhat.telemetry.enabled": true,
+	"githubPullRequests.pullBranch": "never"
 }

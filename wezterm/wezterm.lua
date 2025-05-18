@@ -8,7 +8,7 @@ config.color_scheme = "Rapture"
 
 -- Font
 config.font = wezterm.font("CaskaydiaMono Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
-config.font_size = 10.0
+config.font_size = 9.0
 
 -- Background
 config.window_background_image = wezterm.home_dir .. "/.home/img/bg.png"
