@@ -5,6 +5,7 @@
         <option value="fr.socolin.application-insights-debug-log-viewer" />
         <option value="com.intellij.resharper.azure" />
         <option value="me.seclerp.rider.plugins.efcore" />
+        <option value="intellij.webpack" />
       </list>
     </option>
   </component>
