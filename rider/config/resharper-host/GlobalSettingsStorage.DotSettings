@@ -35,7 +35,7 @@
 	<s:Boolean x:Key="/Default/Environment/Editor/StructuralNavigationIsEnabled/@EntryValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/ExternalSources/Decompiler/DecompilerLegalNoticeAccepted/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/ExternalSources/IlViewer/CodeType/@EntryValue">HighLevelCSharp</s:String>
-	<s:Int64 x:Key="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue">24926</s:Int64>
+	<s:Int64 x:Key="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue">26520</s:Int64>
 	<s:String x:Key="/Default/Environment/Hierarchy/NuGetOptions/CredentialProviderPreference/@EntryValue">NuGetPlugins</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/NuGetOptions/DefaultPackageManagementFormat/@EntryValue">PackageReference</s:String>
 	<s:Boolean x:Key="/Default/Environment/Hierarchy/NuGetOptions/IncludePrerelease/@EntryValue">False</s:Boolean>
@@ -89,6 +89,9 @@
 	<s:Boolean x:Key="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=TabNavigationExplainer/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Housekeeping/Layout/SolBuilderDuoView/ShowBuildProgressInToolWindow/@EntryValue">False</s:Boolean>
 	<s:String x:Key="/Default/Housekeeping/Layout/SolBuilderDuoView/ShowBuildResultsMode/@EntryValue">Never</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoRenameType/@EntryValue">False</s:Boolean>
+	
 	
 	
 	
@@ -118,5 +121,5 @@
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E78A9E4DFA9B3C449A286EEEDC699FE4/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E78A9E4DFA9B3C449A286EEEDC699FE4/Text/@EntryValue">Guard.Against.NullOrWhiteSpace($ARG$);</s:String>
 	<s:Boolean x:Key="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue">True</s:Boolean><s:String x:Key="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue">CodeInspectionSettings</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue">True</s:Boolean><s:String x:Key="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue">CSharpSpacesPage</s:String>
 </wpf:ResourceDictionary>
