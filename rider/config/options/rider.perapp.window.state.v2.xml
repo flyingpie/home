@@ -37,9 +37,8 @@
         {
           "id": "Unit Tests",
           "order": 1,
-          "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.20078126,
+          "weight": 0.16445312,
           "sideWeight": 0.50024295
         },
         {
@@ -50,7 +49,7 @@
         {
           "id": "NuGet",
           "order": 3,
-          "weight": 0.2997396
+          "weight": 0.1360677
         },
         {
           "id": "Tests",
@@ -137,7 +136,7 @@
           "id": "Debug",
           "order": 5,
           "anchor": "BOTTOM",
-          "weight": 0.44990456
+          "weight": 0.06602444
         },
         {
           "id": "Run",
@@ -155,8 +154,7 @@
           "id": "Find",
           "order": 8,
           "anchor": "BOTTOM",
-          "isShowStripeButton": false,
-          "weight": 0.24856871
+          "weight": 0.108787596
         },
         {
           "id": "RoslynVisualizer",
@@ -192,7 +190,7 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.20078126
+          "weight": 0.08841146
         },
         {
           "id": "Notifications",
@@ -254,9 +252,9 @@
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.20078126,
-        "bottom": 0.44990456,
-        "right": 0.20078126
+        "left": 0.16445312,
+        "bottom": 0.108787596,
+        "right": 0.08841146
       }
     }
   }
