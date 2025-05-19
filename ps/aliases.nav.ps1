@@ -18,7 +18,7 @@ function cdt ($path) {
 
 Set-Alias -Name cd -Value cdt -Option AllScope
 
-# Less.
+# Less
 Set-Alias -Name less -Value more -Option AllScope
 
 # List, using Eza
@@ -35,29 +35,21 @@ function lst() {
 		--icons `
 		--modified `
 		--octal-permissions `
-		--time-style long-iso
+		--time-style long-iso $args
 }
 
 Set-Alias -Name ls -Value lst -Option AllScope
 
-# Go to SYNCTHING root.
-function st() {
-	Set-Location $env:SYNCTHING
-}
-
-# Got to WORKSPACE root.
-function ws() {
-	Set-Location $env:WORKSPACE
-}
+# Location shortcuts
+function st()	{ Set-Location $env:SYNCTHING }
+function ws()	{ Set-Location $env:WORKSPACE }
+function wsf()	{ Set-Location $([IO.Path]::Combine($env:WORKSPACE, "flyingpie")) }
 
 # Move up $levels.
-function up($levels) {
-	for ($i = 0; $i -lt $levels; $i++) {
-		cd ..
-	}
-}
+function up1()	{ Set-Location .. }
+function up2() 	{ Set-Location ../.. }
+function up3() 	{ Set-Location ../../.. }
+function up4() 	{ Set-Location ../../../.. }
 
 # Exit terminal.
-function x() {
-	Exit
-}
+function x()	{ Exit }
