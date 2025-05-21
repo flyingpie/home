@@ -77,8 +77,6 @@
 	"workbench.editor.empty.hint": "hidden",
 	"xml.symbols.maxItemsComputed": 50000,
 
-	"window.zoomLevel": 0,
-
 	"[aspnetcorerazor]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
 	},
