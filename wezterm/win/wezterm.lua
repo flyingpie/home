@@ -7,7 +7,7 @@ local config = {}
 config.color_scheme = "Rapture"
 
 -- Font
-config.font = wezterm.font("CaskaydiaMono Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})
+config.font = wezterm.font("CaskaydiaMono Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 10.0
 
 -- Background
@@ -18,38 +18,22 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- Hotkeys
 local act = wezterm.action
+config.leader = { key = "t", mods = "CTRL", timeout_milliseconds = 300 }
 config.keys = {
-	{
-		key = "-",
-		mods = "ALT",
-		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "\\",
-		mods = "ALT",
-		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
+	-- Tabs
+	{ key = "n",  mods = "LEADER", action = act.SpawnTab "CurrentPaneDomain", },
+	{ key = "h",  mods = "LEADER", action = act.ActivateTabRelative(-1), },
+	{ key = "l",  mods = "LEADER", action = act.ActivateTabRelative(1), },
 
-	{
-		key = 'h',
-		mods = 'ALT',
-		action = act.ActivatePaneDirection 'Left',
-	},
-	{
-		key = 'l',
-		mods = 'ALT',
-		action = act.ActivatePaneDirection 'Right',
-	},
-	{
-		key = 'k',
-		mods = 'ALT',
-		action = act.ActivatePaneDirection 'Up',
-	},
-	{
-		key = 'j',
-		mods = 'ALT',
-		action = act.ActivatePaneDirection 'Down',
-	},
+	-- Panes - Split
+	{ key = "-",  mods = "ALT",    action = act.SplitVertical({ domain = "CurrentPaneDomain" }), },
+	{ key = "\\", mods = "ALT",    action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }), },
+
+	-- Panes - Move focus
+	{ key = "h",  mods = "ALT",    action = act.ActivatePaneDirection "Left", },
+	{ key = "l",  mods = "ALT",    action = act.ActivatePaneDirection "Right", },
+	{ key = "k",  mods = "ALT",    action = act.ActivatePaneDirection "Up", },
+	{ key = "j",  mods = "ALT",    action = act.ActivatePaneDirection "Down", },
 }
 
 config.default_prog = { "pwsh", "-nologo" }
