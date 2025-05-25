@@ -4,6 +4,7 @@
 
 scoop bucket add extras
 scoop bucket add nerd-fonts
+scoop bucket add sysinternals
 scoop bucket add versions
 
 scoop install main/eza
@@ -14,8 +15,18 @@ scoop install main/neovim
 scoop install main/nodejs
 scoop install main/python
 
-#scoop install extras/rider
+scoop install extras/jetbrains-toolbox
+scoop install extras/keepassxc
+scoop install extras/klogg
+scoop install extras/q-dir
+scoop install extras/spotify
+#scoop install extras/tailscale # Doesn't work properly yet, regular install for now
+scoop install extras/wezterm
+scoop install extras/wireshark
+
 scoop install nerd-fonts/CascadiaMono-NF
+
+scoop install sysinternals/process-explorer
 
 #7zip
 #bruno
@@ -23,7 +34,6 @@ scoop install nerd-fonts/CascadiaMono-NF
 #docker
 #doublecmd
 #git
-#keepassxc
 #klogg
 #maven
 #neovide
@@ -31,14 +41,11 @@ scoop install nerd-fonts/CascadiaMono-NF
 #nuget
 #processhacker
 #pwsh
-#q-dir
 #rustdesk
 #sharex
 #sunshine
 #synctrayzor
-#tailscale
 #temurin11-jdk
 #vlc
 #vscode
-#wezterm
 #wireshark
