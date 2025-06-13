@@ -26,13 +26,16 @@
 		{
 			"Name": "System Monitor",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D3" }],
-			"FileName": "plasma-systemmonitor",
+			// "FileName": "plasma-systemmonitor",
+			"FileName": "flatpak",
+			"ArgumentList": [{ "Argument": "run" }, { "Argument": "net.nokyan.Resources" }],
+			"ProcessName": "net.nokyan.Resources",
 			"OffScreenLocations": ["Below"]
 		},
 
-		// KeePass
+		// KeePassXC
 		{
-			"Name": "KeePass",
+			"Name": "KeePassXC",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D4" }],
 			"FileName": "keepassxc",
 			"HorizontalAlign": "Right",
@@ -80,5 +83,13 @@
 	"HorizontalScreenCoverage": 95,
 
 	// Vertical screen coverage, as a percentage (defaults to 95).
-	"VerticalScreenCoverage": 95
+	"VerticalScreenCoverage": 95,
+
+	"EventHooks": [
+		// { "EventPattern": ".*", "FileName": "wtq-sound" }
+	],
+
+	"Api": {
+		"Enable": true
+	}
 }
