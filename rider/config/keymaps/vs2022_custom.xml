@@ -1,4 +1,4 @@
-<keymap version="1" name="Visual Studio 2022 Custom" parent="Visual Studio 2022">
+<keymap version="1" name="vs2022_custom" parent="Visual Studio 2022">
   <action id="ChangesView.Rename" />
   <action id="CloseActiveTab" />
   <action id="CloseContent">

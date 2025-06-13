@@ -36,6 +36,14 @@ ln -srf $(pwd)/nvim ~/.var/app/io.neovim.nvim/config/nvim
 rm -rf ~/.config/powershell
 ln -srf $(pwd)/ps ~/.config/powershell
 
+# JetBrains - DataGrip
+ln -srf $(pwd)/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
+
+# JetBrains - Rider
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.2/idea.properties
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.3/idea.properties
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2025.1/idea.properties
+
 # Rofi
 rm -rf ~/.config/rofi
 ln -srf $(pwd)/rofi ~/.config/rofi
