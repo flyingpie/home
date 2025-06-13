@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo $WTQ_EVENT_NAME
+echo $WTQ_APP_NAME
+
+if [ $WTQ_EVENT_NAME = "AppToggledOn" ]; then
+	if [ $WTQ_IS_SWITCHING = "True" ]; then
+		echo "Do nothing"
+	else
+		ffplay -nodisp -autoexit ~/syncthing/main/on.mp3 &> /dev/null
+	fi
+fi
+
+if [ $WTQ_EVENT_NAME = "AppToggledOff" ]; then
+	if [ $WTQ_IS_SWITCHING = "True" ]; then
+		ffplay -nodisp -autoexit ~/syncthing/main/switch.mp3 &> /dev/null
+	else
+		ffplay -nodisp -autoexit ~/syncthing/main/off.mp3 &> /dev/null
+	fi
+fi
