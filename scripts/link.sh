@@ -42,6 +42,7 @@ rm -rf ~/.config/powershell
 ln -srf $(pwd)/ps ~/.config/powershell
 
 # JetBrains - DataGrip
+mkdir -p ~/.config/JetBrains/DataGrip2025.1
 ln -srf $(pwd)/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
 
 # JetBrains - Rider
