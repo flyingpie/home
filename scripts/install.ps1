@@ -63,3 +63,5 @@ if ($Full) {
 	scoop install extras/vscode
 	scoop install extras/wireshark
 }
+
+scoop update *

@@ -19,6 +19,15 @@ ln -srf $(pwd)/fonts ~/.local/share/fonts
 rm -rf ~/.config/ghostty
 ln -srf $(pwd)/ghostty ~/.config/ghostty
 
+# JetBrains - DataGrip
+mkdir -p ~/.config/JetBrains/DataGrip2025.1
+ln -srf $(pwd)/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
+
+# JetBrains - Rider
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.2/idea.properties
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.3/idea.properties
+ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2025.1/idea.properties
+
 # Kando
 mkdir -p ~/.config/kando
 ln -srf $(pwd)/kando/config.json	~/.config/kando/config.json
@@ -41,24 +50,18 @@ ln -srf $(pwd)/nvim ~/.var/app/io.neovim.nvim/config/nvim
 rm -rf ~/.config/powershell
 ln -srf $(pwd)/ps ~/.config/powershell
 
-# JetBrains - DataGrip
-mkdir -p ~/.config/JetBrains/DataGrip2025.1
-ln -srf $(pwd)/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
-
-# JetBrains - Rider
-ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.2/idea.properties
-ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2024.3/idea.properties
-ln -srf $(pwd)/rider/idea.properties ~/.config/JetBrains/Rider2025.1/idea.properties
-
 # Rofi
 rm -rf ~/.config/rofi
 ln -srf $(pwd)/rofi ~/.config/rofi
+
+# Solaar
+# TODO
 
 # SSH Agent
 mkdir -p ~/.config/systemd/user
 ln -srf $(pwd)/ssh/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
 
-# tmux
+# TMux
 ln -srf $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 
 # User
@@ -75,7 +78,6 @@ ln -s $(pwd)/vscode/settings.json ~/.config/Code/User/settings.json
 # Wezterm
 mkdir -p ~/.config/wezterm
 ln -srf $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
-#ln -srf $(pwd)/wezterm/wezterm.lua ~/.wezterm.lua
 
 # WTQ
 mkdir -p ~/.config/wtq
@@ -93,4 +95,3 @@ ln -srf $(pwd)/zellij/config.kdl ~/.config/zellij/config.kdl
 ln -srf $(pwd)/zsh/.zshrc ~/.zshrc
 
 #fc-cache -fv
-
