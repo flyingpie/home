@@ -15,6 +15,10 @@ ln -srf $(pwd)/fonts ~/.local/share/fonts
 # Git
 # ln -srf $(pwd)/.gitconfig ~/.gitconfig
 
+# Ghostty
+rm -rf ~/.config/ghostty
+ln -srf $(pwd)/ghostty ~/.config/ghostty
+
 # Kando
 mkdir -p ~/.config/kando
 ln -srf $(pwd)/kando/config.json	~/.config/kando/config.json
@@ -74,6 +78,10 @@ ln -srf $(pwd)/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 # WTQ
 mkdir -p ~/.config/wtq
 ln -srf $(pwd)/wtq/wtq.jsonc ~/.config/wtq/wtq.jsonc
+
+# Zed
+rm -rf ~/.config/zed
+ln -srf $(pwd)/zed ~/.config/zed
 
 # Zellij
 mkdir -p ~/.config/zellij
