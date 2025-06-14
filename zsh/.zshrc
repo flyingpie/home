@@ -98,12 +98,14 @@ alias ls2='ls \
   --tree \
   --level 2'
 
+# Locations
+alias d2="cd ~/workspace/isres/dtrv2_1"
+alias h="cd ~/.home"
+alias st="cd ~/syncthing"
 alias ws="cd ~/workspace"
 alias wsf="cd ~/workspace/flyingpie"
 alias wsi="cd ~/workspace/isres"
 alias wss="cd ~/workspace/sandbox"
-alias st="cd ~/syncthing"
-alias d2="cd ~/workspace/isres/dtrv2_1"
 
 # Docker
 alias dl='docker logs --tail 100 -f'
