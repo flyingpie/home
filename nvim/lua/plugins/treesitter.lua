@@ -11,6 +11,7 @@ return {
 			"gitignore",
 			"html",
 			"http",
+			"ini",
 			"javascript",
 			"json",
 			"lua",
