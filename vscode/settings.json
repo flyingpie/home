@@ -12,6 +12,7 @@
 	"diffEditor.renderSideBySide": true,
 
 	/* Editor */
+	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.copyWithSyntaxHighlighting": false,
 	"editor.cursorBlinking": "blink",
 	"editor.cursorStyle": "line-thin",
@@ -37,15 +38,6 @@
 
 	/* Files */
 	"files.autoSave": "off",
-	"files.exclude": {
-		"**/.classpath": true,
-		"**/.factorypath": true,
-		"**/.project": true,
-		"**/.settings": true,
-		"**/artifacts": true,
-		"**/TestResults": true,
-		"**/tools": true
-	},
 
 	/* Git */
 	"git.autofetch": true,
@@ -92,8 +84,13 @@
 	"[xml]": {
 		"editor.defaultFormatter": "redhat.vscode-xml"
 	},
-	"window.menuBarVisibility": "toggle",
-	"editor.acceptSuggestionOnCommitCharacter": false,
-	"redhat.telemetry.enabled": true,
-	"githubPullRequests.pullBranch": "never"
+
+	"C_Cpp.copilotHover": "disabled",
+	"chat.agent.enabled": false,
+	"chat.agent.maxRequests": 0,
+	"chat.commandCenter.enabled": false,
+	"chat.extensionTools.enabled": false,
+	"chat.focusWindowOnConfirmation": false,
+	"chat.setupFromDialog": false,
+	"telemetry.feedback.enabled": false
 }
