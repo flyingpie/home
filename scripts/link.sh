@@ -55,7 +55,13 @@ rm -rf ~/.config/rofi
 ln -srf $(pwd)/rofi ~/.config/rofi
 
 # Solaar
-# TODO
+rm -rf ~/.config/solaar
+ln -srT $(pwd)/solaar ~/.config/solaar
+ln -sf /usr/share/applications/solaar.desktop ~/.config/autostart
+
+sudo cp -f $(pwd)/solaar/udev.rules /etc/udev/rules.d/42-logitech-unify-permissions.rules
+sudo chown $USER /dev/uinput
+sudo udevadm control --reload-rules
 
 # SSH Agent
 mkdir -p ~/.config/systemd/user
