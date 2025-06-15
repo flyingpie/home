@@ -21,7 +21,6 @@ scoop install main/fd
 scoop install main/fzf
 scoop install main/gzip
 scoop install main/git
-scoop install main/lazygit
 scoop install main/lua
 scoop install main/luarocks
 scoop install main/maven
@@ -38,6 +37,7 @@ scoop install main/wget
 scoop install extras/doublecmd
 scoop install extras/keepassxc
 scoop install extras/klogg
+scoop install extras/lazygit
 scoop install extras/notepadplusplus
 scoop install extras/q-dir
 scoop install extras/sharex
@@ -50,7 +50,6 @@ scoop install sysinternals/process-explorer
 
 scoop install versions/dotnet-sdk-lts
 scoop install versions/systeminformer-nightly
-scoop install versions/temurin11-jdk
 
 # Extras
 if ($Full) {
@@ -65,3 +64,6 @@ if ($Full) {
 }
 
 scoop update *
+
+# TODO
+#scoop install versions/temurin11-jdk
