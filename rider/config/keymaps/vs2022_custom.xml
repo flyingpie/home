@@ -46,6 +46,7 @@
     <keyboard-shortcut first-keystroke="shift alt equals" />
     <keyboard-shortcut first-keystroke="ctrl alt right" />
   </action>
+  <action id="StepInto" />
   <action id="TableResult.GrowSelection">
     <keyboard-shortcut first-keystroke="shift alt equals" />
     <keyboard-shortcut first-keystroke="ctrl alt right" />
@@ -57,6 +58,9 @@
   <action id="Terminal.SearchInCommandHistory" />
   <action id="ToggleMinimap">
     <keyboard-shortcut first-keystroke="shift ctrl alt m" />
+  </action>
+  <action id="TogglePresentationMode">
+    <keyboard-shortcut first-keystroke="f11" />
   </action>
   <action id="UsageFiltering.ReadAccess" />
   <action id="UsageFiltering.WriteAccess" />
