@@ -131,6 +131,8 @@ alias dc='docker compose'
 alias dn='dotnet'
 alias dnb='dotnet build'
 alias dnr='dotnet run'
+alias dnw='dotnet watch'
+alias dnwi='dotnet watch --non-interactive'
 
 # Git
 alias gitba='git branch -a'
