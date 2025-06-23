@@ -1,6 +1,11 @@
 #/bin/bash
 
-H=$(pwd)/..
+# Path to directory of this (link.sh) script:
+H=$(dirname "$0")
+# Path to parent dir:
+H="$H/.."
+# Turn relative path into absolute one:
+H=$(realpath $H)
 
 # Bin
 rm -rf ~/.local/bin
@@ -37,6 +42,27 @@ ln -srf $H/kando/menus.json		~/.config/kando/menus.json
 mkdir -p ~/.var/app/menu.kando.Kando/config/kando
 ln -srf $H/kando/config.json	~/.var/app/menu.kando.Kando/config/kando/config.json
 ln -srf $H/kando/menus.json		~/.var/app/menu.kando.Kando/config/kando/menus.json
+
+# KDE Plasma - Color Schemes
+rm -rf ~/.local/share/color-schemes
+ln -srf $H/kde/color-schemes ~/.local/share/color-schemes
+
+# KDE Plasma - Desktop Theme
+rm -rf ~/.local/share/plasma/desktoptheme
+ln -srf $H/kde/desktoptheme ~/.local/share/plasma/desktoptheme
+
+# KDE Plasma - Global Shortcuts
+ln -srf $H/kde/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
+
+# KDE Plasma - Wallpaper Plugins
+rm -rf ~/.local/share/plasma/wallpapers
+ln -srf $H/kde/wallpapers ~/.local/share/plasma/wallpapers
+
+# Krusader
+ln -srf $H/krusader/krusaderrc ~/.config/krusaderrc
+
+mkdir -p ~/.local/share/kxmlgui5/krusader
+ln -srf $H/krusader/krusaderui.rc ~/.local/share/kxmlgui5/krusader/krusaderui.rc
 
 # LazyGit
 mkdir -p ~/.config/lazygit
