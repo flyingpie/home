@@ -5,13 +5,17 @@ WallpaperItem {
     id: main
     anchors.fill: parent
 
-    property int fontSize: main.configuration.fontSize !== undefined ? main.configuration.fontSize : 16
+    property int fontSize: main.configuration.fontSize !== undefined ? main.configuration.fontSize : 32 // "colCount"
+    property int minFontSize: main.configuration.minFontSize !== undefined ? main.configuration.minFontSize : 12
+    property int maxFontSize: main.configuration.maxFontSize !== undefined ? main.configuration.maxFontSize : 24
     property int speed: main.configuration.speed !== undefined ? main.configuration.speed : 50
     property int colorMode: main.configuration.colorMode !== undefined ? main.configuration.colorMode : 0
     property color singleColor: main.configuration.singleColor !== undefined ? main.configuration.singleColor : "#00ff00"
     property int paletteIndex: main.configuration.paletteIndex !== undefined ? main.configuration.paletteIndex : 0
     property real jitter: main.configuration.jitter !== undefined ? main.configuration.jitter : 0
     property int glitchChance: main.configuration.glitchChance !== undefined ? main.configuration.glitchChance : 1
+    property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.1
+    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1
 
     property var palettes: [
         ["#00ff00","#ff00ff","#00ffff","#ff0000","#ffff00","#0000ff"],
@@ -23,12 +27,16 @@ WallpaperItem {
         id: canvas
         anchors.fill: parent
         property var drops: []
+        property var drops_speed: []
+        property var drops_fontSize: []
 
         function initDrops() {
             drops = []
             var cols = Math.floor(canvas.width / main.fontSize)
             for (var j = 0; j < cols; j++) {
                 drops.push(Math.floor(Math.random() * canvas.height / main.fontSize))
+                drops_speed.push(main.minSpeed + Math.random() * main.maxSpeed)
+                drops_fontSize.push(main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize))
             }
         }
 
@@ -50,16 +58,18 @@ WallpaperItem {
                 var color = main.colorMode === 0
                     ? main.singleColor
                     : main.palettes[main.paletteIndex][i % main.palettes[main.paletteIndex].length]
+                const fontSize = drops_fontSize[i];
                 // glitch chance percent
                 if (Math.random() < main.glitchChance / 100) {
                     ctx.fillStyle = "#ffffff"
                 } else {
                     ctx.fillStyle = color
                 }
-                ctx.font = main.fontSize + "px monospace"
+                ctx.font = fontSize + "px monospace"
                 ctx.fillText(String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96)), x, y)
                 // advance with jitter
-                drops[i] = (drops[i] + 1 + Math.random() * main.jitter) % (h / main.fontSize)
+                const speed = drops_speed[i]
+                drops[i] = (drops[i] + speed + Math.random() * main.jitter) % (h / main.fontSize)
             }
         }
 
