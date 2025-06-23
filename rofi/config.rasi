@@ -3,6 +3,9 @@
 configuration {
 	combi-modes: "window,drun,filebrowser";
 
+	kb-clear-line: "Control+a";
+	kb-move-front: "";
+
 	filebrowser {
 		directories-first: true;
 		sorting-method: "name";
