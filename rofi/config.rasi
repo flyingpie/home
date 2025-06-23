@@ -3,12 +3,13 @@
 configuration {
 	combi-modes: "window,drun,filebrowser";
 
-	timeout {
-		action: "kb-cancel";
-		delay: 0;
-	}
 	filebrowser {
 		directories-first: true;
 		sorting-method: "name";
+	}
+
+	timeout {
+		action: "kb-cancel";
+		delay: 0;
 	}
 }
