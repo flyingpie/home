@@ -7,15 +7,15 @@ WallpaperItem {
 
     property int fontSize: main.configuration.fontSize !== undefined ? main.configuration.fontSize : 32 // "colCount"
     property int minFontSize: main.configuration.minFontSize !== undefined ? main.configuration.minFontSize : 12
-    property int maxFontSize: main.configuration.maxFontSize !== undefined ? main.configuration.maxFontSize : 24
+    property int maxFontSize: main.configuration.maxFontSize !== undefined ? main.configuration.maxFontSize : 26
     property int speed: main.configuration.speed !== undefined ? main.configuration.speed : 50
     property int colorMode: main.configuration.colorMode !== undefined ? main.configuration.colorMode : 0
     property color singleColor: main.configuration.singleColor !== undefined ? main.configuration.singleColor : "#00ff00"
     property int paletteIndex: main.configuration.paletteIndex !== undefined ? main.configuration.paletteIndex : 0
     property real jitter: main.configuration.jitter !== undefined ? main.configuration.jitter : 0
     property int glitchChance: main.configuration.glitchChance !== undefined ? main.configuration.glitchChance : 1
-    property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.1
-    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1
+    property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.2
+    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1.8
 
     property var palettes: [
         ["#00ff00","#ff00ff","#00ffff","#ff0000","#ffff00","#0000ff"],
@@ -29,13 +29,16 @@ WallpaperItem {
         property var drops: []
         property var drops_speed: []
         property var drops_fontSize: []
+        property var init: true
 
         function initDrops() {
+            init = true
+
             drops = []
             var cols = Math.floor(canvas.width / main.fontSize)
             for (var j = 0; j < cols; j++) {
                 drops.push(Math.floor(Math.random() * canvas.height / main.fontSize))
-                drops_speed.push(main.minSpeed + Math.random() * main.maxSpeed)
+                drops_speed.push(main.minSpeed + Math.random() * (main.maxSpeed - main.minSpeed))
                 drops_fontSize.push(main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize))
             }
         }
@@ -55,6 +58,7 @@ WallpaperItem {
             for (var i = 0; i < drops.length; i++) {
                 var x = i * main.fontSize
                 var y = drops[i] * main.fontSize
+
                 var color = main.colorMode === 0
                     ? main.singleColor
                     : main.palettes[main.paletteIndex][i % main.palettes[main.paletteIndex].length]
@@ -69,7 +73,13 @@ WallpaperItem {
                 ctx.fillText(String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96)), x, y)
                 // advance with jitter
                 const speed = drops_speed[i]
-                drops[i] = (drops[i] + speed + Math.random() * main.jitter) % (h / main.fontSize)
+                drops[i] = (drops[i] + speed + Math.random() * main.jitter) //
+
+                if (y > h) {
+                    drops[i] = drops[i] % (h / main.fontSize)
+                    drops_speed[i] = main.minSpeed + Math.random() * (main.maxSpeed - main.minSpeed)
+                    drops_fontSize[i] = main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize)
+                }
             }
         }
 
