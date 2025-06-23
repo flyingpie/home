@@ -14,8 +14,8 @@ WallpaperItem {
     property int paletteIndex: main.configuration.paletteIndex !== undefined ? main.configuration.paletteIndex : 0
     property real jitter: main.configuration.jitter !== undefined ? main.configuration.jitter : 0
     property int glitchChance: main.configuration.glitchChance !== undefined ? main.configuration.glitchChance : 1
-    property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.2
-    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1.8
+    property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.1
+    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1.6
 
     property var palettes: [
         ["#00ff00","#ff00ff","#00ffff","#ff0000","#ffff00","#0000ff"],
@@ -29,6 +29,7 @@ WallpaperItem {
         property var drops: []
         property var drops_speed: []
         property var drops_fontSize: []
+		property var drops_x_offset: []
         property var init: true
 
         function initDrops() {
@@ -70,7 +71,7 @@ WallpaperItem {
                     ctx.fillStyle = color
                 }
                 ctx.font = fontSize + "px monospace"
-                ctx.fillText(String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96)), x, y)
+                ctx.fillText(String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96)), x + drops_x_offset[i], y)
                 // advance with jitter
                 const speed = drops_speed[i]
                 drops[i] = (drops[i] + speed + Math.random() * main.jitter) //
@@ -79,6 +80,7 @@ WallpaperItem {
                     drops[i] = drops[i] % (h / main.fontSize)
                     drops_speed[i] = main.minSpeed + Math.random() * (main.maxSpeed - main.minSpeed)
                     drops_fontSize[i] = main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize)
+                    drops_x_offset[i] = -30 + Math.random() * 60
                 }
             }
         }
