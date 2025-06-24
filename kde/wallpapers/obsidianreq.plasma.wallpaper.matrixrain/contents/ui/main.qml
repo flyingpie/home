@@ -15,7 +15,9 @@ WallpaperItem {
     property real jitter: main.configuration.jitter !== undefined ? main.configuration.jitter : 0
     property int glitchChance: main.configuration.glitchChance !== undefined ? main.configuration.glitchChance : 1
     property real minSpeed: main.configuration.minSpeed !== undefined ? main.configuration.minSpeed : 0.1
-    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1.6
+    property real maxSpeed: main.configuration.maxSpeed !== undefined ? main.configuration.maxSpeed : 1.8
+    property real minAlpha: main.configuration.minAlpha !== undefined ? main.configuration.minAlpha : 0.25
+    property real maxAlpha: main.configuration.maxAlpha !== undefined ? main.configuration.maxAlpha : 1.0
 
     property var palettes: [
         ["#00ff00","#ff00ff","#00ffff","#ff0000","#ffff00","#0000ff"],
@@ -29,7 +31,8 @@ WallpaperItem {
         property var drops: []
         property var drops_speed: []
         property var drops_fontSize: []
-		property var drops_x_offset: []
+        property var drops_x_offset: []
+        property var drops_brightness: []
         property var init: true
 
         function initDrops() {
@@ -41,6 +44,7 @@ WallpaperItem {
                 drops.push(Math.floor(Math.random() * canvas.height / main.fontSize))
                 drops_speed.push(main.minSpeed + Math.random() * (main.maxSpeed - main.minSpeed))
                 drops_fontSize.push(main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize))
+                drops_brightness.push(main.minAlpha + Math.random() * (main.maxAlpha - main.minAlpha))
             }
         }
 
@@ -54,6 +58,7 @@ WallpaperItem {
 
         onPaint: {
             var ctx = getContext("2d"), w = width, h = height
+            ctx.globalAlpha = 1.0
             ctx.fillStyle = "rgba(0,0,0,0.05)"
             ctx.fillRect(0,0,w,h)
             for (var i = 0; i < drops.length; i++) {
@@ -66,9 +71,13 @@ WallpaperItem {
                 const fontSize = drops_fontSize[i];
                 // glitch chance percent
                 if (Math.random() < main.glitchChance / 100) {
-                    ctx.fillStyle = "#ffffff"
+					ctx.fillStyle = "#ffffff"
+					ctx.font = `bold ${fontSize}px monospace`
                 } else {
                     ctx.fillStyle = color
+                    //ctx.fillStyle = `rgba(100, 100, 255, ${drops_brightness[i]})`
+                    //ctx.fillStyle = `${color}${drops_brightness[i]})`
+                    ctx.globalAlpha = drops_brightness[i]
                 }
                 ctx.font = fontSize + "px monospace"
                 ctx.fillText(String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96)), x + drops_x_offset[i], y)
@@ -81,6 +90,7 @@ WallpaperItem {
                     drops_speed[i] = main.minSpeed + Math.random() * (main.maxSpeed - main.minSpeed)
                     drops_fontSize[i] = main.minFontSize + Math.random() * (main.maxFontSize - main.minFontSize)
                     drops_x_offset[i] = -30 + Math.random() * 60
+                    drops_brightness[i] = main.minAlpha + Math.random() * (main.maxAlpha - main.minAlpha)
                 }
             }
         }
