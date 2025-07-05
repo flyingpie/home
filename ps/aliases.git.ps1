@@ -66,3 +66,7 @@ function gitup() {
 
 	& "git" branch --set-upstream-to="origin/$branch"
 }
+
+function gitws() {
+	& "git" commit -m "Workspace"
+}
