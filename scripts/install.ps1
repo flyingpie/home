@@ -43,6 +43,7 @@ scoop install extras/q-dir
 scoop install extras/sharex
 scoop install extras/wezterm
 scoop install extras/windows-terminal
+scoop install extras/winspy
 
 scoop install nerd-fonts/CascadiaMono-NF
 
