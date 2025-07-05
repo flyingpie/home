@@ -58,6 +58,11 @@ ln -srf $H/kde/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
 rm -rf ~/.local/share/plasma/wallpapers
 ln -srf $H/kde/wallpapers ~/.local/share/plasma/wallpapers
 
+# Krita
+ln -srf $H/krita/kritadisplayrc ~/.config
+ln -srf $H/krita/kritarc ~/.config
+ln -srf $H/krita/kritashortcutsrc ~/.config
+
 # Krusader
 ln -srf $H/krusader/krusaderrc ~/.config/krusaderrc
 
