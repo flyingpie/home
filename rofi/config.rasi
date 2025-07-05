@@ -1,14 +1,18 @@
-@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "themes/tokyonight.rasi"
 
 configuration {
-  combi-modes: "window,drun,filebrowser";
+	combi-modes: "window,drun,filebrowser";
 
-  timeout {
-	  action: "kb-cancel";
-	  delay:  0;
-  }
-  filebrowser {
-	  directories-first: true;
-	  sorting-method:    "name";
-  }
+	kb-clear-line: "Control+a";
+	kb-move-front: "";
+
+	filebrowser {
+		directories-first: true;
+		sorting-method: "name";
+	}
+
+	timeout {
+		action: "kb-cancel";
+		delay: 0;
+	}
 }

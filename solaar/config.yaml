@@ -21,3 +21,9 @@
   smart-shift: 50
   thumb-scroll-invert: false
   thumb-scroll-mode: true
+- _NAME: Marathon Mouse M705 (M-R0009)
+  _sensitive: {hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _serial: CD613B06
+  _wpid: 101B
+  side-scroll: true
+  smooth-scroll: false

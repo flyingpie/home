@@ -1,14 +1,6 @@
 {
-	"blender.executables": [
-		{
-			"path": "d:\\apps\\blender\\blender-4.1.1-windows-x64\\blender.exe",
-			"name": "",
-			"isDebug": false
-		}
-	],
-
+	/* Misc */
 	"breadcrumbs.enabled": false,
-
 	"diffEditor.renderSideBySide": true,
 
 	/* Editor */
@@ -31,9 +23,6 @@
 	"explorer.openEditors.visible": 0,
 
 	/* Extensions */
-	"extensions.experimental.affinity": {
-		"asvetliakov.vscode-neovim": 1
-	},
 	"extensions.ignoreRecommendations": true,
 
 	/* Files */
@@ -43,32 +32,35 @@
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
 
-	"markdown-preview-enhanced.previewTheme": "github-light.css",
+	/* Security */
+	"security.workspace.trust.enabled": false,
 
 	/* Search */
 	"search.followSymlinks": false,
-
-	/* Security */
-	"security.workspace.trust.enabled": false,
 
 	/* Spell Right */
 	"spellright.documentTypes": ["markdown", "plaintext"],
 	"spellright.language": ["en", "nl"],
 
-	/* Workbench */
-	"workbench.colorTheme": "Tokyo Night",
-	"workbench.sideBar.location": "right",
-	"workbench.iconTheme": "helium-icon-theme",
-	"workbench.startupEditor": "none",
+	/* Updates */
+	"update.mode": "manual",
+	"update.showReleaseNotes": false,
 
 	/* Window */
 	"window.commandCenter": false,
 	"window.menuBarVisibility": "toggle",
+	"window.zoomLevel": 0,
 
-	"update.mode": "manual",
+	/* Workbench */
+	"workbench.colorTheme": "Tokyo Night",
 	"workbench.editor.empty.hint": "hidden",
+	"workbench.iconTheme": "vscode-icon-theme",
+	"workbench.sideBar.location": "right",
+	"workbench.startupEditor": "none",
+
 	"xml.symbols.maxItemsComputed": 50000,
 
+	/* File-Type Specific */
 	"[aspnetcorerazor]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
 	},
@@ -85,6 +77,7 @@
 		"editor.defaultFormatter": "redhat.vscode-xml"
 	},
 
+	/* Disable copilot-related stuff */
 	"C_Cpp.copilotHover": "disabled",
 	"chat.agent.enabled": false,
 	"chat.agent.maxRequests": 0,

@@ -8,7 +8,6 @@
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D1" }],
 			"FileName": "wezterm-gui",
 			"HideOnFocusLost": "Never",
-			//"Opacity": 95,
 			"OffScreenLocations": ["Above"]
 		},
 
@@ -22,14 +21,13 @@
 			"OffScreenLocations": ["Above"]
 		},
 
-		// System Info
+		// System Monitor
 		{
 			"Name": "System Monitor",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D3" }],
-			// "FileName": "plasma-systemmonitor",
 			"FileName": "flatpak",
-			"ArgumentList": [{ "Argument": "run" }, { "Argument": "net.nokyan.Resources" }],
 			"ProcessName": "net.nokyan.Resources",
+			"ArgumentList": [{ "Argument": "run" }, { "Argument": "net.nokyan.Resources"}],
 			"OffScreenLocations": ["Below"]
 		},
 
@@ -41,7 +39,7 @@
 			"HorizontalAlign": "Right",
 			"HorizontalScreenCoverage": 50,
 			"AlwaysOnTop": true,
-			"HideOnFocusLost": false,
+			"HideOnFocusLost": "False",
 			"OffScreenLocations": ["Right"]
 		},
 
@@ -57,13 +55,13 @@
 		{
 			"Name": "Discord",
 			"Hotkeys": [{ "Modifiers": "Control", "Key": "D6" }],
-			"ProcessName": "discord",
+			"ProcessName": "vesktop",
 			"FileName": "flatpak",
-			"Arguments": "run com.discordapp.Discord",
+			"ArgumentList": [{ "Argument": "run" }, { "Argument": "dev.vencord.Vesktop" }],
 			"HorizontalAlign": "Right",
 			"HorizontalScreenCoverage": 70,
 			"AlwaysOnTop": true,
-			"HideOnFocusLost": false,
+			"HideOnFocusLost": "Never",
 			"OffScreenLocations": ["Below"]
 		}
 	],
@@ -71,25 +69,9 @@
 	"AnimationDurationMs": 150,
 	"AnimationTargetFps": 60,
 
-	// Hot keys that toggle the most recent app (or the first one if none has been active yet).
-	"Hotkeys": [ { "Modifiers": "Control", "Key": "Q" } ],
+	"Hotkeys": [{ "Modifiers": "Control", "Key": "Q" }],
 
-	// What monitor to preferably drop the terminal.
-	// "WithCursor" (default), "Primary" or "AtIndex".
-	// Can be overridden per app.
-	"PreferMonitor": "WithCursor",
-
-	// Horizontal screen coverage, as a percentage (defaults to 95).
 	"HorizontalScreenCoverage": 95,
-
-	// Vertical screen coverage, as a percentage (defaults to 95).
 	"VerticalScreenCoverage": 95,
-
-	"EventHooks": [
-		// { "EventPattern": ".*", "FileName": "wtq-sound" }
-	],
-
-	"Api": {
-		"Enable": true
-	}
+	"PreferMonitor": "WithCursor"
 }
