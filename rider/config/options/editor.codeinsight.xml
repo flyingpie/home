@@ -3,4 +3,7 @@
     <option name="allowToCompleteWithWhitespace" value="false" />
     <option name="parenthesesInsertType" value="None" />
   </component>
+  <component name="RiderDefaultCodeFoldingSettings">
+    <option name="collapseRegions" value="false" />
+  </component>
 </application>
