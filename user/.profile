@@ -29,3 +29,8 @@ export PATH="$PATH:$HOME/syncthing/work/apps/path"
 
 # Disable .Net Telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Force locale
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+export LC_ALL=en_US.UTF-8
