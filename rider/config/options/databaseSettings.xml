@@ -1,5 +1,10 @@
 <application>
   <component name="DatabaseSettings" version="10">
+    <exec-options>
+      <exec-option exec-inside="3" />
+      <exec-option />
+      <exec-option />
+    </exec-options>
     <text-mode>
       <parameter-patterns>
         <parameter-pattern value="#(\w+)#" in-scripts="true" scope="XML" predefined="#name#" />
@@ -10,7 +15,7 @@
         <parameter-pattern value="\:\'.*\'" in-scripts="true" scope="PostgreSQL" predefined=":'name'" />
         <parameter-pattern value="\$\{([^\{\}]*)\}" in-scripts="true" predefined="${name}" />
         <parameter-pattern value="\$\(([^\)]+)\)" in-scripts="true" predefined="$(name)" />
-        <parameter-pattern value="(?&lt;![@&lt;])@[a-zA-Z0-9_]+" in-scripts="true" scope="C#, F#, -GenericSQL, -Oracle, -SQLite, -SQL92, -CassandraQL, -ClickHouse, -DB2, -DB2, -DB2_IS, -DB2_ZOS, -Derby, -Exasol, Greenplum, -H2, -HiveQL, -HSQLDB, -MariaDB, -TSQL, -AZURE, -MySQL, -MySQL, -MySQL, -OracleSqlPlus, -NetSuite, PostgreSQL, Redshift, Snowflake, -SparkSQL, -Sybase, Vertica, -BigQuery, -CouchbaseQuery, -MongoDB, Cockroach, -Redis, -Dynamo" predefined="@name" />
+        <parameter-pattern value="(?&lt;![@&lt;])@[a-zA-Z0-9_]+" in-scripts="true" scope="C#, F#, -GenericSQL, -Oracle, -SQLite, -SQL92, -CassandraQL, -ClickHouse, -DB2, -DB2, -DB2_IS, -DB2_ZOS, -Derby, -Exasol, Greenplum, -H2, -HiveQL, -HSQLDB, -MariaDB, -TSQL, -AZURE, -MySQL, -MySQL, -MySQL, -OracleSqlPlus, -NetSuite, PostgreSQL, Redshift, Snowflake, -SparkSQL, -Sybase, Vertica, -BigQuery, -CouchbaseQuery, -MongoDB, Cockroach, -Redis, -Dynamo" />
       </parameter-patterns>
     </text-mode>
     <csv-formats>

@@ -98,11 +98,17 @@ alias ls2='ls \
   --tree \
   --level 2'
 
+# Locations
+alias h="cd ~/.home"
+alias st="cd ~/syncthing"
 alias ws="cd ~/workspace"
 alias wsf="cd ~/workspace/flyingpie"
 alias wsi="cd ~/workspace/isres"
 alias wss="cd ~/workspace/sandbox"
-alias st="cd ~/syncthing"
+
+# Locations - Projects
+alias d2="cd ~/workspace/isres/dtrv2_1"
+alias wtq="cd ~/workspace/flyingpie/wtq/wtq_1"
 
 # Docker
 alias dl='docker logs --tail 100 -f'
@@ -128,6 +134,8 @@ alias dc='docker compose'
 alias dn='dotnet'
 alias dnb='dotnet build'
 alias dnr='dotnet run'
+alias dnw='dotnet watch'
+alias dnwi='dotnet watch --non-interactive'
 
 # Git
 alias gitba='git branch -a'
@@ -148,25 +156,13 @@ alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
 
-# Functions
-function up() {
-	count=${1-1}
-
-	for i in {1..$count}
-	do
-		if [ "$i" -gt 9 ]
-		then
-			break
-		fi
-
-		cd ..
-	done
-}
-
-alias up1='up 1'
-alias up2='up 2'
-alias up3='up 3'
-alias up4='up 4'
+# Up
+alias up1='cd ..'
+alias up2='cd ../..'
+alias up3='cd ../../..'
+alias up4='cd ../../../..'
+alias up5='cd ../../../../..'
+alias up6='cd ../../../../../..'
 
 # Yazi
 function y() {
