@@ -12,9 +12,18 @@ keymap("", "<Space>", "<Nop>", opts)
 -- Use 'jj' to exit INSERT mode
 --keymap("i", "jj", "<ESC>", opts)
 
-keymap("n", "<leader>e", "Neotree<cr>", opts)	-- Open tree
+--keymap("n", "<leader>e", "Neotree<cr>", opts)	-- Open tree
 
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)	-- Toggle line wrap
+
+-- Remap delete/change to black hole register
+keymap("n", "d", '"_d', { noremap = true })
+keymap("n", "c", '"_c', { noremap = true })
+-- keymap("n", "x", '"_x', { noremap = true })
+
+keymap("v", "d", '"_d', { noremap = true })
+keymap("v", "c", '"_c', { noremap = true })
+-- keymap("v", "x", '"_x', { noremap = true })
 
 -- Window split
 keymap("n", "<C-->", "<C-w>s", opts)			-- Split horizontally
@@ -35,9 +44,19 @@ keymap("n",		"<C-w>",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 
 -- Fuzzy Finder
 local builtin = require("telescope.builtin")
-vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
+--vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
 vim.keymap.set("n",		"<leader>fg",	builtin.live_grep,		opts)
+vim.keymap.set("n",		"<leader>fc",	builtin.commands,		opts)
+--vim.keymap.set("n",		"<leader>fs",	builtin.symbols,		opts)
 
+vim.keymap.set("n",		"<leader>ff",	Snacks.picker.files,		opts)
+vim.keymap.set("n",		"<leader>ft",	Snacks.picker.colorschemes,		opts)
+vim.keymap.set("n",		"<leader>fs",	Snacks.picker.lsp_workspace_symbols,		opts)
 --keymap('n', '<leader>fb', builtin.buffers, {})
 --keymap('n', '<leader>fh', builtin.help_tags, {})
+
+keymap('n',	'<Tab>',	':EagleWin<CR>',	opts)
+
+vim.keymap.set("n",		"<leader>.",		vim.lsp.buf.code_action, opts)
+vim.keymap.set("n",		"<leader>r",		vim.lsp.buf.rename, opts)
 

@@ -13,6 +13,10 @@
           "isShowStripeButton": false
         },
         {
+          "id": "Backup and Sync History",
+          "isShowStripeButton": false
+        },
+        {
           "id": "Pull Requests",
           "isShowStripeButton": false
         },
@@ -33,25 +37,32 @@
         {
           "id": "Unit Tests",
           "order": 1,
-          "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.19934896
+          "weight": 0.16445312,
+          "sideWeight": 0.50024295
         },
         {
           "id": "Test Coverage",
           "order": 2,
-          "weight": 0.23847125
+          "weight": 0.17265625
         },
         {
           "id": "NuGet",
           "order": 3,
-          "weight": 0.26542968
+          "weight": 0.1360677
         },
         {
           "id": "Tests",
           "order": 4,
           "isVisible": true,
           "weight": 0.22050782
+        },
+        {
+          "id": "Assembly Explorer",
+          "order": 5,
+          "weight": 0.16315104,
+          "sideWeight": 0.49975705,
+          "isSplit": true
         },
         {
           "id": "Database Changes",
@@ -107,7 +118,7 @@
           "id": "Problems View",
           "order": 2,
           "anchor": "BOTTOM",
-          "weight": 0.2162642
+          "weight": 0.24856871
         },
         {
           "id": "Terminal",
@@ -119,31 +130,36 @@
           "id": "Build",
           "order": 4,
           "anchor": "BOTTOM",
-          "weight": 0.2162642
+          "weight": 0.21708015
         },
         {
           "id": "Debug",
           "order": 5,
           "anchor": "BOTTOM",
-          "weight": 0.2162642
+          "weight": 0.06602444
         },
         {
           "id": "Run",
           "order": 6,
           "anchor": "BOTTOM",
-          "weight": 0.2162642
+          "weight": 0.64456105
         },
         {
           "id": "Services",
           "order": 7,
           "anchor": "BOTTOM",
-          "weight": 0.1755698
+          "weight": 0.2523855
         },
         {
           "id": "Find",
           "order": 8,
           "anchor": "BOTTOM",
-          "weight": 0.24893466
+          "weight": 0.108787596
+        },
+        {
+          "id": "RoslynVisualizer",
+          "anchor": "RIGHT",
+          "isShowStripeButton": false
         },
         {
           "id": "Endpoints",
@@ -174,7 +190,7 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.17096354
+          "weight": 0.08841146
         },
         {
           "id": "Notifications",
@@ -236,9 +252,9 @@
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.19934896,
-        "bottom": 0.2162642,
-        "right": 0.17096354
+        "left": 0.16445312,
+        "bottom": 0.108787596,
+        "right": 0.08841146
       }
     }
   }
