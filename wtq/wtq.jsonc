@@ -2,76 +2,139 @@
 	"$schema": "wtq.schema.json",
 
 	"Apps": [
-		// WezTerm
 		{
 			"Name": "WezTerm",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D1" }],
+			"Hotkeys": [{ "Modifiers": "Control","KeyChar": "1" }],
 			"FileName": "wezterm-gui",
 			"HideOnFocusLost": "Never",
+			"Opacity": 90,
 			"OffScreenLocations": ["Above"]
 		},
-
-		// Dolphin
 		{
 			"Name": "Dolphin",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D2" }],
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "2"
+				}
+			],
 			"FileName": "dolphin",
 			"HideOnFocusLost": "Never",
+			"Opacity": 90,
 			"HorizontalScreenCoverage": 80,
-			"OffScreenLocations": ["Above"]
+			"OffScreenLocations": [
+				"Above"
+			]
 		},
-
-		// System Monitor
 		{
 			"Name": "System Monitor",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D3" }],
-			"FileName": "flatpak",
-			"ProcessName": "net.nokyan.Resources",
-			"ArgumentList": [{ "Argument": "run" }, { "Argument": "net.nokyan.Resources"}],
-			"OffScreenLocations": ["Below"]
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "3"
+				}
+			],
+			"FileName": "net.nokyan.Resources",
+			"Opacity": 90,
+			"OffScreenLocations": [
+				"Below"
+			]
 		},
-
-		// KeePassXC
 		{
 			"Name": "KeePassXC",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D4" }],
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "4"
+				}
+			],
 			"FileName": "keepassxc",
-			"HorizontalAlign": "Right",
-			"HorizontalScreenCoverage": 50,
 			"AlwaysOnTop": true,
 			"HideOnFocusLost": "False",
-			"OffScreenLocations": ["Right"]
+			"Opacity": 90,
+			"HorizontalScreenCoverage": 50,
+			"HorizontalAlign": "Right",
+			"OffScreenLocations": [
+				"Right"
+			]
 		},
-
-		// Spotify
 		{
 			"Name": "Spotify",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D5" }],
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "5"
+				}
+			],
 			"FileName": "com.spotify.Client",
-			"ProcessName": "Spotify"
+			"Opacity": 90
 		},
-
-		// Discord
 		{
 			"Name": "Discord",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D6" }],
-			"ProcessName": "vesktop",
-			"FileName": "flatpak",
-			"ArgumentList": [{ "Argument": "run" }, { "Argument": "dev.vencord.Vesktop" }],
-			"HorizontalAlign": "Right",
-			"HorizontalScreenCoverage": 70,
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "6"
+				}
+			],
+			"FileName": "dev.vencord.Vesktop",
 			"AlwaysOnTop": true,
 			"HideOnFocusLost": "Never",
-			"OffScreenLocations": ["Below"]
+			"HorizontalScreenCoverage": 70,
+			"HorizontalAlign": "Right",
+			"OffScreenLocations": [
+				"Below"
+			]
+		},
+		{
+			"Name": "Yaak",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "~"
+				}
+			],
+			"FileName": "yaak-app",
+			"OffScreenLocations": [
+				"Below"
+			]
+		},
+		{
+			"Name": "Krita",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "`"
+				}
+			],
+			"FileName": "krita",
+			"HideOnFocusLost": "Never"
+		},
+		{
+			"Name": "Dev Toolbox",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "8"
+				}
+			],
+			"FileName": "me.iepure.devtoolbox",
+			"HorizontalScreenCoverage": 70,
+			"HorizontalAlign": "Right",
+			"OffScreenLocations": [
+				"Right"
+			]
 		}
 	],
-
-	"AnimationDurationMs": 150,
+	"Hotkeys": [
+		{
+			"Modifiers": "Control",
+			"Key": "Q"
+		}
+	],
 	"AnimationTargetFps": 60,
-
-	"Hotkeys": [{ "Modifiers": "Control", "Key": "Q" }],
-
 	"HorizontalScreenCoverage": 95,
 	"VerticalScreenCoverage": 95,
-	"PreferMonitor": "WithCursor"
+	"PreferMonitor": "WithCursor",
+	"AnimationDurationMs": 150
 }
