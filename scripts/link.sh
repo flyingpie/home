@@ -121,6 +121,7 @@ ln -srf $H/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 # WTQ
 mkdir -p ~/.config/wtq
 ln -srf $H/wtq/wtq.jsonc ~/.config/wtq/wtq.jsonc
+ln -srf $H/wtq/wtq.jsonc ~/.var/app/nl.flyingpie.wtq/config/wtq/wtq.jsonc
 
 # Zed
 rm -rf ~/.config/zed
