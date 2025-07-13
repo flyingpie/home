@@ -1,0 +1,108 @@
+#!/bin/bash
+
+STATE_FILE="$HOME/.cache/playing_mpris_players" # Where we put the name of the most recently playing player
+BUS_PATH="/org/mpris/MediaPlayer2"              # DBus service path
+IFACE="org.mpris.MediaPlayer2.Player"           # DBus interface
+
+#
+# Internals
+#
+
+_log() {
+	logger -t "media-playpause" $1
+	echo $1
+}
+
+_players_list() {
+	dbus-send \
+		--session \
+		--dest=org.freedesktop.DBus \
+		--type=method_call \
+		--print-reply \
+		/org/freedesktop/DBus \
+		org.freedesktop.DBus.ListNames |
+		grep -o 'org.mpris.MediaPlayer2.[^"]*'
+}
+
+_player_next() {
+	_log "Player.Next $1."
+	dbus-send --dest="$1" --session --type=method_call $BUS_PATH $IFACE.Next >/dev/null
+}
+
+_player_pause() {
+	_log "Player.Pause $1."
+	dbus-send --dest="$1" --session --type=method_call $BUS_PATH $IFACE.Pause >/dev/null
+}
+
+_player_play() {
+	_log "Player.Play $1."
+	dbus-send --dest="$1" --session --type=method_call $BUS_PATH $IFACE.Play >/dev/null
+}
+
+_player_status() {
+	dbus-send --print-reply --session --dest="$1" $BUS_PATH org.freedesktop.DBus.Properties.Get string:"$IFACE" string:"PlaybackStatus" \
+		2> /dev/null | awk -F'"' '/variant/ {print $2}'
+}
+
+#
+# Commands
+#
+
+next() {
+	players=$(_players_list)
+
+	for player in $players; do
+		status=$(_player_status "$player")
+		if [ "$status" = "Playing" ]; then
+			_player_next "$player"
+			exit 0
+		fi
+	done
+
+	echo "No playing media player found."
+}
+
+toggle() {
+	players=$(_players_list)
+
+	# See if any player is currently playing. If so, reset state.
+	# Probably means a player was started outside of this script, and our state has been invalidated.
+	for player in $players; do
+		status=$(_player_status "$player")
+		if [ "$status" = "Playing" ]; then
+			rm -f "$STATE_FILE"
+		fi
+	done
+
+	# See if we have a state file. If so, it means we paused a player last time, which we'll continue now.
+	if [ ! -f "$STATE_FILE" ]; then
+		>"$STATE_FILE"
+		for player in $players; do
+			status=$(_player_status "$player")
+			_log "PLAYER:$player STATUS:$status"
+			if [ "$status" = "Playing" ]; then
+				_log "Player '$player' currently playing, pausing and saving state"
+				echo "$player" >>"$STATE_FILE"
+				_player_pause "$player"
+				exit 0
+			fi
+		done
+		_log "Paused all currently playing media players."
+
+	# If we don't have a state file, look for a player that's currently playing, pause it, and save its name to the state.
+	else
+		while IFS= read -r player; do
+			_player_play "$player"
+		done <"$STATE_FILE"
+		rm -f "$STATE_FILE"
+		_log "Resumed previously playing media players."
+	fi
+}
+
+#
+# Run
+#
+
+COMMAND="$1"
+shift
+"$COMMAND" "$@"
