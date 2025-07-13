@@ -1,7 +1,11 @@
 %YAML 1.3
 ---
 - Key: [Mouse Gesture Button, pressed]
-- Execute: media-playpause
+- Execute: [media, toggle]
+...
+---
+- Key: [Forward Button, pressed]
+- Execute: [media, next]
 ...
 ---
 - Test: thumb_wheel_up
