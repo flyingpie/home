@@ -1,0 +1,53 @@
+bandwhich
+blender-launcher-v2-bin
+bruno-bin
+btop
+docker
+docker-compose
+dos2unix
+dotnet-host
+duf							# du -f but prettier
+firefox
+flatpak
+htop
+hugo
+keepassxc
+klogg-bin
+kora-icon-theme
+krdc
+krita
+kubectl
+meson
+moonlight-qt
+ncdu						# Disk usage analyzer
+neovim
+nmap
+nodejs
+npm
+obsidian
+powershell-bin
+pureref
+qpwgraph					# Pipewire graph
+qt6-imageformats			# More image formats in Qt apps, like previews in file explorers
+quickemu-git
+ripgrep
+rofi-wayland
+rsync
+rustup
+solaar						# Logitech device manager
+strace
+tailscale
+tcpdump
+unzip
+vesktop-bin
+visual-studio-code-bin
+wakeonlan
+wezterm
+wireshark-qt
+wl-clipboard				# Wayland clipboard support in terminals
+wtq-bin
+xdg-desktop-portal-gtk
+xdg-desktop-portal-kde
+yaak-bin
+yt-dlp
+zellij

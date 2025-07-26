@@ -31,15 +31,19 @@
         {
           "id": "Structure",
           "order": 0,
-          "weight": 0.42239583,
+          "isActiveOnStart": true,
+          "isVisible": true,
+          "weight": 0.13450521,
+          "sideWeight": 0.123733714,
           "isSplit": true
         },
         {
           "id": "Unit Tests",
           "order": 1,
+          "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.16445312,
-          "sideWeight": 0.50024295
+          "weight": 0.13450521,
+          "sideWeight": 0.8762065
         },
         {
           "id": "Test Coverage",
@@ -49,7 +53,16 @@
         {
           "id": "NuGet",
           "order": 3,
-          "weight": 0.1360677
+          "floatingBounds": [
+            4164,
+            546,
+            1315,
+            1036
+          ],
+          "type": "WINDOWED",
+          "isActiveOnStart": true,
+          "weight": 0.32890624,
+          "sideWeight": 0.5002413
         },
         {
           "id": "Tests",
@@ -130,25 +143,27 @@
           "id": "Build",
           "order": 4,
           "anchor": "BOTTOM",
-          "weight": 0.21708015
+          "weight": 0.27326128
         },
         {
           "id": "Debug",
           "order": 5,
           "anchor": "BOTTOM",
-          "weight": 0.06602444
+          "isVisible": true,
+          "weight": 0.27326128
         },
         {
           "id": "Run",
           "order": 6,
           "anchor": "BOTTOM",
-          "weight": 0.64456105
+          "isVisible": true,
+          "weight": 0.27326128
         },
         {
           "id": "Services",
           "order": 7,
           "anchor": "BOTTOM",
-          "weight": 0.2523855
+          "weight": 0.27326128
         },
         {
           "id": "Find",
@@ -187,10 +202,9 @@
           "id": "Project",
           "order": 0,
           "anchor": "RIGHT",
-          "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.08841146
+          "weight": 0.12200521
         },
         {
           "id": "Notifications",
@@ -252,9 +266,9 @@
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.16445312,
-        "bottom": 0.108787596,
-        "right": 0.08841146
+        "left": 0.13450521,
+        "bottom": 0.27326128,
+        "right": 0.12200521
       }
     }
   }

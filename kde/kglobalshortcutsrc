@@ -196,16 +196,26 @@ disableInputCapture=Meta+Shift+Esc,Meta+Shift+Esc,Disable Active Input Capture
 view_actual_size=none,Meta+0,Zoom to Actual Size
 view_zoom_in=Meta++\tMeta+=,Meta++\tMeta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
+wtq_hotkey_app_dev toolbox_1=Ctrl+8,none,WTQ hotkey - App - Dev Toolbox
+wtq_hotkey_app_discord_2=Ctrl+6,none,WTQ hotkey - App - Discord
+wtq_hotkey_app_dolphin_3=Ctrl+2,none,WTQ hotkey - App - Dolphin
+wtq_hotkey_app_keepassxc_4=Ctrl+4,none,WTQ hotkey - App - KeePassXC
+wtq_hotkey_app_krita_5=Ctrl+`,none,WTQ hotkey - App - Krita
+wtq_hotkey_app_spotify_6=Ctrl+5,none,WTQ hotkey - App - Spotify
+wtq_hotkey_app_system monitor_7=Ctrl+3,none,WTQ hotkey - App - System Monitor
+wtq_hotkey_app_wezterm_8=Ctrl+1,none,WTQ hotkey - App - WezTerm
+wtq_hotkey_app_yaak_9=Ctrl+~,none,WTQ hotkey - App - Yaak
+wtq_hotkey_global_0=Ctrl+Q,none,WTQ hotkey - Global
 
 [mediacontrol]
 _k_friendly_name=Media Controller
 mediavolumedown=none,,Media volume down
 mediavolumeup=none,,Media volume up
-nextmedia=Media Next,Media Next,Media playback next
+nextmedia=Media Next\tCtrl+Num+PgDown,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
 playmedia=none,,Play media playback
-playpausemedia=Media Play,Media Play,Play/Pause media playback
-previousmedia=Media Previous,Media Previous,Media playback previous
+playpausemedia=Media Play\tCtrl+Num+Down,Media Play,Play/Pause media playback
+previousmedia=Ctrl+Num+End\tMedia Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org_kde_powerdevil]
@@ -238,12 +248,14 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 106=none,none,Activate Icons-and-Text Task Manager Widget
+activate widget 124=none,none,Activate Application Launcher Widget
+activate widget 126=none,none,Activate Pager Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
 cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
-edit_clipboard=,,Edit Contents…
+edit_clipboard=none,,Edit Contents…
 manage activities=Meta+Q,Meta+Q,Show Activity Switcher
 next activity=Meta+A,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
