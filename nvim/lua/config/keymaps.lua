@@ -2,17 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 local opts = { noremap = true }
-local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
 
 keymap("", "<Space>", "<Nop>", opts)
-
--- Use 'jj' to exit INSERT mode
---keymap("i", "jj", "<ESC>", opts)
-
---keymap("n", "<leader>e", "Neotree<cr>", opts)	-- Open tree
 
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)	-- Toggle line wrap
 
@@ -39,21 +33,16 @@ keymap("n",		"<C-Down>",		":resize +2<CR>",			opts)
 keymap("n",		"<C-Left>",		":vertical resize -2<CR>",	opts)
 keymap("n",		"<C-Right>",	":vertical resize +2<CR>",	opts)
 
---keymap("n",		"<leader>q",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 keymap("n",		"<C-w>",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 
 -- Fuzzy Finder
 local builtin = require("telescope.builtin")
---vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
-vim.keymap.set("n",		"<leader>fg",	builtin.live_grep,		opts)
-vim.keymap.set("n",		"<leader>fc",	builtin.commands,		opts)
---vim.keymap.set("n",		"<leader>fs",	builtin.symbols,		opts)
+vim.keymap.set("n",		"<leader>fg",		builtin.live_grep,		opts)
+vim.keymap.set("n",		"<leader>fc",		builtin.commands,		opts)
 
-vim.keymap.set("n",		"<leader>ff",	Snacks.picker.files,		opts)
-vim.keymap.set("n",		"<leader>ft",	Snacks.picker.colorschemes,		opts)
-vim.keymap.set("n",		"<leader>fs",	Snacks.picker.lsp_workspace_symbols,		opts)
---keymap('n', '<leader>fb', builtin.buffers, {})
---keymap('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set("n",		"<leader>ff",		Snacks.picker.files,		opts)
+vim.keymap.set("n",		"<leader>ft",		Snacks.picker.colorschemes,		opts)
+vim.keymap.set("n",		"<leader>fs",		Snacks.picker.lsp_workspace_symbols,		opts)
 
 keymap('n',	'<Tab>',	':EagleWin<CR>',	opts)
 

@@ -85,5 +85,12 @@
 	"chat.extensionTools.enabled": false,
 	"chat.focusWindowOnConfirmation": false,
 	"chat.setupFromDialog": false,
-	"telemetry.feedback.enabled": false
+	"telemetry.feedback.enabled": false,
+	"blender.executables": [
+		{
+			"path": "/home/marco/apps/blender/stable/blender-4.5.0-lts.8cb6b388974a/blender",
+			"name": "",
+			"isDebug": false
+		}
+	]
 }
