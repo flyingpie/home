@@ -1,6 +1,5 @@
 AngularJS
 Docker
-IdeaVIM
 JSIntentionPowerPack
 JavaScriptDebugger
 Karma

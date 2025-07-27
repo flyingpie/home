@@ -46,6 +46,6 @@ vim.keymap.set("n",		"<leader>fs",		Snacks.picker.lsp_workspace_symbols,		opts)
 
 keymap('n',	'<Tab>',	':EagleWin<CR>',	opts)
 
-vim.keymap.set("n",		"<leader>.",		vim.lsp.buf.code_action, opts)
-vim.keymap.set("n",		"<leader>r",		vim.lsp.buf.rename, opts)
+-- vim.keymap.set("n",		"<leader>.",		vim.lsp.buf.code_action, opts)
+-- vim.keymap.set("n",		"<leader>r",		vim.lsp.buf.rename, opts)
 
