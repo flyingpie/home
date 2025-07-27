@@ -2,7 +2,6 @@ bandwhich
 blender-launcher-v2-bin
 bruno-bin
 btop
-code
 docker
 docker-compose
 dos2unix
@@ -40,6 +39,7 @@ tailscale
 tcpdump
 unzip
 vesktop-bin
+visual-studio-code-bin
 wakeonlan
 wezterm
 wireshark-qt
@@ -47,5 +47,6 @@ wl-clipboard				# Wayland clipboard support in terminals
 wtq-bin
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
+yazi
 yt-dlp
 zellij
