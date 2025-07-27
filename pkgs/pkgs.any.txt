@@ -2,6 +2,7 @@ bandwhich
 blender-launcher-v2-bin
 bruno-bin
 btop
+code
 docker
 docker-compose
 dos2unix
@@ -12,13 +13,13 @@ flatpak
 htop
 hugo
 keepassxc
-klogg-bin
+klogg-bin-git
 kora-icon-theme
 krdc
 krita
 kubectl
 meson
-moonlight-qt
+moonlight-qt-bin
 ncdu						# Disk usage analyzer
 neovim
 nmap
@@ -33,14 +34,12 @@ quickemu-git
 ripgrep
 rofi-wayland
 rsync
-rustup
 solaar						# Logitech device manager
 strace
 tailscale
 tcpdump
 unzip
 vesktop-bin
-visual-studio-code-bin
 wakeonlan
 wezterm
 wireshark-qt
@@ -48,6 +47,5 @@ wl-clipboard				# Wayland clipboard support in terminals
 wtq-bin
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
-yaak-bin
 yt-dlp
 zellij
