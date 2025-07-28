@@ -62,6 +62,9 @@ if $RUN_ALL || [ "$1" = "pkgs" ]; then
 	echo "# Installing packages"
 	echo "#########################################"
 
+	# Update database
+	yay -Syy
+
 	HOSTNAME=$(hostname)
 	COMMON_FILE="../pkgs/pkgs.any.txt"
 	HOST_FILE="../pkgs/pkgs.${HOSTNAME}.txt"
@@ -132,6 +135,7 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 9.0
 
 	dotnet tool install --global --allow-roll-forward dotnet-suggest
+	dotnet tool install --global easydotnet
 fi
 
 # Update Neovim plugins
