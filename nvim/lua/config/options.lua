@@ -3,6 +3,7 @@
 local o = vim.opt
 
 vim.g.autoformat = false
+vim.g.snacks_animate = false
 
 o.clipboard = "unnamedplus"
 o.conceallevel = 0
@@ -36,4 +37,3 @@ o.wrap = false
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
-
