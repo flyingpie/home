@@ -50,6 +50,7 @@ alias c="clear"
 alias cat="bat --tabs 2"
 alias clip="wl-copy"
 alias lg="lazygit"
+alias n="cd ~/syncthing/main/notes"
 alias path="echo $PATH"
 alias py="python3"
 alias python="python3"
@@ -108,7 +109,7 @@ alias wss="cd ~/workspace/sandbox"
 
 # Locations - Projects
 alias d2="cd ~/workspace/isres/dtrv2_1"
-alias wtq="cd ~/workspace/flyingpie/wtq/wtq_1"
+alias wsfq="cd ~/workspace/flyingpie/wtq/wtq_1"
 
 # Docker
 alias dl='docker logs --tail 100 -f'
