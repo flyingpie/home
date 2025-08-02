@@ -14,6 +14,11 @@ kset("n",	"c", 					'"_c')									-- Copy, normal mode
 kset("v",	"d", 					'"_d')									-- Delete, visual mode
 kset("v",	"c", 					'"_c')									-- Copy, visual mode
 
+kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
+kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
+kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
+kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
+
 -- Window split
 kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
 kset("n", 	"<leader>-",			function() vim.cmd("split") end)		-- Split horizontal
