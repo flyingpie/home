@@ -78,6 +78,7 @@ rm -rf ~/.config/nvim
 ln -srf $H/nvim ~/.config/nvim
 mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
+ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
 
 # PowerShell
 rm -rf ~/.config/powershell
