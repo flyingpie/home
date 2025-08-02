@@ -109,7 +109,7 @@ alias wss="cd ~/workspace/sandbox"
 
 # Locations - Projects
 alias d2="cd ~/workspace/isres/dtrv2_1"
-alias wsfq="cd ~/workspace/flyingpie/wtq/wtq_1"
+alias q="cd ~/workspace/flyingpie/wtq/wtq_1"
 
 # Docker
 alias dl='docker logs --tail 100 -f'
@@ -153,6 +153,8 @@ alias gitcm='git commit -m'
 
 alias k='kubectl --kubeconfig ~/.kube/local'
 alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
+
+alias tf="terraform"
 
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
