@@ -47,5 +47,6 @@ map \b <Action>(ToggleLineBreakpoint)
 nmap oo o<Esc>k
 nmap OO O<Esc>j
 
-
 set guicursor+=n-v-c:blinkon0
+
+"set clipboard+=unnamed
