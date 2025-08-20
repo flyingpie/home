@@ -14,7 +14,8 @@
   <option name="CONSOLE_FONT_SIZE" value="11" />
   <colors>
     <option name="CONSOLE_BACKGROUND_KEY" value="000000" />
-    <option name="WHITESPACES" value="202020" />
+    <option name="TABS" value="2F3441" />
+    <option name="WHITESPACES" value="8598C0" />
   </colors>
   <attributes>
     <option name="CONSOLE_WHITE_OUTPUT">
@@ -26,6 +27,13 @@
       <value>
         <option name="FOREGROUND" value="dcdcdc" />
         <option name="BACKGROUND" value="0" />
+      </value>
+    </option>
+    <option name="TODO_DEFAULT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="4b5e88" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="ERROR_STRIPE_COLOR" value="a72b2" />
       </value>
     </option>
   </attributes>
