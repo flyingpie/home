@@ -1,5 +1,4 @@
 AngularJS
-Docker
 JSIntentionPowerPack
 JavaScriptDebugger
 Karma
@@ -12,7 +11,6 @@ XPathView
 com.deadlock.scsyntax
 com.dmarcotte.handlebars
 com.intellij.completion.ml.ranking
-com.intellij.csharpier
 com.intellij.diagram
 com.intellij.grpc
 com.intellij.ja
@@ -50,7 +48,6 @@ com.jetbrains.rider-cpp
 com.jetbrains.rider.diagram
 com.jetbrains.rider.fsharp
 com.jetbrains.rider.publish.webDeploy
-com.jetbrains.sh
 hg4idea
 idea.plugin.protoeditor
 intellij.nextjs

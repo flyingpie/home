@@ -17,10 +17,6 @@
           "isShowStripeButton": false
         },
         {
-          "id": "Pull Requests",
-          "isShowStripeButton": false
-        },
-        {
           "id": "Settings Sync History",
           "isShowStripeButton": false
         },
@@ -32,7 +28,6 @@
           "id": "Structure",
           "order": 0,
           "isActiveOnStart": true,
-          "isVisible": true,
           "weight": 0.13450521,
           "sideWeight": 0.123733714,
           "isSplit": true
@@ -42,7 +37,7 @@
           "order": 1,
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.13450521,
+          "weight": 0.07832031,
           "sideWeight": 0.8762065
         },
         {
@@ -54,14 +49,14 @@
           "id": "NuGet",
           "order": 3,
           "floatingBounds": [
-            4164,
-            546,
-            1315,
-            1036
+            3200,
+            540,
+            1279,
+            1047
           ],
           "type": "WINDOWED",
           "isActiveOnStart": true,
-          "weight": 0.32890624,
+          "weight": 0.13085938,
           "sideWeight": 0.5002413
         },
         {
@@ -131,7 +126,7 @@
           "id": "Problems View",
           "order": 2,
           "anchor": "BOTTOM",
-          "weight": 0.24856871
+          "weight": 0.3849715
         },
         {
           "id": "Terminal",
@@ -143,27 +138,26 @@
           "id": "Build",
           "order": 4,
           "anchor": "BOTTOM",
-          "weight": 0.27326128
+          "weight": 0.16047932
         },
         {
           "id": "Debug",
           "order": 5,
           "anchor": "BOTTOM",
-          "isVisible": true,
-          "weight": 0.27326128
+          "isActiveOnStart": true,
+          "weight": 0.192271
         },
         {
           "id": "Run",
           "order": 6,
           "anchor": "BOTTOM",
-          "isVisible": true,
-          "weight": 0.27326128
+          "weight": 0.12100564
         },
         {
           "id": "Services",
           "order": 7,
           "anchor": "BOTTOM",
-          "weight": 0.27326128
+          "weight": 0.17913106
         },
         {
           "id": "Find",
@@ -204,7 +198,7 @@
           "anchor": "RIGHT",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.12200521
+          "weight": 0.12089844
         },
         {
           "id": "Notifications",
@@ -217,7 +211,7 @@
           "id": "Commit",
           "order": 2,
           "anchor": "RIGHT",
-          "weight": 0.13691406
+          "weight": 0.12747395
         },
         {
           "id": "AIAssistant",
@@ -262,13 +256,19 @@
           "order": 9,
           "anchor": "RIGHT",
           "weight": 0.22213542
+        },
+        {
+          "id": "Pull Requests",
+          "order": 10,
+          "anchor": "RIGHT",
+          "weight": 0.23359375
         }
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.13450521,
-        "bottom": 0.27326128,
-        "right": 0.12200521
+        "left": 0.07832031,
+        "bottom": 0.192271,
+        "right": 0.12089844
       }
     }
   }
