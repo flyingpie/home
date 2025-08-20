@@ -12,6 +12,11 @@ set scrolloff=5
 set ignorecase
 set smartcase
 
+set timeout
+set timeoutlen=300
+set ttimeout
+set ttimeoutlen=50
+
 " Do incremental searching.
 set incsearch
 
@@ -37,7 +42,10 @@ Plug 'tpope/vim-commentary'
 "map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
+map \b <Action>(ToggleLineBreakpoint)
 
 nmap oo o<Esc>k
 nmap OO O<Esc>j
+
+
+set guicursor+=n-v-c:blinkon0
