@@ -23,6 +23,7 @@ return {
 			"scss",
 			"sql",
 			"svelte",
+			"terraform",
 			"typescript",
 			"vim",
 			"vue",

@@ -8,6 +8,7 @@ return {
 	opts = {
 		ensure_installed = {
 			"csharpier",
+			"helm-ls",
 			"html-lsp",
 			"json-lsp",
 			"lua-language-server",
@@ -17,7 +18,10 @@ return {
 			"rzls",
 			"shfmt",
 			"stylua",
+			"terraform-ls",
+			"tflint",
 			"xmlformatter",
+			-- "yaml-language-server",
 		},
 		registries = {
 			"github:mason-org/mason-registry",
