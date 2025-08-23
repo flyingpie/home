@@ -16,6 +16,7 @@ scoop bucket add versions
 # Apps
 scoop install main/7zip
 scoop install main/docker
+scoop install main/dotnet-sdk
 scoop install main/eza
 scoop install main/fd
 scoop install main/fzf
@@ -41,6 +42,7 @@ scoop install extras/lazygit
 scoop install extras/notepadplusplus
 scoop install extras/q-dir
 scoop install extras/sharex
+scoop install extras/vcredist
 scoop install extras/wezterm
 scoop install extras/windows-terminal
 scoop install extras/winspy
@@ -50,7 +52,7 @@ scoop install nerd-fonts/CascadiaMono-NF
 scoop install sysinternals/process-explorer
 
 scoop install versions/dotnet-sdk-lts
-scoop install versions/systeminformer-nightly
+scoop install versions/systeminformer
 
 # Extras
 if ($Full) {
