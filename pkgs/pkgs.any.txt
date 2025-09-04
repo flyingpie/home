@@ -1,8 +1,8 @@
 bandwhich
-blender-launcher-v2-bin
 bruno-bin
 btop
 docker
+docker-buildx
 docker-compose
 dos2unix
 dotnet-host
@@ -44,7 +44,6 @@ wakeonlan
 wezterm
 wireshark-qt
 wl-clipboard				# Wayland clipboard support in terminals
-wtq-bin
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
 yazi

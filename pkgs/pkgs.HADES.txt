@@ -1,3 +1,4 @@
+blender-launcher-v2-bin
 coolercontrol
 heroic-games-launcher-bin
 it87-dkms-git
