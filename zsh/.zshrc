@@ -108,10 +108,12 @@ alias wsi="cd ~/workspace/isres"
 alias wss="cd ~/workspace/sandbox"
 
 # Locations - Projects
+alias d1="cd ~/workspace/isres/dtrv1_1"
 alias d2="cd ~/workspace/isres/dtrv2_1"
 alias q="cd ~/workspace/flyingpie/wtq/wtq_1"
 
 # Docker
+alias d='docker'
 alias dl='docker logs --tail 100 -f'
 alias ds='docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"'
 alias dsp='docker system prune -f'
@@ -151,8 +153,10 @@ alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD
 alias gitws='git commit -m "Workspace"'
 alias gitcm='git commit -m'
 
-alias k='kubectl --kubeconfig ~/.kube/local'
+#alias k='kubectl --kubeconfig ~/.kube/local'
+alias k='kubectl'
 alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
+alias kns='kubectl config set-context --current --namespace'
 
 alias tf="terraform"
 

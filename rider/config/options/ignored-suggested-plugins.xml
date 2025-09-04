@@ -7,6 +7,7 @@
         <option value="me.seclerp.rider.plugins.efcore" />
         <option value="intellij.webpack" />
         <option value="fr.socolin.awesomeLogViewer" />
+        <option value="com.jetbrains.opentelemetry" />
       </list>
     </option>
   </component>
