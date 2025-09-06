@@ -92,5 +92,12 @@
 			"name": "",
 			"isDebug": false
 		}
-	]
+	],
+	"explorer.confirmDelete": false,
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"githubPullRequests.codingAgent.enabled": false,
+	"githubPullRequests.experimental.chat": false,
+	"workbench.secondarySideBar.defaultVisibility": "hidden"
 }
