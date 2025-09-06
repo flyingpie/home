@@ -119,9 +119,9 @@ alias ds='docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t
 alias dsp='docker system prune -f'
 alias dx='docker exec -it'
 
+alias dex='docker exec -it'
 alias dps='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.ID}}" | grep -v ^NAMES | sort'
 alias dpss='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.Image}}\t{{.ID}}" | grep -v ^NAMES | sort'
-alias dex='docker exec -it'
 
 alias dni='docker node inspect'
 alias dnls='docker node ls'
@@ -202,42 +202,3 @@ source ~/.home/zsh/.p10k.zsh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-
-_dotnet_zsh_complete()
-{
-	# Get full path to script because dotnet-suggest needs it
-	# NOTE: this requires a command registered with dotnet-suggest be on the PATH
-	full_path=`which ${words[1]}` # zsh arrays are 1-indexed
-
-	# Get the full line
-	# $words array when quoted like this gets expanded out into the full line
-	full_line="$words"
-
-	# Get the completion results, will be newline-delimited
-	completions=$(dotnet-suggest get --executable "$full_path" -- "$full_line")
-	# explode the completions by linefeed instead of by spaces into the descriptions for the
-	# _values helper function.
-	
-	exploded=(${(f)completions})
-	# for later - once we have descriptions from dotnet suggest, we can stitch them
-	# together like so:
-	# described=()
-	# for i in {1..$#exploded}; do
-	#     argument="${exploded[$i]}"
-	#     description="hello description $i"
-	#     entry=($argument"["$description"]")
-	#     described+=("$entry")
-	# done
-	_values 'suggestions' $exploded
-}
-
-# If "dotnet-suggest" is installed, activate it.
-if command -v dotnet-suggest &> /dev/null
-then
-	compdef _dotnet_zsh_complete $(dotnet-suggest list)
-fi
-
-export DOTNET_SUGGEST_SCRIPT_VERSION="1.0.0"
-
-# JBang
-export PATH="$HOME/.jbang/bin:$PATH"

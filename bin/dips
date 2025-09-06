@@ -1,4 +1,0 @@
-#!/bin/bash
-
-docker inspect -f '{{.Id}} {{.Name}} {{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -q) | column -t -s ' '
-
