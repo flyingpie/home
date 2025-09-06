@@ -1,6 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
-
 local kset = vim.keymap.set
 local tscope = require("telescope.builtin")
 
@@ -48,5 +45,3 @@ kset("n",	"<leader>fs",			function() tscope.lsp_workspace_symbols() end)
 kset("n",	"<leader>.",			vim.lsp.buf.code_action)
 kset("n",	"<F12>",				vim.lsp.buf.definition)
 kset("n",	"<leader>r",			vim.lsp.buf.rename)
-
--- kset('n',	'<Tab>',	':EagleWin<CR>')

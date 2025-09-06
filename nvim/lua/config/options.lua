@@ -1,5 +1,3 @@
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
-
 local o = vim.opt
 
 vim.g.autoformat = false
@@ -25,7 +23,7 @@ o.signcolumn = "yes"
 o.smartcase = true
 o.smartindent = false
 o.spell = false
--- o.spelllang = { "en", "nl" }
+o.spelllang = { "en", "nl" }
 o.splitbelow = true
 o.splitright = true
 o.statuscolumn = "%s %l  %r "
