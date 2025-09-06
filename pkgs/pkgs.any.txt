@@ -1,14 +1,18 @@
 bandwhich
+bat							# Like cat, but nicer
 bruno-bin
-btop
+btop						# Like top, but nicer
 docker
 docker-buildx
 docker-compose
 dos2unix
 dotnet-host
 duf							# du -f but prettier
+eza							# Like ls, but nicer
 firefox
 flatpak
+fzf
+git-delta
 htop
 hugo
 keepassxc
@@ -17,6 +21,8 @@ kora-icon-theme
 krdc
 krita
 kubectl
+lazygit
+luarocks
 meson
 moonlight-qt-bin
 ncdu						# Disk usage analyzer
@@ -46,6 +52,6 @@ wireshark-qt
 wl-clipboard				# Wayland clipboard support in terminals
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
-yazi
+yazi						# TUI file browser
 yt-dlp
 zellij

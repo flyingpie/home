@@ -52,7 +52,7 @@ rm -rf ~/.local/share/plasma/desktoptheme
 ln -srf $H/kde/desktoptheme ~/.local/share/plasma/desktoptheme
 
 # KDE Plasma - Global Shortcuts
-ln -srf $H/kde/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
+# ln -srf $H/kde/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
 
 # KDE Plasma - Wallpaper Plugins
 rm -rf ~/.local/share/plasma/wallpapers
@@ -134,5 +134,3 @@ ln -srf $H/zellij/config.kdl ~/.config/zellij/config.kdl
 
 # Zsh
 ln -srf $H/zsh/.zshrc ~/.zshrc
-
-#fc-cache -fv

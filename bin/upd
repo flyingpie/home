@@ -4,10 +4,10 @@
 set -e
 
 # Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Push into that directory
-pushd "$SCRIPT_DIR" > /dev/null
+pushd "$SCRIPT_DIR" >/dev/null
 
 # If no argument is provided, run all tasks
 RUN_ALL=false
@@ -23,7 +23,8 @@ if [ "$1" = "--help" ]; then
 	echo "yay"
 fi
 
-# Install Yay
+# Yay
+#
 if $RUN_ALL || [ "$1" = "yay" ]; then
 	echo "#########################################"
 	echo "# Installing Yay"
@@ -56,7 +57,9 @@ if $RUN_ALL || [ "$1" = "yay" ]; then
 	fi
 fi
 
-# Install Packages
+#
+# Yay Packages
+#
 if $RUN_ALL || [ "$1" = "pkgs" ]; then
 	echo "#########################################"
 	echo "# Installing packages"
@@ -106,7 +109,9 @@ if $RUN_ALL || [ "$1" = "pkgs" ]; then
 	fi
 fi
 
-# Install .Net
+#
+# DotNet
+#
 if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	echo "#########################################"
 	echo "# Install .Net"
@@ -134,11 +139,24 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 8.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 9.0
 
+	dotnet tool install --global csharpier
 	dotnet tool install --global --allow-roll-forward dotnet-suggest
 	dotnet tool install --global easydotnet
 fi
 
-# Update Neovim plugins
+#
+# Flatpak
+#
+if $RUN_ALL || [ "$1" = "flatpak" ]; then
+	echo "#########################################"
+	echo "Updating Flatpak packages"
+	echo "#########################################"
+	flatpak update -y
+fi
+
+#
+# Neovim
+#
 if $RUN_ALL || [ "$1" = "nvim" ]; then
 	echo "#########################################"
 	echo "Updating Neovim plugins"
@@ -147,4 +165,4 @@ if $RUN_ALL || [ "$1" = "nvim" ]; then
 fi
 
 # Pop back to the original directory
-popd > /dev/null
+popd >/dev/null
