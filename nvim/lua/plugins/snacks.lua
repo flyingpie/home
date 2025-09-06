@@ -23,7 +23,6 @@ return {
 						preset = "sidebar",
 						layout = {
 							box = "vertical",
-							-- position = "right",
 							position = "left",
 							width = 0.2,
 							{ win = "input",   height = 1,          border = "bottom" },

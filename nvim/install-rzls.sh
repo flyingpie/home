@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if ! command -v unzip &> /dev/null
-then
-    echo "unzip is required. Please install it"
-    exit 1
+if ! command -v unzip &>/dev/null; then
+	echo "unzip is required. Please install it"
+	exit 1
 fi
 
 rid="linux-x64"
@@ -14,7 +13,7 @@ latestVersion=$(curl -s https://api.github.com/repos/Crashdummyy/rzls/releases |
 
 echo "Latest version: $latestVersion"
 
-asset=$(curl -s https://api.github.com/repos/Crashdummyy/rzls/releases | grep "releases/download/$latestVersion" | grep "$rid"| cut -d '"' -f 4)
+asset=$(curl -s https://api.github.com/repos/Crashdummyy/rzls/releases | grep "releases/download/$latestVersion" | grep "$rid" | cut -d '"' -f 4)
 
 echo "Downloading: $asset"
 
