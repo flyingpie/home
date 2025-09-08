@@ -37,7 +37,7 @@ qpwgraph					# Pipewire graph
 qt6-imageformats			# More image formats in Qt apps, like previews in file explorers
 quickemu-git
 ripgrep
-rofi-wayland
+rofi
 rsync
 solaar						# Logitech device manager
 strace
