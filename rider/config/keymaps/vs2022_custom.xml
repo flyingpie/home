@@ -18,8 +18,6 @@
   <action id="GotoSymbol">
     <keyboard-shortcut first-keystroke="ctrl t" />
   </action>
-  <action id="Graph.AlignNodes.Left" />
-  <action id="Graph.DistributeNodes.Horizontally" />
   <action id="ParameterInfo.GoToPreviousSignature" />
   <action id="Pause">
     <keyboard-shortcut first-keystroke="ctrl alt cancel" />
