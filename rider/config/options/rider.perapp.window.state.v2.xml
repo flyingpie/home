@@ -37,8 +37,9 @@
         {
           "id": "Unit Tests",
           "order": 1,
+          "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.16445312,
+          "weight": 0.11497396,
           "sideWeight": 0.50024295
         },
         {
@@ -49,7 +50,15 @@
         {
           "id": "NuGet",
           "order": 3,
-          "weight": 0.1360677
+          "floatingBounds": [
+            3389,
+            222,
+            1698,
+            1171
+          ],
+          "type": "FLOATING",
+          "isActiveOnStart": true,
+          "weight": 0.18971354
         },
         {
           "id": "Tests",
@@ -190,7 +199,7 @@
           "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.08841146
+          "weight": 0.107421875
         },
         {
           "id": "Notifications",
@@ -252,9 +261,9 @@
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.16445312,
+        "left": 0.11497396,
         "bottom": 0.108787596,
-        "right": 0.08841146
+        "right": 0.107421875
       }
     }
   }
