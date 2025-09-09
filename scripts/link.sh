@@ -28,12 +28,15 @@ ln -srf $H/ghostty ~/.config/ghostty
 
 # JetBrains - DataGrip
 mkdir -p ~/.config/JetBrains/DataGrip2025.1
-ln -srf $H/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
+ln -srf $H/jetbrains/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
+
+# JetBrains - IDEA
+mkdir -p ~/.config/JetBrains/IntelliJIdea2025.2
+ln -srf $H/jetbrains/idea/idea.properties ~/.config/JetBrains/IntelliJIdea2025.2/idea.properties
 
 # JetBrains - Rider
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2024.2/idea.properties
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2024.3/idea.properties
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.1/idea.properties
+mkdir -p ~/.config/JetBrains/Rider2025.2
+ln -srf $H/jetbrains/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
 
 # Kando
 mkdir -p ~/.config/kando

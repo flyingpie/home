@@ -1,0 +1,40 @@
+<scheme name="_@user_Visual Studio Dark" version="142" parent_scheme="Darcula">
+  <option name="FONT_SCALE" value="1.0" />
+  <metaInfo>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2024.1.2.0.0</property>
+    <property name="originalScheme">Visual Studio Dark</property>
+    <property name="partialSave">true</property>
+    <property name="pluginId">Rider UI Theme Pack</property>
+  </metaInfo>
+  <option name="LINE_SPACING" value="1.2" />
+  <option name="EDITOR_FONT_SIZE" value="13" />
+  <option name="EDITOR_FONT_NAME" value="CaskaydiaMono Nerd Font" />
+  <option name="CONSOLE_FONT_NAME" value="CaskaydiaMono Nerd Font" />
+  <option name="CONSOLE_FONT_SIZE" value="11" />
+  <colors>
+    <option name="CONSOLE_BACKGROUND_KEY" value="000000" />
+    <option name="TABS" value="2F3441" />
+    <option name="WHITESPACES" value="8598C0" />
+  </colors>
+  <attributes>
+    <option name="CONSOLE_WHITE_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="ffffff" />
+      </value>
+    </option>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="dcdcdc" />
+        <option name="BACKGROUND" value="0" />
+      </value>
+    </option>
+    <option name="TODO_DEFAULT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="4b5e88" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="ERROR_STRIPE_COLOR" value="a72b2" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
