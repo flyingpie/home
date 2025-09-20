@@ -2,7 +2,7 @@ return {
 
 	-- disabled
 	{ "MeanderingProgrammer/render-markdown.nvim", enabled = false },
-	{ "echasnovski/mini.pairs", enabled = false },
+	{ "nvim-mini/mini.pairs", enabled = false },
 
 	-- lspconfig
 	{
@@ -35,7 +35,7 @@ return {
 	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
-		tag = "v0.10.0",
+		branch = "main",
 		opts = {
 			ensure_installed = {
 				"bash",
