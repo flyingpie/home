@@ -1,4 +1,3 @@
-
 $ErrorActionPreference = "Stop"
 
 Write-Host "Pulling submodules" -f cyan
