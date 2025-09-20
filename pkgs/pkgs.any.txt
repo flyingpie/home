@@ -39,10 +39,12 @@ quickemu-git
 ripgrep
 rofi
 rsync
+simdjson
 solaar						# Logitech device manager
 strace
 tailscale
 tcpdump
+tree-sitter-cli
 unzip
 vesktop-bin
 visual-studio-code-bin
