@@ -50,6 +50,7 @@ alias c="clear"
 alias cat="bat --tabs 2"
 alias clip="wl-copy"
 alias lg="lazygit"
+alias n="cd ~/syncthing/main/notes"
 alias path="echo $PATH"
 alias py="python3"
 alias python="python3"
@@ -107,18 +108,20 @@ alias wsi="cd ~/workspace/isres"
 alias wss="cd ~/workspace/sandbox"
 
 # Locations - Projects
+alias d1="cd ~/workspace/isres/dtrv1_1"
 alias d2="cd ~/workspace/isres/dtrv2_1"
-alias wtq="cd ~/workspace/flyingpie/wtq/wtq_1"
+alias q="cd ~/workspace/flyingpie/wtq/wtq_1"
 
 # Docker
+alias d='docker'
 alias dl='docker logs --tail 100 -f'
 alias ds='docker stats --format "table {{.Name}}\t{{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}"'
 alias dsp='docker system prune -f'
 alias dx='docker exec -it'
 
+alias dex='docker exec -it'
 alias dps='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.ID}}" | grep -v ^NAMES | sort'
 alias dpss='docker ps --all --format "table {{.Names}}\t{{.Status}}\t{{.Image}}\t{{.ID}}" | grep -v ^NAMES | sort'
-alias dex='docker exec -it'
 
 alias dni='docker node inspect'
 alias dnls='docker node ls'
@@ -150,8 +153,12 @@ alias gitup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD
 alias gitws='git commit -m "Workspace"'
 alias gitcm='git commit -m'
 
-alias k='kubectl --kubeconfig ~/.kube/local'
+#alias k='kubectl --kubeconfig ~/.kube/local'
+alias k='kubectl'
 alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
+alias kns='kubectl config set-context --current --namespace'
+
+alias tf="terraform"
 
 # Zsh
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
@@ -195,42 +202,3 @@ source ~/.home/zsh/.p10k.zsh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
-
-_dotnet_zsh_complete()
-{
-	# Get full path to script because dotnet-suggest needs it
-	# NOTE: this requires a command registered with dotnet-suggest be on the PATH
-	full_path=`which ${words[1]}` # zsh arrays are 1-indexed
-
-	# Get the full line
-	# $words array when quoted like this gets expanded out into the full line
-	full_line="$words"
-
-	# Get the completion results, will be newline-delimited
-	completions=$(dotnet-suggest get --executable "$full_path" -- "$full_line")
-	# explode the completions by linefeed instead of by spaces into the descriptions for the
-	# _values helper function.
-	
-	exploded=(${(f)completions})
-	# for later - once we have descriptions from dotnet suggest, we can stitch them
-	# together like so:
-	# described=()
-	# for i in {1..$#exploded}; do
-	#     argument="${exploded[$i]}"
-	#     description="hello description $i"
-	#     entry=($argument"["$description"]")
-	#     described+=("$entry")
-	# done
-	_values 'suggestions' $exploded
-}
-
-# If "dotnet-suggest" is installed, activate it.
-if command -v dotnet-suggest &> /dev/null
-then
-	compdef _dotnet_zsh_complete $(dotnet-suggest list)
-fi
-
-export DOTNET_SUGGEST_SCRIPT_VERSION="1.0.0"
-
-# JBang
-export PATH="$HOME/.jbang/bin:$PATH"

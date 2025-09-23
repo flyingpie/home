@@ -7,13 +7,40 @@
         "Settings": [],
         "Enable": true
       },
-      "Filters": [],
+      "Filters": [
+        {
+          "Path": "OTD.EnhancedOutputMode.Lib.Tools.TouchSettings",
+          "Settings": [
+            {
+              "Property": "IsTouchToggled",
+              "Value": true
+            },
+            {
+              "Property": "DisableWhenPenInRange",
+              "Value": false
+            },
+            {
+              "Property": "PenResetTime",
+              "Value": 100
+            },
+            {
+              "Property": "MaxX",
+              "Value": 4095
+            },
+            {
+              "Property": "MaxY",
+              "Value": 4095
+            }
+          ],
+          "Enable": false
+        }
+      ],
       "AbsoluteModeSettings": {
         "Display": {
-          "Width": 2560.0,
-          "Height": 1440.0,
-          "X": 3200.0,
-          "Y": 960.0,
+          "Width": 3840.0,
+          "Height": 2160.0,
+          "X": 4480.0,
+          "Y": 1080.0,
           "Rotation": 0.0
         },
         "Tablet": {
@@ -72,26 +99,8 @@
         "AuxButtons": [
           null,
           null,
-          {
-            "Path": "OTD.PresetBinds.Binding.PresetBinding",
-            "Settings": [
-              {
-                "Property": "Selected",
-                "Value": "artist"
-              }
-            ],
-            "Enable": true
-          },
-          {
-            "Path": "OTD.PresetBinds.Binding.PresetBinding",
-            "Settings": [
-              {
-                "Property": "Selected",
-                "Value": "absolute"
-              }
-            ],
-            "Enable": true
-          }
+          null,
+          null
         ],
         "MouseButtons": [],
         "MouseScrollUp": null,

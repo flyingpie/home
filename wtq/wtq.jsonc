@@ -1,14 +1,19 @@
 {
 	"$schema": "wtq.schema.json",
-
 	"Apps": [
 		{
 			"Name": "WezTerm",
-			"Hotkeys": [{ "Modifiers": "Control","KeyChar": "1" }],
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "1"
+				}
+			],
 			"FileName": "wezterm-gui",
 			"HideOnFocusLost": "Never",
-			"Opacity": 90,
-			"OffScreenLocations": ["Above"]
+			"OffScreenLocations": [
+				"Above"
+			]
 		},
 		{
 			"Name": "Dolphin",
@@ -20,7 +25,7 @@
 			],
 			"FileName": "dolphin",
 			"HideOnFocusLost": "Never",
-			"Opacity": 90,
+			"Opacity": 95,
 			"HorizontalScreenCoverage": 80,
 			"OffScreenLocations": [
 				"Above"
@@ -35,6 +40,7 @@
 				}
 			],
 			"FileName": "net.nokyan.Resources",
+			"AttachMode": "Find",
 			"Opacity": 90,
 			"OffScreenLocations": [
 				"Below"
@@ -77,24 +83,11 @@
 					"KeyChar": "6"
 				}
 			],
-			"FileName": "dev.vencord.Vesktop",
+			"FileName": "vesktop",
 			"AlwaysOnTop": true,
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 70,
 			"HorizontalAlign": "Right",
-			"OffScreenLocations": [
-				"Below"
-			]
-		},
-		{
-			"Name": "Yaak",
-			"Hotkeys": [
-				{
-					"Modifiers": "Control",
-					"KeyChar": "~"
-				}
-			],
-			"FileName": "yaak-app",
 			"OffScreenLocations": [
 				"Below"
 			]
@@ -108,6 +101,7 @@
 				}
 			],
 			"FileName": "krita",
+			"AttachMode": "Find",
 			"HideOnFocusLost": "Never"
 		},
 		{
@@ -119,10 +113,26 @@
 				}
 			],
 			"FileName": "me.iepure.devtoolbox",
+			"AttachMode": "Find",
 			"HorizontalScreenCoverage": 70,
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
 				"Right"
+			]
+		},
+		{
+			"Name": "Lens",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "9"
+				}
+			],
+			"FileName": "lens-desktop",
+			"ProcessName": "^Lens$",
+			"AttachMode": "Find",
+			"OffScreenLocations": [
+				"Below"
 			]
 		}
 	],

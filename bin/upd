@@ -1,0 +1,168 @@
+#!/bin/bash
+
+# Stop on error
+set -e
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Push into that directory
+pushd "$SCRIPT_DIR" >/dev/null
+
+# If no argument is provided, run all tasks
+RUN_ALL=false
+if [ $# -eq 0 ]; then
+	RUN_ALL=true
+fi
+
+# Help
+if [ "$1" = "--help" ]; then
+	echo "dotnet"
+	echo "nvim"
+	echo "pkgs"
+	echo "yay"
+fi
+
+# Yay
+#
+if $RUN_ALL || [ "$1" = "yay" ]; then
+	echo "#########################################"
+	echo "# Installing Yay"
+	echo "#########################################"
+
+	# Check if yay is installed
+	if command -v yay &>/dev/null; then
+		echo "yay is already installed."
+	else
+		echo "yay not found. Installing yay..."
+
+		# Temporary working directory
+		TEMP_DIR=$(mktemp -d)
+
+		# Cleanup on exit
+		cleanup() {
+			echo "Cleaning up..."
+			rm -rf "$TEMP_DIR"
+		}
+		trap cleanup EXIT
+
+		# Clone yay from AUR
+		git clone https://aur.archlinux.org/yay.git "$TEMP_DIR/yay"
+
+		# Build and install
+		cd "$TEMP_DIR/yay"
+		makepkg -si --noconfirm
+
+		echo "yay installed successfully."
+	fi
+fi
+
+#
+# Yay Packages
+#
+if $RUN_ALL || [ "$1" = "pkgs" ]; then
+	echo "#########################################"
+	echo "# Installing packages"
+	echo "#########################################"
+
+	# Update database
+	yay -Syy
+
+	HOSTNAME=$(hostname)
+	COMMON_FILE="../pkgs/pkgs.any.txt"
+	HOST_FILE="../pkgs/pkgs.${HOSTNAME}.txt"
+
+	function install_from_file() {
+		local file="$1"
+
+		if [[ ! -f "$file" ]]; then
+			echo "Skipping missing file: $file"
+			return
+		fi
+
+		echo "Processing: $file"
+
+		local packages=()
+		while IFS= read -r line; do
+			# Strip comments and trim
+			clean_line=$(echo "$line" | sed 's/#.*//' | xargs)
+			[[ -z "$clean_line" ]] && continue
+			packages+=("$clean_line")
+		done <"$file"
+
+		if [[ ${#packages[@]} -gt 0 ]]; then
+			echo "Installing packages from $file: ${packages[*]}"
+			yay -S --needed --noconfirm "${packages[@]}"
+		else
+			echo "No packages to install in $file."
+		fi
+	}
+
+	# Install common packages
+	install_from_file "$COMMON_FILE"
+
+	# Install host-specific packages, if applicable
+	if [[ -f "$HOST_FILE" ]]; then
+		install_from_file "$HOST_FILE"
+	else
+		echo "No host-specific package file found for hostname '$HOSTNAME'."
+	fi
+fi
+
+#
+# DotNet
+#
+if $RUN_ALL || [ "$1" = "dotnet" ]; then
+	echo "#########################################"
+	echo "# Install .Net"
+	echo "#########################################"
+
+	# URL to download
+	URL="https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh"
+
+	# Extract the filename from the URL
+	FILENAME=$(basename "$URL")
+
+	# Check if the file already exists
+	if [ -f "$FILENAME" ]; then
+		echo "File '$FILENAME' already exists. Skipping download."
+	else
+		# Download dotnet-install.sh
+		wget -O $FILENAME $URL
+		chmod +x $FILENAME
+	fi
+
+	# Also part of pkgs.txt, but just to be sure
+	yay -S --needed --noconfirm dotnet-host
+
+	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 6.0
+	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 8.0
+	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 9.0
+
+	dotnet tool install --global csharpier
+	dotnet tool install --global --allow-roll-forward dotnet-suggest
+	dotnet tool install --global easydotnet
+fi
+
+#
+# Flatpak
+#
+if $RUN_ALL || [ "$1" = "flatpak" ]; then
+	echo "#########################################"
+	echo "Updating Flatpak packages"
+	echo "#########################################"
+	flatpak update -y
+fi
+
+#
+# Neovim
+#
+if $RUN_ALL || [ "$1" = "nvim" ]; then
+	echo "#########################################"
+	echo "Updating Neovim plugins"
+	echo "#########################################"
+	nvim --headless "+Lazy update" "+MasonUpdate" +qa
+fi
+
+# Pop back to the original directory
+popd >/dev/null

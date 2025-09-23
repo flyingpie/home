@@ -1,62 +1,47 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+local kset = vim.keymap.set
+local tscope = require("telescope.builtin")
 
-local opts = { noremap = true }
-local term_opts = { silent = true }
+kset("",	"<Space>",				"<Nop>")
 
-local keymap = vim.api.nvim_set_keymap
-
-
-keymap("", "<Space>", "<Nop>", opts)
-
--- Use 'jj' to exit INSERT mode
---keymap("i", "jj", "<ESC>", opts)
-
---keymap("n", "<leader>e", "Neotree<cr>", opts)	-- Open tree
-
-keymap("n", "<A-z>", ":set wrap!<CR>", opts)	-- Toggle line wrap
+kset("n",	"<A-z>",				":set wrap!<CR>")						-- Toggle line wrap
 
 -- Remap delete/change to black hole register
-keymap("n", "d", '"_d', { noremap = true })
-keymap("n", "c", '"_c', { noremap = true })
--- keymap("n", "x", '"_x', { noremap = true })
+kset("n",	"d",					'"_d')									-- Delete, normal mode
+kset("n",	"c", 					'"_c')									-- Copy, normal mode
+kset("v",	"d", 					'"_d')									-- Delete, visual mode
+kset("v",	"c", 					'"_c')									-- Copy, visual mode
 
-keymap("v", "d", '"_d', { noremap = true })
-keymap("v", "c", '"_c', { noremap = true })
--- keymap("v", "x", '"_x', { noremap = true })
+kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
+kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
+kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
+kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
 
 -- Window split
-keymap("n", "<C-->", "<C-w>s", opts)			-- Split horizontally
+kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
+kset("n", 	"<leader>-",			function() vim.cmd("split") end)		-- Split horizontal
+kset("n", 	"<leader>\\",			function() vim.cmd("vsplit") end)		-- Split vertical
+
 -- Window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)			-- Move left
-keymap("n", "<C-j>", "<C-w>j", opts)			-- Move down
-keymap("n", "<C-k>", "<C-w>k", opts)			-- Move up
-keymap("n", "<C-l>", "<C-w>l", opts)			-- Move right
+kset("n",	"<C-h>",				"<C-w>h")								-- Move left
+kset("n", 	"<C-j>", 				"<C-w>j")								-- Move down
+kset("n", 	"<C-k>", 				"<C-w>k")								-- Move up
+kset("n", 	"<C-l>", 				"<C-w>l")								-- Move right
 
 -- Window resize
-keymap("n",		"<C-Up>",		":resize -2<CR>",			opts)
-keymap("n",		"<C-Down>",		":resize +2<CR>",			opts)
-keymap("n",		"<C-Left>",		":vertical resize -2<CR>",	opts)
-keymap("n",		"<C-Right>",	":vertical resize +2<CR>",	opts)
+kset("n",	"<C-Up>",				":resize -4<CR>")
+kset("n",	"<C-Down>",				":resize +4<CR>")
+kset("n",	"<C-Left>",				":vertical resize -2<CR>")
+kset("n",	"<C-Right>",			":vertical resize +2<CR>")
 
---keymap("n",		"<leader>q",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
-keymap("n",		"<C-w>",	":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
+kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not window
 
 -- Fuzzy Finder
-local builtin = require("telescope.builtin")
---vim.keymap.set("n",		"<leader>ff",	builtin.find_files,		opts)
-vim.keymap.set("n",		"<leader>fg",	builtin.live_grep,		opts)
-vim.keymap.set("n",		"<leader>fc",	builtin.commands,		opts)
---vim.keymap.set("n",		"<leader>fs",	builtin.symbols,		opts)
+kset("n",	"<leader>fg",			function() tscope.live_grep() end)
+kset("n",	"<leader>fc",			function() tscope.commands() end)
+kset("n",	"<leader>ff",			function() tscope.find_files() end)
+kset("n",	"<leader>fs",			function() tscope.lsp_workspace_symbols() end)
 
-vim.keymap.set("n",		"<leader>ff",	Snacks.picker.files,		opts)
-vim.keymap.set("n",		"<leader>ft",	Snacks.picker.colorschemes,		opts)
-vim.keymap.set("n",		"<leader>fs",	Snacks.picker.lsp_workspace_symbols,		opts)
---keymap('n', '<leader>fb', builtin.buffers, {})
---keymap('n', '<leader>fh', builtin.help_tags, {})
-
-keymap('n',	'<Tab>',	':EagleWin<CR>',	opts)
-
-vim.keymap.set("n",		"<leader>.",		vim.lsp.buf.code_action, opts)
-vim.keymap.set("n",		"<leader>r",		vim.lsp.buf.rename, opts)
-
+-- LSP
+kset("n",	"<leader>.",			vim.lsp.buf.code_action)
+kset("n",	"<F12>",				vim.lsp.buf.definition)
+kset("n",	"<leader>r",			vim.lsp.buf.rename)

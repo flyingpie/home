@@ -2,11 +2,11 @@
   "menus": [
     {
       "shortcut": "Control+Space",
-      "shortcutID": "example-menu",
+      "shortcutID": "kando-1",
       "centered": false,
       "root": {
         "type": "submenu",
-        "name": "Main",
+        "name": "kando-1",
         "icon": "award_star",
         "iconTheme": "material-symbols-rounded",
         "children": [

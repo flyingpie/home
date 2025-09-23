@@ -1,0 +1,31 @@
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Settings
+set clipboard^=unnamedplus,unnamed
+set guicursor+=a:blinkon0
+set ignorecase
+set incsearch			" Do incremental searching.
+set number
+set relativenumber
+set scrolloff=5
+set smartcase
+set timeout
+set timeoutlen=300
+set ttimeout
+set ttimeoutlen=50
+
+" Key mappings
+map \b <Action>(ToggleLineBreakpoint)
+map Q gq				" Don't use Ex mode, use Q for formatting.
+
+" nmap oo o<Esc>k
+" nmap OO O<Esc>j
+
+" Keep visual mode after indent
+vnoremap > >gv
+vnoremap < <gv
+
+" Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
