@@ -12,8 +12,6 @@ if [ -f $CARGO_ENV ]; then
 	. $CARGO_ENV
 fi
 
-unset SSH_AUTH_SOCK
-
 # SSH Agent Socket for use by KeePassXC
 # Only set if not set already (e.g. by SSH forwarding)
 if [[ ${SSH_AUTH_SOCK:-"unset"} == "unset" ]]

@@ -30,10 +30,13 @@ ln -srf $H/ghostty ~/.config/ghostty
 mkdir -p ~/.config/JetBrains/DataGrip2025.1
 ln -srf $H/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
 
+# JetBrains - IDEA
+mkdir -p ~/.config/JetBrains/IntelliJIdea2025.2
+ln -srf $H/idea/idea.properties ~/.config/JetBrains/IntelliJIdea2025.2/idea.properties
+
 # JetBrains - Rider
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2024.2/idea.properties
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2024.3/idea.properties
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.1/idea.properties
+mkdir -p ~/.config/JetBrains/Rider2025.2
+ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
 
 # Kando
 mkdir -p ~/.config/kando
@@ -42,21 +45,6 @@ ln -srf $H/kando/menus.json		~/.config/kando/menus.json
 mkdir -p ~/.var/app/menu.kando.Kando/config/kando
 ln -srf $H/kando/config.json	~/.var/app/menu.kando.Kando/config/kando/config.json
 ln -srf $H/kando/menus.json		~/.var/app/menu.kando.Kando/config/kando/menus.json
-
-# KDE Plasma - Color Schemes
-rm -rf ~/.local/share/color-schemes
-ln -srf $H/kde/color-schemes ~/.local/share/color-schemes
-
-# KDE Plasma - Desktop Theme
-rm -rf ~/.local/share/plasma/desktoptheme
-ln -srf $H/kde/desktoptheme ~/.local/share/plasma/desktoptheme
-
-# KDE Plasma - Global Shortcuts
-ln -srf $H/kde/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
-
-# KDE Plasma - Wallpaper Plugins
-rm -rf ~/.local/share/plasma/wallpapers
-ln -srf $H/kde/wallpapers ~/.local/share/plasma/wallpapers
 
 # Krita
 ln -srf $H/krita/kritadisplayrc ~/.config
@@ -75,9 +63,11 @@ ln -srf $H/lazygit/config.yml ~/.config/lazygit/config.yml
 
 # NVim
 rm -rf ~/.config/nvim
-ln -srf $H/nvim ~/.config/nvim
-mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
-ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
+# ln -srf $H/nvim ~/.config/nvim
+ln -srf $H/nvim-v2 ~/.config/nvim
+# mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
+# ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
+ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
 
 # PowerShell
 rm -rf ~/.config/powershell
@@ -133,5 +123,3 @@ ln -srf $H/zellij/config.kdl ~/.config/zellij/config.kdl
 
 # Zsh
 ln -srf $H/zsh/.zshrc ~/.zshrc
-
-#fc-cache -fv

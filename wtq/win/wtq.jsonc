@@ -1,59 +1,83 @@
 {
 	"$schema": "wtq.schema.json",
-
 	"Apps": [
-		// WezTerm
 		{
-			"Name": "WezTerm",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D1" }],
-			"FileName": "wezterm-gui",
+			"Name": "WindowsTerminal",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"Key": "D1"
+				}
+			],
+			"FileName": "wt",
+			"ProcessName": "^WindowsTerminal$",
 			"HideOnFocusLost": "Never",
 			"Opacity": 99,
-			"OffScreenLocations": ["Above"]
+			"OffScreenLocations": [
+				"Above"
+			]
 		},
-
-		// ProcessHacker
 		{
 			"Name": "QDir",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D2" }],
-			"FileName": "Q-Dir_x64",
-			//"HideOnFocusLost": "Never",
-			"OffScreenLocations": ["Left"]
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"Key": "D2"
+				}
+			],
+			"FileName": "Q-Dir",
+			"ProcessName": "^Q-Dir_x64$",
+			"MainWindow": "MainWindowOnly",
+			"OffScreenLocations": [
+				"Left"
+			]
 		},
-
-		// ProcessHacker
 		{
-			"Name": "ProcessHacker",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D3" }],
-			"FileName": "ProcessHacker",
-			//"HideOnFocusLost": "Never",
-			"OffScreenLocations": ["Below"]
+			"Name": "SystemInformer",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"Key": "D3"
+				}
+			],
+			"FileName": "SystemInformer",
+			"OffScreenLocations": [
+				"Below"
+			]
 		},
-
-		// KeePassXC
 		{
 			"Name": "KeePassXC",
-			"Hotkeys": [{ "Modifiers": "Control", "Key": "D4" }],
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"Key": "D4"
+				}
+			],
 			"FileName": "KeePassXC",
-			//"HideOnFocusLost": "Never",
-			"OffScreenLocations": ["Right"]
+			"OffScreenLocations": [
+				"Right"
+			]
 		},
+		{
+			"Name": "Spotify",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"Key": "D5"
+				}
+			],
+			"FileName": "spotify"
+		}
 	],
-
-	"AnimationDurationMs": 150,
+	"Hotkeys": [
+		{
+			"Modifiers": "Control",
+			"Key": "Q"
+		}
+	],
 	"AnimationTargetFps": 60,
-
-	// Hot keys that toggle the most recent app (or the first one if none has been active yet).
-	"Hotkeys": [ { "Modifiers": "Control", "Key": "Q" } ],
-
-	// What monitor to preferably drop the terminal.
-	// "WithCursor" (default), "Primary" or "AtIndex".
-	// Can be overridden per app.
-	"PreferMonitor": "WithCursor",
-
-	// Horizontal screen coverage, as a percentage (defaults to 95).
 	"HorizontalScreenCoverage": 95,
-
-	// Vertical screen coverage, as a percentage (defaults to 95).
-	"VerticalScreenCoverage": 95
+	"VerticalScreenCoverage": 95,
+	"PreferMonitor": "WithCursor",
+	"AnimationDurationMs": 50
 }
