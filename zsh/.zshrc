@@ -110,7 +110,8 @@ alias wss="cd ~/workspace/sandbox"
 # Locations - Projects
 alias d1="cd ~/workspace/isres/dtrv1_1"
 alias d2="cd ~/workspace/isres/dtrv2_1"
-alias q="cd ~/workspace/flyingpie/wtq/wtq_1"
+alias p="cd ~/workspace/flyingpie/piper_1"
+alias q="cd ~/workspace/flyingpie/wtq_1"
 
 # Docker
 alias d='docker'
@@ -164,6 +165,7 @@ alias tf="terraform"
 alias zz='source ~/.zshrc;echo \"Reloaded zshrc\"'
 
 # Up
+alias up='cd ..'
 alias up1='cd ..'
 alias up2='cd ../..'
 alias up3='cd ../../..'
@@ -202,3 +204,21 @@ source ~/.home/zsh/.p10k.zsh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+
+# zsh parameter completion for the dotnet CLI
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  # If the completion list is empty, just continue with filename selection
+  if [ -z "$completions" ]
+  then
+	_arguments '*::arguments: _normal'
+	return
+  fi
+
+  # This is not a variable assignment, don't remove spaces!
+  _values = "${(ps:\n:)completions}"
+}
+
+compdef _dotnet_zsh_complete dotnet
