@@ -18,4 +18,6 @@ config.window_background_image_hsb = { brightness = 0.002 }
 
 config.hide_tab_bar_if_only_one_tab = true
 
+config.window_decorations = "NONE"
+
 return config
