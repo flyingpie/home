@@ -39,7 +39,7 @@
 					"KeyChar": "3"
 				}
 			],
-			"FileName": "net.nokyan.Resources",
+			"FileName": "plasma-systemmonitor",
 			"AttachMode": "Find",
 			"Opacity": 90,
 			"OffScreenLocations": [
@@ -114,6 +114,7 @@
 			],
 			"FileName": "me.iepure.devtoolbox",
 			"AttachMode": "Find",
+			"Resize": "Never",
 			"HorizontalScreenCoverage": 70,
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
