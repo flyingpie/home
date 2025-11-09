@@ -1,0 +1,17 @@
+com.microsoft.Edge
+com.moonlight_stream.Moonlight
+com.spotify.Client
+com.usebruno.Bruno
+com.vscodium.codium
+dev.vencord.Vesktop
+io.dbeaver.DBeaverCommunity
+md.obsidian.Obsidian
+me.iepure.devtoolbox
+org.chromium.Chromium
+org.filezillaproject.Filezilla
+org.ghidra_sre.Ghidra
+org.kde.krita
+org.localsend.localsend_app
+org.onlyoffice.desktopeditors
+org.remmina.Remmina
+org.signal.Signal
