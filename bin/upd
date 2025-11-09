@@ -151,7 +151,51 @@ if $RUN_ALL || [ "$1" = "flatpak" ]; then
 	echo "#########################################"
 	echo "Updating Flatpak packages"
 	echo "#########################################"
-	flatpak update -y
+
+	# Update packages
+	flatpak update --system --assumeyes
+	flatpak update --user --assumeyes
+
+	HOSTNAME=$(hostname)
+	COMMON_FILE="../pkgs/flatpak.any.txt"
+	HOST_FILE="../pkgs/flatpak.${HOSTNAME}.txt"
+
+	function install_from_file() {
+		local file="$1"
+
+		if [[ ! -f "$file" ]]; then
+			echo "Skipping missing file: $file"
+			return
+		fi
+
+		echo "Processing: $file"
+
+		local packages=()
+		while IFS= read -r line; do
+			# Strip comments and trim
+			clean_line=$(echo "$line" | sed 's/#.*//' | xargs)
+			[[ -z "$clean_line" ]] && continue
+			packages+=("$clean_line")
+		done <"$file"
+
+		if [[ ${#packages[@]} -gt 0 ]]; then
+			echo "Installing packages from $file: ${packages[*]}"
+			# yay -S --needed --noconfirm "${packages[@]}"
+			flatpak install --system --assumeyes --or-update "${packages[@]}"
+		else
+			echo "No packages to install in $file."
+		fi
+	}
+
+	# Install common packages
+	install_from_file "$COMMON_FILE"
+
+	# Install host-specific packages, if applicable
+	if [[ -f "$HOST_FILE" ]]; then
+		install_from_file "$HOST_FILE"
+	else
+		echo "No host-specific package file found for hostname '$HOSTNAME'."
+	fi
 fi
 
 #
@@ -161,7 +205,28 @@ if $RUN_ALL || [ "$1" = "nvim" ]; then
 	echo "#########################################"
 	echo "Updating Neovim plugins"
 	echo "#########################################"
-	nvim --headless "+Lazy update" "+MasonUpdate" +qa
+	nvim --headless "+Lazy update" #"+MasonUpdate" +qa
+fi
+
+#
+# Firmware
+#
+if $RUN_ALL || [ "$1" = "firmware" ]; then
+	echo "#########################################"
+	echo "Updating firmware"
+	echo "#########################################"
+	fwupdmgr refresh
+	fwupdmgr get-updates
+fi
+
+#
+# TLDR
+#
+if $RUN_ALL || [ "$1" = "tldr" ]; then
+	echo "#########################################"
+	echo "Updating TLDR"
+	echo "#########################################"
+	tldr --update
 fi
 
 # Pop back to the original directory

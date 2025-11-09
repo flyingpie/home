@@ -1,12 +1,10 @@
 bandwhich
 bat							# Like cat, but nicer
-bruno-bin
 btop						# Like top, but nicer
 docker
 docker-buildx
 docker-compose
 dos2unix
-dotnet-host
 duf							# du -f but prettier
 eza							# Like ls, but nicer
 firefox
@@ -14,30 +12,24 @@ flatpak
 fzf
 git-delta
 htop
-hugo
 keepassxc
-klogg-bin-git
 kora-icon-theme
 krdc
-krita
 kubectl
 lazygit
 luarocks
 meson
-moonlight-qt-bin
 ncdu						# Disk usage analyzer
 neovim
 nmap
 nodejs
 npm
-obsidian
 powershell-bin
 pureref
 qpwgraph					# Pipewire graph
 qt6-imageformats			# More image formats in Qt apps, like previews in file explorers
 quickemu-git
 ripgrep
-rofi
 rsync
 simdjson
 solaar						# Logitech device manager
@@ -46,8 +38,6 @@ tailscale
 tcpdump
 tree-sitter-cli
 unzip
-vesktop-bin
-visual-studio-code-bin
 wakeonlan
 wezterm
 wireshark-qt
