@@ -205,7 +205,7 @@ if $RUN_ALL || [ "$1" = "nvim" ]; then
 	echo "#########################################"
 	echo "Updating Neovim plugins"
 	echo "#########################################"
-	nvim --headless "+Lazy update" #"+MasonUpdate" +qa
+	nvim --headless "+Lazy update" +qa
 fi
 
 #
