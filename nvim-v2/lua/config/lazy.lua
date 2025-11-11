@@ -63,3 +63,5 @@ require("lazy").setup({
 		},
 	},
 })
+
+vim.lsp.config("roslyn", {})

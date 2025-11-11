@@ -54,6 +54,7 @@ return {
 				"markdown_inline",
 				"python",
 				"query",
+				"razor",
 				"regex",
 				"scss",
 				"sql",
