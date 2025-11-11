@@ -69,6 +69,10 @@ ln -srf $H/nvim-v2 ~/.config/nvim
 # ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
 
+# OpenTabletDriver
+rm -rf ~/.config/OpenTabletDriver/
+ln -srf $H/otd ~/.config/OpenTabletDriver
+
 # PowerShell
 rm -rf ~/.config/powershell
 ln -srf $H/ps ~/.config/powershell
@@ -103,6 +107,11 @@ rm -rf  ~/.config/Code/User/
 mkdir -p ~/.config/Code/User/
 ln -s $H/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s $H/vscode/settings.json ~/.config/Code/User/settings.json
+
+rm -rf ~/.var/app/com.vscodium.codium/config/VSCodium/User/
+mkdir -p ~/.var/app/com.vscodium.codium/config/VSCodium/User/
+ln -s $H/vscode/keybindings.json ~/.var/app/com.vscodium.codium/config/VSCodium/User/keybindings.json
+ln -s $H/vscode/settings.json ~/.var/app/com.vscodium.codium/config/VSCodium/User/settings.json
 
 # Wezterm
 mkdir -p ~/.config/wezterm
