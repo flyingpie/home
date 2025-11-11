@@ -12,7 +12,6 @@ XPathView
 com.deadlock.scsyntax
 com.dmarcotte.handlebars
 com.intellij.completion.ml.ranking
-com.intellij.csharpier
 com.intellij.diagram
 com.intellij.grpc
 com.intellij.ja
