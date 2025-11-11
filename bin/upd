@@ -138,6 +138,7 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 6.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 8.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 9.0
+	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 10.0
 
 	dotnet tool install --global csharpier
 	dotnet tool install --global --allow-roll-forward dotnet-suggest
