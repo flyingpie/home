@@ -56,6 +56,7 @@ alias py="python3"
 alias python="python3"
 alias vim="nvim"
 alias z="zellij attach -c"
+alias code="com.vscodium.codium"
 
 alias sc="systemctl"
 alias jc="journalctl"
