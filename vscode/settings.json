@@ -54,7 +54,7 @@
 	// Workbench
 	"workbench.colorTheme": "Tokyo Night",
 	"workbench.editor.empty.hint": "hidden",
-	"workbench.iconTheme": "vscode-icon-theme",
+	"workbench.iconTheme": "bearded-icons",
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
 
