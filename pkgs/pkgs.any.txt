@@ -36,6 +36,7 @@ solaar						# Logitech device manager
 strace
 tailscale
 tcpdump
+tldr
 tree-sitter-cli
 unzip
 wakeonlan
@@ -47,3 +48,4 @@ xdg-desktop-portal-kde
 yazi						# TUI file browser
 yt-dlp
 zellij
+zsh

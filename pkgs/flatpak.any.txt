@@ -1,3 +1,4 @@
+com.github.zocker_160.SyncThingy
 com.microsoft.Edge
 com.moonlight_stream.Moonlight
 com.spotify.Client
