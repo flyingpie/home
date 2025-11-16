@@ -40,7 +40,7 @@
 				}
 			],
 			"FileName": "plasma-systemmonitor",
-			"AttachMode": "Find",
+			"AttachMode": "FindOrStart",
 			"Opacity": 90,
 			"OffScreenLocations": [
 				"Below"
