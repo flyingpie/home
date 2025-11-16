@@ -69,10 +69,6 @@ ln -srf $H/nvim-v2 ~/.config/nvim
 # ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
 
-# OpenTabletDriver
-rm -rf ~/.config/OpenTabletDriver/
-ln -srf $H/otd ~/.config/OpenTabletDriver
-
 # PowerShell
 rm -rf ~/.config/powershell
 ln -srf $H/ps ~/.config/powershell
