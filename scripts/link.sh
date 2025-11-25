@@ -20,7 +20,7 @@ mkdir -p ~/.local/share
 ln -srf $H/fonts ~/.local/share/fonts
 
 # Git
-# ln -srf $H/.gitconfig ~/.gitconfig
+ln -srf $H/.gitconfig ~/.gitconfig
 
 # Ghostty
 rm -rf ~/.config/ghostty
