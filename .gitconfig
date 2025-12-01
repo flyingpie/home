@@ -37,3 +37,9 @@
 
 [includeIf "gitdir:~/workspace/flyingpie/"]
 	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/isres/"] # TODO: Remove
+	path = ~/.home/.gitconfig-work
+
+[includeIf "gitdir:~/workspace/work/"]
+	path = ~/.home/.gitconfig-work
