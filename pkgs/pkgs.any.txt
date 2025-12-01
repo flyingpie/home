@@ -39,6 +39,7 @@ tcpdump
 tldr
 tree-sitter-cli
 unzip
+visual-studio-code-bin
 wakeonlan
 wezterm
 wireshark-qt
