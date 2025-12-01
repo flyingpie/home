@@ -26,6 +26,10 @@ ln -srf $H/.gitconfig ~/.gitconfig
 rm -rf ~/.config/ghostty
 ln -srf $H/ghostty ~/.config/ghostty
 
+# Htop
+rm -rf ~/.config/htop
+ln -srf $H/htop ~/.config/htop
+
 # JetBrains - DataGrip
 mkdir -p ~/.config/JetBrains/DataGrip2025.1
 ln -srf $H/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
