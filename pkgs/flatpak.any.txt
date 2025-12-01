@@ -3,8 +3,6 @@ com.microsoft.Edge
 com.moonlight_stream.Moonlight
 com.spotify.Client
 com.usebruno.Bruno
-com.vscodium.codium
-dev.vencord.Vesktop
 io.dbeaver.DBeaverCommunity
 md.obsidian.Obsidian
 me.iepure.devtoolbox
