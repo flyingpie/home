@@ -19,6 +19,7 @@ com.intellij.jsonpath
 com.intellij.ko
 com.intellij.kubernetes
 com.intellij.marketplace.ml
+com.intellij.mcpServer
 com.intellij.microservices.ui
 com.intellij.plugins.html.instantEditing
 com.intellij.plugins.resharperkeymap
@@ -29,7 +30,6 @@ com.intellij.plugins.webcomponents
 com.intellij.react
 com.intellij.resharper.unity
 com.intellij.rider.godot
-com.intellij.rider.godot.community
 com.intellij.searcheverywhere.ml
 com.intellij.settingsSync
 com.intellij.stylelint
@@ -44,12 +44,14 @@ com.jetbrains.gateway
 com.jetbrains.performancePlugin
 com.jetbrains.plugins.jade
 com.jetbrains.plugins.webDeployment
+com.jetbrains.remoteDevServer
 com.jetbrains.restClient
-com.jetbrains.rider-cpp
 com.jetbrains.rider.diagram
 com.jetbrains.rider.fsharp
+com.jetbrains.rider.plugins.verse
 com.jetbrains.rider.publish.webDeploy
 com.jetbrains.sh
+com.jetbrains.station
 hg4idea
 idea.plugin.protoeditor
 intellij.nextjs
