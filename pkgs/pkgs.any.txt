@@ -34,6 +34,7 @@ rsync
 simdjson
 solaar						# Logitech device manager
 strace
+sysstat
 tailscale
 tcpdump
 tldr
