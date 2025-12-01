@@ -24,6 +24,7 @@ neovim
 nmap
 nodejs
 npm
+perf
 powershell-bin
 pureref
 qpwgraph					# Pipewire graph
