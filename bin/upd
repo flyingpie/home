@@ -19,7 +19,8 @@ fi
 if [ "$1" = "--help" ]; then
 	echo "dotnet"
 	echo "nvim"
-	echo "pkgs"
+	echo "pkgs_upd"
+	echo "pkgs_inst"
 	echo "yay"
 fi
 
@@ -60,7 +61,18 @@ fi
 #
 # Yay Packages
 #
-if $RUN_ALL || [ "$1" = "pkgs" ]; then
+if $RUN_ALL || [ "$1" = "pkgs_upd" ]; then
+	echo "#########################################"
+	echo "# Updating packages"
+	echo "#########################################"
+
+	yay -Syu --noconfirm
+fi
+
+#
+# Yay Packages
+#
+if $RUN_ALL || [ "$1" = "pkgs_inst" ]; then
 	echo "#########################################"
 	echo "# Installing packages"
 	echo "#########################################"
