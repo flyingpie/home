@@ -1,6 +1,7 @@
 return {
 
 	-- disabled
+	{ "folke/noice.nvim", enabled = false },
 	{ "MeanderingProgrammer/render-markdown.nvim", enabled = false },
 	{ "nvim-mini/mini.pairs", enabled = false },
 
