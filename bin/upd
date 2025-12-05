@@ -157,7 +157,6 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	dotnet tool install --global dotnet-dump
 	dotnet tool install --global dotnet-sos
 	dotnet tool install --global dotnet-suggest
-	dotnet tool install --global dotnet-suggest
 	dotnet tool install --global dotnet-symbol
 	dotnet tool install --global roslynator.dotnet.cli
 fi
