@@ -34,7 +34,12 @@ o.termguicolors = true
 o.timeoutlen = 300
 o.undofile = true
 o.updatetime = 300
+o.winborder = "rounded"
 o.wrap = false
+
+o.fillchars = {
+	horiz = '━',
+}
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
