@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "vscode.nvim": {
+      "rev": "aa1102a",
+      "src": "https://github.com/Mofiqul/vscode.nvim"
+    }
+  }
+}
