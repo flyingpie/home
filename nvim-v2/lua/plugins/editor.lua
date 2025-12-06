@@ -38,7 +38,7 @@ return {
 							layout = {
 								box = "vertical",
 								position = "left",
-								width = 0.3,
+								width = 50,
 								{ win = "input", height = 1, border = "bottom" },
 								{ win = "list", border = "none" },
 								{ win = "preview", title = "{preview}", height = 0.4, border = "top" },
