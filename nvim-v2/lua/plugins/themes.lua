@@ -89,6 +89,7 @@ return {
 			opts = {
 				color_overrides = {
 					vscCursorDarkDark = "#000000",
+					vscLineNumber = "#333333",
 				},
 				transparent = true,
 			},

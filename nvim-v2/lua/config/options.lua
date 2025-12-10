@@ -1,7 +1,7 @@
 local o = vim.opt
 
 vim.g.autoformat = false		-- Don't format on save
-vim.g.snacks_animate = false	-- Disable animations
+-- vim.g.snacks_animate = false	-- Disable animations
 
 o.clipboard = "unnamedplus"
 o.conceallevel = 0
@@ -11,7 +11,15 @@ o.fixeol = false
 o.hlsearch = true
 o.ignorecase = true
 o.list = true
-o.listchars = { eol = "↲", tab = "»-", trail = "·", extends = "x", precedes = ".", nbsp = "␣", space = "." }
+o.listchars = {
+	eol = "↲",
+	extends = "x",
+	nbsp = "␣",
+	precedes = ".",
+	space = ".",
+	tab = "»-",
+	trail = "·"
+}
 o.mouse = "a"
 o.number = true
 o.numberwidth = 4
