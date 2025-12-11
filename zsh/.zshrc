@@ -159,6 +159,7 @@ alias gitu='git config list | grep -i user'
 
 #alias k='kubectl --kubeconfig ~/.kube/local'
 alias k='kubectl'
+alias kc='kubectl config current-context'
 alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
 alias kns='kubectl config set-context --current --namespace'
 
