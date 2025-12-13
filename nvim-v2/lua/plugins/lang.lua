@@ -35,6 +35,8 @@ return {
 		end,
 	},
 
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
+
 	-- lazy.nvim
 	{
 		"GustavEikaas/easy-dotnet.nvim",
@@ -64,7 +66,7 @@ return {
 				---@type TestRunnerOptions
 				test_runner = {
 					---@type "split" | "vsplit" | "float" | "buf"
-					viewmode = "float",
+					viewmode = "vsplit",
 					---@type number|nil
 					vsplit_width = nil,
 					---@type string|nil "topleft" | "topright"
