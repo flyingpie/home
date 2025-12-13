@@ -35,6 +35,10 @@ return {
 		---@module 'roslyn.config'
 		---@type RoslynNvimConfig
 		ft = { "cs", "razor" },
+		init = function()
+			vim.lsp.enable("roslyn")
+		end,
+		lazy = false,
 		opts = {
 			broad_search = true,
 			silent = false,

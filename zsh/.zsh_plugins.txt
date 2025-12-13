@@ -1,4 +1,5 @@
 Aloxaf/fzf-tab
+jeffreytse/zsh-vi-mode
 romkatv/powerlevel10k
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-history-substring-search

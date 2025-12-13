@@ -42,3 +42,6 @@ kset("n",	"<leader>fh",			":GrugFar<CR>")
 kset("n",	"<leader>.",			vim.lsp.buf.code_action)
 kset("n",	"<F12>",				vim.lsp.buf.definition)
 kset("n",	"<leader>r",			vim.lsp.buf.rename)
+
+-- Outline
+kset("n",	"<leader>o",			"<cmd>Outline!<CR>")
