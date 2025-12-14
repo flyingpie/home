@@ -3,6 +3,7 @@ return {
 	-- bufferline
 	{
 		"akinsho/bufferline.nvim",
+		version = "*",
 		opts = {
 			-- stylua: ignore
 			options = {
@@ -19,7 +20,7 @@ return {
 	---@module "neominimap.config.meta"
 	{
 		"Isrothy/neominimap.nvim",
-		version = "^3.0.0",
+		version = "*",
 		lazy = false,
 		keys = {
 			{ "<leader>mm", "<cmd>Neominimap Toggle<cr>", desc = "Toggle global minimap" },
@@ -36,15 +37,14 @@ return {
 	-- outline
 	{
 		"hedyhli/outline.nvim",
+		version = "*",
 		opts = {
 			outline_window = {
-				-- Where to open the split window: right/left
 				position = "right",
-				split_command = nil,
-				width = 25,
 				show_numbers = true,
 				show_relative_numbers = true,
-				-- wrap = false,
+				split_command = nil,
+				width = 25,
 			},
 
 			symbol_folding = {
@@ -57,42 +57,27 @@ return {
 
 			-- These keymaps can be a string or a table for multiple keys.
 			-- Set to `{}` to disable. (Using 'nil' will fallback to default keys)
+			-- stylua: ignore
 			keymaps = {
-				show_help = "?",
-				close = { "<Esc>", "q" },
-				-- Jump to symbol under cursor.
-				-- It can auto close the outline window when triggered, see
-				-- 'auto_close' option above.
-				goto_location = "<Cr>",
-				-- Jump to symbol under cursor but keep focus on outline window.
-				peek_location = "o",
-				-- Visit location in code and close outline immediately
-				goto_and_close = "<S-Cr>",
-				-- Change cursor position of outline window to match current location in code.
-				-- 'Opposite' of goto/peek_location.
-				restore_location = "<C-g>",
-				-- Open LSP/provider-dependent symbol hover information
-				hover_symbol = "<C-space>",
-				-- Preview location code of the symbol under cursor
-				toggle_preview = "K",
-				rename_symbol = "r",
-				code_actions = "a",
-				-- These fold actions are collapsing tree nodes, not code folding
-				fold = "h",
-				unfold = "l",
-				fold_toggle = "<Tab>",
-				-- Toggle folds for all nodes.
-				-- If at least one node is folded, this action will fold all nodes.
-				-- If all nodes are folded, this action will unfold all nodes.
-				fold_toggle_all = "<S-Tab>",
-				fold_all = "W",
-				unfold_all = "E",
-				fold_reset = "R",
-				-- Move down/up by one line and peek_location immediately.
-				-- You can also use outline_window.auto_jump=true to do this for any
-				-- j/k/<down>/<up>.
-				down_and_jump = "<C-j>",
-				up_and_jump = "<C-k>",
+				show_help				= "?",
+				close					= "<Esc>",
+				goto_location			= "<Cr>",		-- Jump to symbol under cursor.
+				peek_location			= "o",			-- Jump to symbol under cursor but keep focus on outline window.
+				goto_and_close			= "<S-Cr>",		-- Visit location in code and close outline immediately
+				restore_location		= "<C-g>",		-- Change cursor position of outline window to match current location in code.
+				hover_symbol			= "<C-space>",	-- Open LSP/provider-dependent symbol hover information
+				toggle_preview			= "K",			-- Preview location code of the symbol under cursor
+				rename_symbol			= "r",
+				code_actions			= "a",
+				fold					= "h",			-- These fold actions are collapsing tree nodes, not code folding
+				unfold					= "l",
+				fold_toggle				= "<Tab>",
+				fold_toggle_all			= "<S-Tab>",	-- Toggle folds for all nodes. If at least one node is folded, this action will fold all nodes. If all nodes are folded, this action will unfold all nodes.
+				fold_all				= "W",
+				unfold_all				= "E",
+				fold_reset				= "R",
+				down_and_jump			= "<C-j>",		-- Move down/up by one line and peek_location immediately. You can also use outline_window.auto_jump=true to do this for any j/k/<down>/<up>.
+				up_and_jump				= "<C-k>",
 			},
 		},
 	},
@@ -131,16 +116,6 @@ return {
 
 			scroll = {
 				enabled = false,
-				-- animate = {
-				-- 	duration = { step = 10, total = 100 },
-				-- 	easing = "linear",
-				-- },
-				-- faster animation when repeating scroll after delay
-				-- animate_repeat = {
-				-- 	delay = 50, -- delay in ms before using the repeat animation
-				-- 	duration = { step = 3, total = 20 },
-				-- 	easing = "linear",
-				-- },
 			},
 		},
 		-- stylua: ignore
@@ -578,18 +553,20 @@ return {
 	-- trouble
 	{
 		"folke/trouble.nvim",
-		tag = "v3.7.1",
+		version = "*",
 		opts = { use_diagnostic_signs = true },
 	},
 
 	-- vim-be-good
 	{
 		"ThePrimeagen/vim-be-good",
+		branch = "master",
 	},
 
 	-- web-devicons
 	{
 		"nvim-tree/nvim-web-devicons",
+		branch = "master",
 		opts = {},
 	},
 }

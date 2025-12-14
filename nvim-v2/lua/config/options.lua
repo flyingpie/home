@@ -1,6 +1,6 @@
 local o = vim.opt
 
-vim.g.autoformat = false			-- Don't format on save
+vim.g.autoformat = false -- Don't format on save
 
 o.clipboard = "unnamedplus"
 o.conceallevel = 0
@@ -17,7 +17,7 @@ o.listchars = {
 	precedes = ".",
 	space = ".",
 	tab = "»-",
-	trail = "·"
+	trail = "·",
 }
 o.mouse = "a"
 o.number = true
@@ -45,8 +45,8 @@ o.winborder = "rounded"
 o.wrap = false
 
 o.fillchars = {
-	horiz = '━',					-- Thicker horizontal window separator
+	horiz = "━", -- Thicker horizontal window separator
 }
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])

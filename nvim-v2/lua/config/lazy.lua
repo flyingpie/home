@@ -21,7 +21,6 @@ require("lazy").setup({
 	},
 	defaults = {
 		lazy = false,
-		-- version = false, -- always use the latest git commit
 		version = "*", -- try installing the latest stable version for plugins that support semver
 	},
 	spec = {
@@ -30,6 +29,7 @@ require("lazy").setup({
 		-- Extras
 		{ import = "lazyvim.plugins.extras.editor.outline" },
 
+		{ import = "lazyvim.plugins.extras.lang.clangd" },
 		{ import = "lazyvim.plugins.extras.lang.docker" },
 		{ import = "lazyvim.plugins.extras.lang.git" },
 		{ import = "lazyvim.plugins.extras.lang.helm" },
@@ -41,8 +41,59 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.terraform" },
 		{ import = "lazyvim.plugins.extras.lang.vue" },
 		{ import = "lazyvim.plugins.extras.lang.yaml" },
+		{ import = "lazyvim.plugins.extras.lang.zig" },
 
 		-- Plugins
 		{ import = "plugins" },
 	},
 })
+
+-- vim.lsp.enable("csharp")
+
+-- vim.lsp.config(
+-- 	"csharp",
+--
+-- 	---@type vim.lsp.Config
+-- 	{
+-- 		cmd = { "roslyn" },
+-- 		filetypes = { "zig", "zir" },
+-- 		root_markers = { "zls.json", "build.zig", ".git" },
+-- 		-- root_dir = function(bufnr, on_dir)
+-- 		-- 	error("Root dirrrr")
+-- 		-- 	local root_path = vim.fs.find("deno.json", {
+-- 		-- 		upward = true,
+-- 		-- 		type = "file",
+-- 		-- 		path = vim.fn.getcwd(),
+-- 		-- 	})[1]
+-- 		--
+-- 		-- 	if root_path then
+-- 		-- 		on_dir(vim.fn.fnamemodify(root_path, ":h"))
+-- 		-- 	end
+-- 		-- end,
+-- 		workspace_required = false,
+-- 	}
+-- )
+
+vim.lsp.config(
+	"zls",
+
+	---@type vim.lsp.Config
+	{
+		cmd = { "zls" },
+		filetypes = { "zig", "zir" },
+		root_markers = { "zls.json", "build.zig", ".git" },
+		-- root_dir = function(bufnr, on_dir)
+		-- 	error("Root dirrrr")
+		-- 	local root_path = vim.fs.find("deno.json", {
+		-- 		upward = true,
+		-- 		type = "file",
+		-- 		path = vim.fn.getcwd(),
+		-- 	})[1]
+		--
+		-- 	if root_path then
+		-- 		on_dir(vim.fn.fnamemodify(root_path, ":h"))
+		-- 	end
+		-- end,
+		workspace_required = false,
+	}
+)

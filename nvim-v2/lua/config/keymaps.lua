@@ -1,5 +1,4 @@
 local kset = vim.keymap.set
--- local tscope = require("telescope.builtin")
 
 kset("",	"<Space>",				"<Nop>")
 
@@ -45,3 +44,5 @@ kset("n",	"<leader>r",			vim.lsp.buf.rename)
 
 -- Outline
 kset("n",	"<leader>o",			"<cmd>Outline!<CR>")
+
+kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })
