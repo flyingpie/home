@@ -162,7 +162,8 @@ return {
 	-- -- roslyn
 	-- {
 	-- 	"seblyng/roslyn.nvim",
-	-- 	enabled = false,
+	-- 	branch = "main",
+	-- 	-- enabled = false,
 	-- },
 
 	-- {
