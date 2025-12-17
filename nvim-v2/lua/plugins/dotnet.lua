@@ -1,30 +1,30 @@
 return {
 
-	{
-		"nvim-neotest/neotest",
-		dependencies = {
-			-- "lawrence-laz/neotest-zig",
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"antoinemadec/FixCursorHold.nvim",
-			-- "nsidorenco/neotest-vstest",
-		},
-		event = "LspAttach",
-		config = function()
-			require("neotest").setup({
-				adapters = {
-					require("rustaceanvim.neotest"),
-					-- require("neotest-vstest"),
-					-- require("neotest-zig")({
-					-- 	dap = {
-					-- 		adapter = "lldb",
-					-- 	},
-					-- }),
-				},
-				-- log_level = vim.log.levels.TRACE,
-			})
-		end,
-	},
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	dependencies = {
+	-- 		-- "lawrence-laz/neotest-zig",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"antoinemadec/FixCursorHold.nvim",
+	-- 		-- "nsidorenco/neotest-vstest",
+	-- 	},
+	-- 	event = "LspAttach",
+	-- 	config = function()
+	-- 		require("neotest").setup({
+	-- 			adapters = {
+	-- 				require("rustaceanvim.neotest"),
+	-- 				-- require("neotest-vstest"),
+	-- 				-- require("neotest-zig")({
+	-- 				-- 	dap = {
+	-- 				-- 		adapter = "lldb",
+	-- 				-- 	},
+	-- 				-- }),
+	-- 			},
+	-- 			-- log_level = vim.log.levels.TRACE,
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- easy-dotnet
 	{
