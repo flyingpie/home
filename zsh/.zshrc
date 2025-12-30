@@ -163,6 +163,7 @@ alias k='kubectl'
 alias kc='kubectl config current-context'
 alias kdev='kubectl --kubeconfig ~/.kube/dtr-dev'
 alias kns='kubectl config set-context --current --namespace'
+alias ku='kubectl config use-context'
 
 alias tf="terraform"
 
