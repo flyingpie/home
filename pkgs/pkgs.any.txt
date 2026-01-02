@@ -32,6 +32,8 @@ qt6-imageformats			# More image formats in Qt apps, like previews in file explor
 quickemu-git
 ripgrep
 rsync
+rust-analyzer
+rustup
 simdjson
 solaar						# Logitech device manager
 strace
