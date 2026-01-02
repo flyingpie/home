@@ -3,6 +3,7 @@ com.microsoft.Edge
 com.moonlight_stream.Moonlight
 com.spotify.Client
 com.usebruno.Bruno
+com.valvesoftware.Steam
 io.dbeaver.DBeaverCommunity
 md.obsidian.Obsidian
 me.iepure.devtoolbox
@@ -13,4 +14,3 @@ org.kde.krita
 org.localsend.localsend_app
 org.onlyoffice.desktopeditors
 org.remmina.Remmina
-org.signal.Signal
