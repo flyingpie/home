@@ -85,6 +85,7 @@
 			],
 			"FileName": "vesktop",
 			"AlwaysOnTop": true,
+			"AttachMode": "Find",
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 70,
 			"HorizontalAlign": "Right",
@@ -120,21 +121,6 @@
 			"OffScreenLocations": [
 				"Right"
 			]
-		},
-		{
-			"Name": "Lens",
-			"Hotkeys": [
-				{
-					"Modifiers": "Control",
-					"KeyChar": "9"
-				}
-			],
-			"FileName": "lens-desktop",
-			"ProcessName": "^Lens$",
-			"AttachMode": "Find",
-			"OffScreenLocations": [
-				"Below"
-			]
 		}
 	],
 	"Hotkeys": [
@@ -147,11 +133,5 @@
 	"HorizontalScreenCoverage": 95,
 	"VerticalScreenCoverage": 95,
 	"PreferMonitor": "WithCursor",
-	"AnimationDurationMs": 150,
-	// "EventHooks": [
-	// 	{
-	// 		"EventPattern": ".*",
-	// 		"FileName": "wtq-sound"
-	// 	}
-	// ]
+	"AnimationDurationMs": 150
 }
