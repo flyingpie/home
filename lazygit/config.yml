@@ -1,5 +1,5 @@
 git:
-  diffContextSize: 9999
+  diffContextSize: 5
   pagers:
     - colorArg: always
       pager: delta --dark --paging=never --side-by-side
