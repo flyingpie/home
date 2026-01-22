@@ -1,48 +1,14 @@
 return {
 
-	-- {
-	-- 	"nvim-neotest/neotest",
-	-- 	dependencies = {
-	-- 		-- "lawrence-laz/neotest-zig",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"antoinemadec/FixCursorHold.nvim",
-	-- 		-- "nsidorenco/neotest-vstest",
-	-- 	},
-	-- 	event = "LspAttach",
-	-- 	config = function()
-	-- 		require("neotest").setup({
-	-- 			adapters = {
-	-- 				require("rustaceanvim.neotest"),
-	-- 				-- require("neotest-vstest"),
-	-- 				-- require("neotest-zig")({
-	-- 				-- 	dap = {
-	-- 				-- 		adapter = "lldb",
-	-- 				-- 	},
-	-- 				-- }),
-	-- 			},
-	-- 			-- log_level = vim.log.levels.TRACE,
-	-- 		})
-	-- 	end,
-	-- },
-
 	-- easy-dotnet
 	{
 		"GustavEikaas/easy-dotnet.nvim",
 		branch = "main",
 		dependencies = {
-			-- "lawrence-laz/neotest-zig",
 			"nvim-lua/plenary.nvim",
 			"rcarriga/nvim-dap-ui",
 		},
 		config = function()
-			-- require("neotest").setup({
-			-- 	adapters = {
-			-- 		require("neotest-vstest"),
-			-- 	},
-			-- 	log_level = vim.log.levels.TRACE,
-			-- })
-
 			local dotnet = require("easy-dotnet")
 			-- Options are not required
 			dotnet.setup({
@@ -102,11 +68,6 @@ return {
 					--- Optional table of extra args e.g "--blame crash"
 					additional_args = {},
 				},
-				new = {
-					project = {
-						prefix = "sln", -- "sln" | "none"
-					},
-				},
 				---@param action "test" | "restore" | "build" | "run"
 				terminal = function(path, action, args)
 					args = args or ""
@@ -159,60 +120,4 @@ return {
 			})
 		end,
 	},
-
-	-- -- roslyn
-	-- {
-	-- 	"seblyng/roslyn.nvim",
-	-- 	branch = "main",
-	-- 	-- enabled = false,
-	-- },
-
-	-- {
-	-- 	"seblyng/roslyn.nvim",
-	-- 	opts = { autoformat = false },
-	-- 	init = function()
-	-- 		vim.lsp.config("roslyn", {
-	-- 			settings = {
-	-- 				["csharp|background_analysis"] = {
-	-- 					dotnet_analyzer_diagnostics_scope = "fullSolution",
-	-- 					dotnet_compiler_diagnostics_scope = "fullSolution",
-	-- 				},
-	-- 				["csharp|code_lens"] = {
-	-- 					dotnet_enable_references_code_lens = true,
-	-- 				},
-	-- 				["csharp|inlay_hints"] = {
-	-- 					csharp_enable_inlay_hints_for_implicit_object_creation = true,
-	-- 					csharp_enable_inlay_hints_for_implicit_variable_types = true,
-	--
-	-- 					csharp_enable_inlay_hints_for_lambda_parameter_types = true,
-	-- 					csharp_enable_inlay_hints_for_types = true,
-	-- 					dotnet_enable_inlay_hints_for_indexer_parameters = true,
-	-- 					dotnet_enable_inlay_hints_for_literal_parameters = true,
-	-- 					dotnet_enable_inlay_hints_for_object_creation_parameters = true,
-	-- 					dotnet_enable_inlay_hints_for_other_parameters = true,
-	-- 					dotnet_enable_inlay_hints_for_parameters = true,
-	-- 					dotnet_suppress_inlay_hints_for_parameters_that_differ_only_by_suffix = true,
-	-- 					dotnet_suppress_inlay_hints_for_parameters_that_match_argument_name = true,
-	-- 					dotnet_suppress_inlay_hints_for_parameters_that_match_method_intent = true,
-	-- 				},
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
-
-	-- -- Roslyn
-	-- {
-	-- 	"seblyng/roslyn.nvim",
-	-- 	---@module 'roslyn.config'
-	-- 	---@type RoslynNvimConfig
-	-- 	ft = { "cs", "razor" },
-	-- 	init = function()
-	-- 		vim.lsp.enable("roslyn")
-	-- 	end,
-	-- 	lazy = false,
-	-- 	opts = {
-	-- 		broad_search = true,
-	-- 		silent = false,
-	-- 	},
-	-- },
 }
