@@ -1,11 +1,19 @@
 git:
+  diffContextSize: 9999
   pagers:
     - colorArg: always
       pager: delta --dark --paging=never --side-by-side
+
 gui:
+  authorColors:
+    '*': '#b4befe'
+  border: single
+
+  expandedSidePanelWeight: 100
   expandFocusedSidePanel: true
   scrollHeight: 15
   showCommandLog: false
+  sidePanelWidth: 0.2
 
   theme:
     activeBorderColor:
@@ -28,5 +36,14 @@ gui:
     searchingActiveBorderColor:
       - '#f9e2af'
 
-  authorColors:
-    '*': '#b4befe'
+keybinding:
+  universal:
+    prevBlock-alt: ""
+    nextBlock-alt: ""
+    jumpToBlock:
+      - "1"
+      - "h"
+      - "3"
+      - "4"
+      - "5"
+    focusMainView: "l"

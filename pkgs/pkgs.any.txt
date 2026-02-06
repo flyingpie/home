@@ -5,15 +5,19 @@ docker
 docker-buildx
 docker-compose
 dos2unix
+dotnet-host					# Note that runtimes and sdks are installed separately
 duf							# du -f but prettier
 eza							# Like ls, but nicer
 firefox
 flatpak
 fzf
+git
 git-delta
+git-lfs
 htop
+imhex-bin
+jetbrains-toolbox
 keepassxc
-kora-icon-theme
 krdc
 kubectl
 lazygit
@@ -24,6 +28,7 @@ neovim
 nmap
 nodejs
 npm
+octopi
 perf
 powershell-bin
 pureref
@@ -32,6 +37,8 @@ qt6-imageformats			# More image formats in Qt apps, like previews in file explor
 quickemu-git
 ripgrep
 rsync
+rust-analyzer
+rustup
 simdjson
 solaar						# Logitech device manager
 strace
@@ -40,14 +47,18 @@ tailscale
 tcpdump
 tldr
 tree-sitter-cli
+unrar
 unzip
+uv
 visual-studio-code-bin
 wakeonlan
+webkit2gtk-4.1
 wezterm
 wireshark-qt
 wl-clipboard				# Wayland clipboard support in terminals
 xdg-desktop-portal-gtk
 xdg-desktop-portal-kde
+xmlstarlet
 yazi						# TUI file browser
 yt-dlp
 zellij

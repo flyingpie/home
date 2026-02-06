@@ -45,6 +45,10 @@ ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
 mkdir -p ~/.config/JetBrains/Rider2025.3
 ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.3/idea.properties
 
+# JetBrains - RustRover
+mkdir -p ~/.config/JetBrains/RustRover2025.2/
+ln -srf $H/rider/idea.properties ~/.config/JetBrains/RustRover2025.2/idea.properties
+
 # Kando
 mkdir -p ~/.config/kando
 ln -srf $H/kando/config.json	~/.config/kando/config.json
@@ -123,6 +127,7 @@ ln -srf $H/wezterm/wezterm.lua ~/.config/wezterm/wezterm.lua
 # WTQ
 mkdir -p ~/.config/wtq
 ln -srf $H/wtq/wtq.jsonc ~/.config/wtq/wtq.jsonc
+mkdir -p ~/.var/app/nl.flyingpie.wtq/config/wtq
 ln -srf $H/wtq/wtq.jsonc ~/.var/app/nl.flyingpie.wtq/config/wtq/wtq.jsonc
 
 # Zed

@@ -1,5 +1,4 @@
 local kset = vim.keymap.set
--- local tscope = require("telescope.builtin")
 
 kset("",	"<Space>",				"<Nop>")
 
@@ -11,10 +10,10 @@ kset("n",	"c", 					'"_c')									-- Copy, normal mode
 kset("v",	"d", 					'"_d')									-- Delete, visual mode
 kset("v",	"c", 					'"_c')									-- Copy, visual mode
 
--- kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
--- kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
--- kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
--- kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
+kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
+kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
+kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
+kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
 
 -- Window split
 kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
@@ -42,3 +41,8 @@ kset("n",	"<leader>fh",			":GrugFar<CR>")
 kset("n",	"<leader>.",			vim.lsp.buf.code_action)
 kset("n",	"<F12>",				vim.lsp.buf.definition)
 kset("n",	"<leader>r",			vim.lsp.buf.rename)
+
+-- Outline
+kset("n",	"<leader>o",			"<cmd>Outline!<CR>")
+
+kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })

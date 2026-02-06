@@ -1,30 +1,31 @@
-com.vscodium.codium --install-extension ban.spellright
-com.vscodium.codium --install-extension bierner.markdown-mermaid
-com.vscodium.codium --install-extension dracula-theme.theme-dracula
-com.vscodium.codium --install-extension editorconfig.editorconfig
-com.vscodium.codium --install-extension enkia.tokyo-night
-com.vscodium.codium --install-extension github.vscode-pull-request-github
-# com.vscodium.codium --install-extension hbenl.vscode-test-explorer
-com.vscodium.codium --install-extension helgardrichard.helium-icon-theme
-com.vscodium.codium --install-extension humao.rest-client
-com.vscodium.codium --install-extension jtlowe.vscode-icon-theme
-com.vscodium.codium --install-extension mechatroner.rainbow-csv
-# com.vscodium.codium --install-extension mesonbuild.mesonbuild
-# com.vscodium.codium --install-extension ms-dotnettools.csdevkit
-# com.vscodium.codium --install-extension ms-dotnettools.csharp
-# com.vscodium.codium --install-extension ms-dotnettools.vscode-dotnet-runtime
-# com.vscodium.codium --install-extension ms-vscode.cmake-tools
-# com.vscodium.codium --install-extension ms-vscode.cpptools
-# com.vscodium.codium --install-extension ms-vscode.cpptools-extension-pack
-# com.vscodium.codium --install-extension ms-vscode.cpptools-themes
-# com.vscodium.codium --install-extension ms-vscode.test-adapter-converter
-com.vscodium.codium --install-extension redhat.vscode-xml
-com.vscodium.codium --install-extension redhat.vscode-yaml
-# com.vscodium.codium --install-extension rust-lang.rust-analyzer
-com.vscodium.codium --install-extension shd101wyy.markdown-preview-enhanced
-# com.vscodium.codium --install-extension swellaby.vscode-rust-test-adapter
-com.vscodium.codium --install-extension tamasfe.even-better-toml
-com.vscodium.codium --install-extension thinker.sort-json
-# com.vscodium.codium --install-extension twxs.cmake
-com.vscodium.codium --install-extension yinfei.luahelper
-com.vscodium.codium --install-extension yummygum.city-lights-icon-vsc
+# code --install-extension hbenl.vscode-test-explorer
+# code --install-extension mesonbuild.mesonbuild
+# code --install-extension ms-dotnettools.csdevkit
+# code --install-extension ms-dotnettools.csharp
+# code --install-extension ms-dotnettools.vscode-dotnet-runtime
+# code --install-extension ms-vscode.cmake-tools
+# code --install-extension ms-vscode.cpptools
+# code --install-extension ms-vscode.cpptools-extension-pack
+# code --install-extension ms-vscode.cpptools-themes
+# code --install-extension ms-vscode.test-adapter-converter
+# code --install-extension rust-lang.rust-analyzer
+# code --install-extension swellaby.vscode-rust-test-adapter
+# code --install-extension twxs.cmake
+code --install-extension ban.spellright
+code --install-extension bierner.markdown-mermaid
+code --install-extension dracula-theme.theme-dracula
+code --install-extension editorconfig.editorconfig
+code --install-extension enkia.tokyo-night
+code --install-extension github.vscode-pull-request-github
+code --install-extension helgardrichard.helium-icon-theme
+code --install-extension humao.rest-client
+code --install-extension jtlowe.vscode-icon-theme
+code --install-extension mechatroner.rainbow-csv
+code --install-extension redhat.vscode-xml
+code --install-extension redhat.vscode-yaml
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension tamasfe.even-better-toml
+code --install-extension thinker.sort-json
+code --install-extension yinfei.luahelper
+code --install-extension yummygum.city-lights-icon-vsc
+code --install-extesnion shaneliesegang.vscode-simple-icons-rev
