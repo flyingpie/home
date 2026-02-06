@@ -16,6 +16,16 @@ return {
 		},
 	},
 
+	-- image.nvim
+	{
+		"3rd/image.nvim",
+		version = "*",
+		build = false,
+		opts = {
+			processor = "magick_cli",
+		}
+	},
+
 	-- minimap
 	---@module "neominimap.config.meta"
 	{

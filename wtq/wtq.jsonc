@@ -147,11 +147,5 @@
 	"HorizontalScreenCoverage": 95,
 	"VerticalScreenCoverage": 95,
 	"PreferMonitor": "WithCursor",
-	"AnimationDurationMs": 150,
-	// "EventHooks": [
-	// 	{
-	// 		"EventPattern": ".*",
-	// 		"FileName": "wtq-sound"
-	// 	}
-	// ]
+	"AnimationDurationMs": 150
 }
