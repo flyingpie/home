@@ -1,0 +1,10 @@
+aws-cli-v2
+aws-session-manager-plugin
+camunda-modeler
+helm
+jdtls
+k9s
+kubectl
+maven
+powershell-bin
+terraform
