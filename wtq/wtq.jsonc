@@ -85,6 +85,7 @@
 			],
 			"FileName": "vesktop",
 			"AlwaysOnTop": true,
+			"AttachMode": "Find",
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 70,
 			"HorizontalAlign": "Right",
@@ -119,21 +120,6 @@
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
 				"Right"
-			]
-		},
-		{
-			"Name": "Lens",
-			"Hotkeys": [
-				{
-					"Modifiers": "Control",
-					"KeyChar": "9"
-				}
-			],
-			"FileName": "lens-desktop",
-			"ProcessName": "^Lens$",
-			"AttachMode": "Find",
-			"OffScreenLocations": [
-				"Below"
 			]
 		}
 	],
