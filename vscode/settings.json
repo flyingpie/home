@@ -78,14 +78,11 @@
 	},
 
 	// Disable copilot-related stuff
-	"C_Cpp.copilotHover": "disabled",
-	"chat.agent.enabled": false,
-	"chat.agent.maxRequests": 0,
-	"chat.commandCenter.enabled": false,
-	"chat.extensionTools.enabled": false,
-	"chat.focusWindowOnConfirmation": false,
-	"chat.setupFromDialog": false,
+	"chat.disableAIFeatures": true,
+
+	// Disable telemetry
 	"telemetry.feedback.enabled": false,
+
 	"blender.executables": [
 		{
 			"path": "/home/marco/apps/blender/stable/blender-4.5.0-lts.8cb6b388974a/blender",
