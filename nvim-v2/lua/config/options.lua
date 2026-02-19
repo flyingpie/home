@@ -30,7 +30,6 @@ o.sidescrolloff = 8
 o.signcolumn = "yes"
 o.smartcase = true
 o.smartindent = false
--- o.spell = false
 o.spelllang = { "en", "nl" }
 o.splitbelow = true
 o.splitright = true

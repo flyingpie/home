@@ -121,6 +121,18 @@
 			"OffScreenLocations": [
 				"Right"
 			]
+		},
+		{
+			"Name": "Edge",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control",
+					"KeyChar": "9"
+				}
+			],
+			"FileName": "microsoft-edge",
+			"AttachMode": "Find",
+			"HideOnFocusLost": "Never"
 		}
 	],
 	"Hotkeys": [
