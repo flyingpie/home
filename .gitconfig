@@ -55,3 +55,6 @@
 
 [includeIf "gitdir:~/workspace/work/"]
 	path = ~/.home/.gitconfig-work
+
+[includeIf "gitdir:/ws/"]
+	path = ~/.home/.gitconfig-work
