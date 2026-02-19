@@ -76,6 +76,11 @@
 	"[xml]": {
 		"editor.defaultFormatter": "redhat.vscode-xml"
 	},
+
+	// Disable copilot-related stuff
+	"chat.disableAIFeatures": true,
+
+	// Disable telemetry
 	"telemetry.feedback.enabled": false,
 
 	"blender.executables": [
