@@ -85,17 +85,30 @@
 
 	"blender.executables": [
 		{
-			"path": "/home/marco/apps/blender/stable/blender-4.5.0-lts.8cb6b388974a/blender",
-			"name": "",
-			"isDebug": false
+			"name": "Blender 5.0.1",
+			"path": "/home/marco/apps/blender/stable/blender-5.0.1-stable.a3db93c5b259/blender"
+		},
+		{
+			"name": "Blender 4.5",
+			"path": "/home/marco/apps/blender/stable/blender-4.5.5-lts.836beaaf597a/blender"
+		},
+		{
+			"name": "Blender 4.4",
+			"path": "/home/marco/apps/blender/stable/blender-4.4.3-stable.802179c51ccc/blender"
+		},
+		{
+			"name": "Blender 4.3",
+			"path": "/home/marco/apps/blender/stable/blender-4.3.2-stable.32f5fdce0a0a/blender"
+		},
+		{
+			"name": "Blender 4.2",
+			"path": "/home/marco/apps/blender/stable/blender-4.2.16-lts.39502cae951c/blender"
 		}
 	],
 	"explorer.confirmDelete": false,
 	"extensions.experimental.affinity": {
 		"asvetliakov.vscode-neovim": 1
 	},
-	"githubPullRequests.codingAgent.enabled": false,
-	"githubPullRequests.experimental.chat": false,
 	"workbench.secondarySideBar.defaultVisibility": "hidden",
 	"[dockercompose]": {
 		"editor.insertSpaces": true,
@@ -105,5 +118,21 @@
 	},
 	"[github-actions-workflow]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
-	}
+	},
+	"python.analysis.typeCheckingMode": "standard",
+	"chat.agent.enabled": false,
+	"githubPullRequests.codingAgent.autoCommitAndPush": false,
+	"githubPullRequests.codingAgent.codeLens": false,
+	"githubPullRequests.codingAgent.enabled": false,
+	"githubPullRequests.codingAgent.promptForConfirmation": false,
+	"githubPullRequests.codingAgent.uiIntegration": false,
+	"chat.agent.codeBlockProgress": false,
+	"chat.agent.thinking.generateTitles": false,
+	"vim.handleKeys": {
+		"<C-p>": false,
+		"<C-d>": true,
+		"<C-s>": false,
+		"<C-z>": false
+	},
+	"editor.lineNumbers": "relative"
 }
