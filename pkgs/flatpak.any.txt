@@ -1,11 +1,9 @@
 com.github.zocker_160.SyncThingy
-com.microsoft.Edge
 com.moonlight_stream.Moonlight
 com.spotify.Client
 com.usebruno.Bruno
 com.valvesoftware.Steam
 io.dbeaver.DBeaverCommunity
-md.obsidian.Obsidian
 me.iepure.devtoolbox
 org.chromium.Chromium
 org.filezillaproject.Filezilla
