@@ -43,6 +43,16 @@ kset("n",	"<F12>",				vim.lsp.buf.definition)
 kset("n",	"<leader>r",			vim.lsp.buf.rename)
 
 -- Outline
-kset("n",	"<leader>o",			"<cmd>Outline!<CR>")
+kset("n",	"<leader>o",			function()
+	local outline = require("outline")
+	local minimap = require("mini.map")
+	if outline.is_open() then
+		outline.close()
+		minimap.open()
+	else
+		outline.open()
+		minimap.close()
+	end
+	end)
 
 kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })
