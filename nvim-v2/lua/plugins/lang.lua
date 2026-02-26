@@ -72,6 +72,7 @@ return {
 				"html",
 				"http",
 				"ini",
+				"java",
 				"javascript",
 				"json",
 				"lua",
