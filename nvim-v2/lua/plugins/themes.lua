@@ -9,15 +9,23 @@ return {
 
 	-- VSCode
 	{
-		{
-			"Mofiqul/vscode.nvim",
-			opts = {
-				color_overrides = {
-					vscCursorDarkDark = "#000000",
-					vscLineNumber = "#333333",
-				},
-				transparent = true,
+		"flyingpie/vscode.nvim",
+		branch = "custom",
+		opts = {
+			color_overrides = {
+				vscCursorDarkDark = "#101010",
+				vscPopupBack = "#090909",
 			},
+			transparent = true,
 		},
 	},
+
+	-- -- VSCode - Local
+	-- {
+	-- 	dir = "~/workspace/github/vscode.nvim",
+	-- 	name = "vscode.nvim",
+	-- 	opts = {
+	-- 		transparent = true,
+	-- 	},
+	-- },
 }
