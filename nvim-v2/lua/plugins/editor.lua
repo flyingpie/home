@@ -16,6 +16,10 @@ return {
 		},
 	},
 
+	{
+		"sindrets/diffview.nvim",
+	},
+
 	-- image
 	{
 		"3rd/image.nvim",
