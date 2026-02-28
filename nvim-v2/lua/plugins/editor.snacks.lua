@@ -51,7 +51,10 @@ return {
 				sources = {
 					explorer = {
 						layout = {
-							preset = "sidebar",
+							git_status = true,
+							git_status_open = false,
+							git_untracked = true,
+
 							layout = {
 								box = "vertical",
 								position = "left",
@@ -60,6 +63,8 @@ return {
 								{ win = "list", border = "none" },
 								{ win = "preview", title = "{preview}", height = 0.4, border = "top" },
 							},
+
+							preset = "sidebar",
 						},
 						win = {
 							list = {
