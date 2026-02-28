@@ -37,6 +37,9 @@ kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not wi
 -- Find And Replace
 kset("n",	"<leader>fh",			":GrugFar<CR>")
 
+-- Diffview
+kset("n",	"<leader>do",			":DiffviewOpen<CR>")
+
 -- LSP
 kset("n",	"<leader>.",			vim.lsp.buf.code_action)
 kset("n",	"<F12>",				vim.lsp.buf.definition)

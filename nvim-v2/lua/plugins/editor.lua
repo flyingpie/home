@@ -18,6 +18,28 @@ return {
 
 	{
 		"sindrets/diffview.nvim",
+		opts = {
+			view = {
+				default = {
+					-- Config for changed files, and staged files in diff views.
+					layout = "diff2_horizontal",
+					disable_diagnostics = false, -- Temporarily disable diagnostics for diff buffers while in the view.
+					winbar_info = false, -- See |diffview-config-view.x.winbar_info|
+				},
+				merge_tool = {
+					-- Config for conflicted files in diff views during a merge or rebase.
+					layout = "diff3_mixed",
+					disable_diagnostics = true, -- Temporarily disable diagnostics for diff buffers while in the view.
+					winbar_info = true, -- See |diffview-config-view.x.winbar_info|
+				},
+				file_history = {
+					-- Config for changed files in file history views.
+					layout = "diff2_horizontal",
+					disable_diagnostics = false, -- Temporarily disable diagnostics for diff buffers while in the view.
+					winbar_info = false, -- See |diffview-config-view.x.winbar_info|
+				},
+			},
+		},
 	},
 
 	-- image
