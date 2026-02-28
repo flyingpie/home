@@ -1,12 +1,14 @@
 return {
 
 	-- bufferline
+	--
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		opts = {
 			-- stylua: ignore
 			options = {
+				always_show_bufferline = true,
 				diagnostics = "nvim_lsp",
 				max_name_length = 40,								-- Longer max length, so we can still see longer file names.
 				name_formatter = function(buf)
@@ -16,6 +18,7 @@ return {
 		},
 	},
 
+	-- diffview
 	{
 		"sindrets/diffview.nvim",
 		opts = {
