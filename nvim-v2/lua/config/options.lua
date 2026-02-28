@@ -6,6 +6,16 @@ o.clipboard = "unnamedplus"
 o.conceallevel = 0
 o.expandtab = false
 o.fileencoding = "utf-8"
+o.fillchars = {
+	vert = "▕",
+	fold = " ",
+	eob = " ",
+	diff = " ",
+	msgsep = "‾",
+	foldopen = "▾",
+	foldsep = "│",
+	foldclose = "▸",
+}
 o.fixeol = false
 o.hlsearch = true
 o.ignorecase = true
@@ -16,7 +26,7 @@ o.listchars = {
 	nbsp = "␣",
 	precedes = ".",
 	space = ".",
-	tab = "»-",
+	tab = "·┈",
 	trail = "·",
 }
 o.mouse = "a"
@@ -42,10 +52,6 @@ o.undofile = true
 o.updatetime = 300
 o.winborder = "rounded"
 o.wrap = false
-
-o.fillchars = {
-	horiz = "━", -- Thicker horizontal window separator
-}
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
