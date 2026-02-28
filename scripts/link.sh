@@ -74,8 +74,7 @@ ln -srf $H/lazygit/config.yml ~/.config/lazygit/config.yml
 
 # NVim
 rm -rf ~/.config/nvim
-# ln -srf $H/nvim ~/.config/nvim
-ln -srf $H/nvim-v2 ~/.config/nvim
+ln -srf $H/nvim ~/.config/nvim
 # mkdir -p ~/.var/app/io.neovim.nvim/config/nvim
 # ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
