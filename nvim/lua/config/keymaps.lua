@@ -10,10 +10,10 @@ kset("n",	"c", 					'"_c')									-- Copy, normal mode
 kset("v",	"d", 					'"_d')									-- Delete, visual mode
 kset("v",	"c", 					'"_c')									-- Copy, visual mode
 
-kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
-kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
-kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
-kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
+-- kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
+-- kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
+-- kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
+-- kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
 
 -- Window split
 kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
@@ -37,8 +37,12 @@ kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not wi
 -- Find And Replace
 kset("n",	"<leader>fh",			":GrugFar<CR>")
 
+-- Debugger
+kset("n",	"<leader>du",			function() require("dapui").toggle() end)
+kset("n",	"<leader>db",			":DapToggleBreakpoint<CR>")
+
 -- Diffview
-kset("n",	"<leader>do",			":DiffviewOpen<CR>")
+kset("n",	"<leader>do",			":DiffviewOpen<CR>",					{ desc = "Open diff view" })
 
 -- LSP
 kset("n",	"<leader>.",			vim.lsp.buf.code_action)
