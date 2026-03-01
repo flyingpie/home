@@ -63,3 +63,5 @@ kset("n",	"<leader>o",			function()
 	end)
 
 kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })
+
+kset("i",	"<C-l>",				function() Snacks.picker.actions.qflist_all(Snacks.picker()) end)
