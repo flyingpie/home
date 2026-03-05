@@ -55,3 +55,12 @@ o.wrap = false
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
+
+vim.filetype.add({
+	extension = {
+		json = "jsonc",
+		json5 = "jsonc",
+		jsonc = "jsonc",
+		props = "xml",
+	},
+})

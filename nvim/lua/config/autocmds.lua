@@ -1,7 +1,16 @@
--- Use "jsonc" filetype for "json" files, so we can use comments and such.
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = "*.json",
-	callback = function()
-		vim.bo.filetype = "jsonc"
-	end,
-})
+-- -- Use "jsonc" filetype for "json" files, so we can use comments and such.
+-- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+-- 	pattern = "*.json",
+-- 	callback = function()
+-- 		vim.bo.filetype = "jsonc"
+-- 	end,
+-- })
+
+-- local function load_dotenv()
+-- 	-- load .env from current working directory (project root if you cd there)
+-- 	pcall(vim.cmd, "Dotenv .")
+-- end
+--
+-- vim.api.nvim_create_autocmd({ "VimEnter", "DirChanged" }, {
+-- 	callback = load_dotenv,
+-- })
