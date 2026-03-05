@@ -1,5 +1,19 @@
 return {
 
+	-- conform.nvim
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" }, -- format on save
+		cmd = { "ConformInfo" },
+		opts = {
+			-- Formatters by FileType
+			formatters_by_ft = {
+				cs = { "csharpier" },
+				xml = { "csharpier" },
+			},
+		},
+	},
+
 	-- nvim-dap
 	{
 		"mfussenegger/nvim-dap",
@@ -7,51 +21,30 @@ return {
 		dependencies = {
 			"igorlfs/nvim-dap-view",
 			"nvim-neotest/nvim-nio",
-			-- "rcarriga/nvim-dap-ui",
+			"stevearc/conform.nvim",
 			"theHamsta/nvim-dap-virtual-text",
+			-- "rcarriga/nvim-dap-ui",
 		},
 		config = function()
 			local dap = require("dap")
-			-- local dapui = require("dapui")
-			-- local dapview = require("dap-view")
 			local virt = require("nvim-dap-virtual-text")
 
-			-- dapui.setup()
 			virt.setup()
 
-			-- dap.listeners.before.attach.dapui_config = function()
-			-- 	-- dapui.open()
-			-- 	dapview.open()
-			-- end
-			-- dap.listeners.before.launch.dapui_config = function()
-			-- 	-- dapui.open()
-			-- 	dapview.open()
-			-- end
-			-- dap.listeners.before.event_terminated.dapui_config = function()
-			-- 	-- dapui.close()
-			-- 	dapview.close()
-			-- end
-			-- dap.listeners.before.event_exited.dapui_config = function()
-			-- 	-- dapui.close()
-			-- 	dapview.close()
-			-- end
-
 			-- Keymaps for controlling the debugger
-			vim.keymap.set("n", "q", function()
-				dap.terminate()
-				-- dap.clear_breakpoints()
-			end, { desc = "Terminate and clear breakpoints" })
-
-			vim.keymap.set("n", "<F5>", dap.continue, { desc = "Start/continue debugging" })
-			vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Step over" })
-			vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Step into" })
-			vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Step out" })
-			vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-			vim.keymap.set("n", "<leader>dO", dap.step_over, { desc = "Step over (alt)" })
-			vim.keymap.set("n", "<leader>dC", dap.run_to_cursor, { desc = "Run to cursor" })
-			vim.keymap.set("n", "<leader>dr", dap.repl.toggle, { desc = "Toggle DAP REPL" })
-			vim.keymap.set("n", "<leader>dj", dap.down, { desc = "Go down stack frame" })
-			vim.keymap.set("n", "<leader>dk", dap.up, { desc = "Go up stack frame" })
+			-- stylua: ignore start
+			vim.keymap.set("n", "q",			dap.terminate,			{ desc = "Terminate"					})
+			vim.keymap.set("n", "<F5>",			dap.continue,			{ desc = "Start/continue debugging"		})
+			vim.keymap.set("n", "<F10>",		dap.step_over,			{ desc = "Step over"					})
+			vim.keymap.set("n", "<F11>",		dap.step_into,			{ desc = "Step into"					})
+			vim.keymap.set("n", "<F12>",		dap.step_out,			{ desc = "Step out"						})
+			vim.keymap.set("n", "<leader>db",	dap.toggle_breakpoint,	{ desc = "Toggle breakpoint"			})
+			vim.keymap.set("n", "<leader>dO",	dap.step_over,			{ desc = "Step over (alt)"				})
+			vim.keymap.set("n", "<leader>dC",	dap.run_to_cursor,		{ desc = "Run to cursor"				})
+			vim.keymap.set("n", "<leader>dr",	dap.repl.toggle,		{ desc = "Toggle DAP REPL"				})
+			vim.keymap.set("n", "<leader>dj",	dap.down,				{ desc = "Go down stack frame"			})
+			vim.keymap.set("n", "<leader>dk",	dap.up,					{ desc = "Go up stack frame"			})
+			-- stylua: ignore end
 
 			-- https://github.com/mfussenegger/nvim-dap/issues/1341
 			vim.cmd("hi DapBreakpointColor guifg=#fa4848")

@@ -1,3 +1,5 @@
+-- stylua: ignore start
+
 local kset = vim.keymap.set
 
 kset("",	"<Space>",				"<Nop>")
@@ -9,11 +11,14 @@ kset("n",	"d",					'"_d')									-- Delete, normal mode
 kset("n",	"c", 					'"_c')									-- Copy, normal mode
 kset("v",	"d", 					'"_d')									-- Delete, visual mode
 kset("v",	"c", 					'"_c')									-- Copy, visual mode
+kset("n",	"<leader>p",			'"_dP')									-- Paste without putting selected stuff in register
+kset("v",	"<leader>p",			'"_dP')									-- Paste without putting selected stuff in register
 
--- kset("n",	"<C-d>",				"<C-d>zz");								-- Half page up, and center cursor
--- kset("n",	"<C-u>",				"<C-u>zz");								-- Half page up, and center cursor
--- kset("n",	"n",					"nzzzv");								-- Half page up, and center cursor
--- kset("n",	"N",					"Nzzzv");								-- Half page up, and center cursor
+-- TODO: Currently disabled because it doesn't play nice with smooth scroll
+-- kset("n",	"<C-d>",				"<C-d>zz");							-- Half page up, and center cursor
+-- kset("n",	"<C-u>",				"<C-u>zz");							-- Half page up, and center cursor
+-- kset("n",	"n",					"nzzzv");							-- Half page up, and center cursor
+-- kset("n",	"N",					"Nzzzv");							-- Half page up, and center cursor
 
 -- Window split
 kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
@@ -37,25 +42,24 @@ kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not wi
 -- Find And Replace
 kset("n",	"<leader>fh",			":GrugFar<CR>")
 
--- Debugger
-kset("n",	"<leader>du",			function() require("dapui").toggle() end)
-kset("n",	"<leader>db",			":DapToggleBreakpoint<CR>")
-
 -- Diffview
 kset("n",	"<leader>do",			":DiffviewOpen<CR>",					{ desc = "Open diff view" })
 
 -- LSP
-kset("n",	"<leader>.",			vim.lsp.buf.code_action)
-kset("n",	"<F12>",				vim.lsp.buf.definition)
-kset("n",	"<leader>r",			vim.lsp.buf.rename)
+kset("n",	"<leader>.",			vim.lsp.buf.code_action)				-- Bring up actions like namespace import and diagnostic fix
+kset("n",	"<F12>",				vim.lsp.buf.definition)					-- Go to definition (just get used to gd already)
+kset("n",	"<leader>r",			vim.lsp.buf.rename)						-- Rename
 
 -- Outline
 kset("n",	"<leader>o",			function()
 	local outline = require("outline")
 	local minimap = require("mini.map")
+
+	-- If the outline is open, close it, and open the minimap
 	if outline.is_open() then
 		outline.close()
 		minimap.open()
+	-- Vice-versa
 	else
 		outline.open()
 		minimap.close()

@@ -6,6 +6,7 @@ docker-buildx
 docker-compose
 dos2unix
 dotnet-host					# Note that runtimes and sdks are installed separately
+duckdb
 duf							# du -f but prettier
 eza							# Like ls, but nicer
 firefox
