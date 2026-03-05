@@ -1,5 +1,16 @@
 return {
 
+	-- rustowl
+	-- Looks interesting, but currently breaks (haven't tried that much though)
+	-- https://github.com/cordx56/rustowl?tab=readme-ov-file#neovim
+	-- {
+	-- 	"cordx56/rustowl",
+	-- 	branch = "main", -- Latest stable version
+	-- 	build = "cargo install rustowl",
+	-- 	lazy = false, -- This plugin is already lazy
+	-- 	opts = {},
+	-- },
+
 	-- mrcjkb/rustaceanvim
 	{
 		"mrcjkb/rustaceanvim",
