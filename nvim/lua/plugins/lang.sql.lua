@@ -1,9 +1,5 @@
 return {
 
-	-- {
-	-- 	"tpope/vim-dotenv",
-	-- },
-
 	{
 		"kndndrj/nvim-dbee",
 		branch = "master",
@@ -11,51 +7,10 @@ return {
 			"MunifTanjim/nui.nvim",
 		},
 		build = function()
-			-- Install tries to automatically detect the install method.
-			-- if it fails, try calling it with one of these parameters:
-			--    "curl", "wget", "bitsadmin", "go"
-			require("dbee").install()
+			require("dbee").install("curl")
 		end,
 		config = function()
 			require("dbee").setup(--[[optional config]])
 		end,
 	},
-
-	-- {
-	-- 	"kristijanhusak/vim-dadbod-ui",
-	-- 	branch = "master",
-	-- 	dependencies = {
-	-- 		{
-	-- 			"tpope/vim-dadbod",
-	-- 			branch = "master",
-	-- 			lazy = true,
-	-- 		},
-	-- 		{
-	-- 			"kristijanhusak/vim-dadbod-completion",
-	-- 			branch = "master",
-	-- 			ft = { "sql", "mysql", "plsql" },
-	-- 			lazy = true,
-	-- 		},
-	-- 	},
-	-- 	cmd = {
-	-- 		"DBUI",
-	-- 		"DBUIToggle",
-	-- 		"DBUIAddConnection",
-	-- 		"DBUIFindBuffer",
-	-- 	},
-	-- 	init = function()
-	-- 		-- Your DBUI configuration
-	-- 		vim.g.db_ui_use_nerd_fonts = 1
-	-- 	end,
-	-- },
-
-	-- {
-	-- 	"xemptuous/sqlua.nvim",
-	-- 	branch = "master",
-	-- 	lazy = true,
-	-- 	cmd = "SQLua",
-	-- 	config = function()
-	-- 		require("sqlua").setup()
-	-- 	end,
-	-- },
 }
