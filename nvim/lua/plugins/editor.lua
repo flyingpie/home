@@ -1,7 +1,6 @@
 return {
 
 	-- bufferline
-	--
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
@@ -107,7 +106,7 @@ return {
 			},
 
 			preview_window = {
-				auto_preview = true,
+				auto_preview = false,
 			},
 
 			-- stylua: ignore
