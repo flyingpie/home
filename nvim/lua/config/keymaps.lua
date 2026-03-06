@@ -38,6 +38,7 @@ kset("n",	"<C-Left>",				":vertical resize -2<CR>")
 kset("n",	"<C-Right>",			":vertical resize +2<CR>")
 
 kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not window
+-- kset("n",	"<C-w>",				function() Snacks.bufdelete() end)			-- Close tab, but not window
 
 -- Find And Replace
 kset("n",	"<leader>fh",			":GrugFar<CR>")
@@ -46,9 +47,10 @@ kset("n",	"<leader>fh",			":GrugFar<CR>")
 kset("n",	"<leader>do",			":DiffviewOpen<CR>",					{ desc = "Open diff view" })
 
 -- LSP
-kset("n",	"<leader>.",			vim.lsp.buf.code_action)				-- Bring up actions like namespace import and diagnostic fix
-kset("n",	"<F12>",				vim.lsp.buf.definition)					-- Go to definition (just get used to gd already)
-kset("n",	"<leader>r",			vim.lsp.buf.rename)						-- Rename
+kset("n",	"<leader>.",			vim.lsp.buf.code_action,				{ desc = "Code action" })				-- Bring up actions like namespace import and diagnostic fix
+kset("n",	"<F12>",				vim.lsp.buf.definition,					{ desc = "Go to definition" })					-- Go to definition (just get used to gd already)
+kset("n",	"<leader>r",			vim.lsp.buf.rename,						{ desc = "Rename" })						-- Rename
+kset("n",	"<C-Space>",			vim.lsp.buf.hover)						-- Rename
 
 -- Outline
 kset("n",	"<leader>o",			function()
@@ -69,3 +71,5 @@ kset("n",	"<leader>o",			function()
 kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })
 
 kset("i",	"<C-l>",				function() Snacks.picker.actions.qflist_all(Snacks.picker()) end)
+
+kset("n",	"<F6>",					":Dotnet build solution quickfix<CR>",	{ desc = ".Net - Build Solution" })

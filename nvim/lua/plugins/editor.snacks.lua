@@ -48,6 +48,25 @@ return {
 			},
 
 			picker = {
+
+				actions = {
+					toggle_hidden_ignored = function(picker)
+						local h = picker.opts.hidden
+						local i = picker.opts.ignored
+
+						if not h and not i then
+							picker.opts.hidden = true
+						elseif h and not i then
+							picker.opts.ignored = true
+						else
+							picker.opts.hidden = false
+							picker.opts.ignored = false
+						end
+
+						picker:refresh()
+					end,
+				},
+
 				sources = {
 					explorer = {
 						layout = {
@@ -73,6 +92,14 @@ return {
 									relativenumber = true,
 								},
 							},
+						},
+					},
+				},
+				win = {
+					input = {
+						keys = {
+							["<C-l>"] = { "qflist", mode = { "n", "i" } }, -- Copy all results to quickfix
+							["<C-h>"] = { "toggle_hidden_ignored", mode = { "n", "i" } },
 						},
 					},
 				},
