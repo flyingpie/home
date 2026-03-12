@@ -62,5 +62,6 @@ vim.filetype.add({
 		json5 = "jsonc",
 		jsonc = "jsonc",
 		props = "xml",
+		razor = "razor",
 	},
 })
