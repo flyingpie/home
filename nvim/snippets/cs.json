@@ -1,0 +1,78 @@
+{
+	"cls": {
+		"description": "Class",
+		"prefix": "cls",
+		"body": [
+			"public class ${1:$TM_FILENAME_BASE}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"ctor": {
+		"description": "Constructor",
+		"prefix": "ctor",
+		"body": [
+			"${1:public} ${2:$TM_FILENAME_BASE}(${3:Parameters}) sup sup sup",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"iface": {
+		"description": "Interface",
+		"prefix": "iface",
+		"body": [
+			"public interface I${1:Name}",
+			"{",
+			"\t$0",
+			"}"
+		]
+	},
+	"prop": {
+		"description": "Property",
+		"prefix": "prop",
+		"body": [
+			"public ${1:int} ${2:MyProperty} { get; set; }$0"
+		]
+	},
+	"sum": {
+		"description": "Summary",
+		"prefix": "sum",
+		"body": [
+			"/// <summary>",
+			"/// $0",
+			"/// </summary>"
+		]
+	},
+	"test": {
+		"description": "Test",
+		"prefix": "test",
+		"body": [
+			"[TestMethod]",
+			"public void ${1:TestName}()",
+			"{",
+			"\t// Arrange",
+			"",
+			"\t// Act",
+			"",
+			"\t// Assert",
+			"}$0"
+		]
+	},
+	"try": {
+		"description": "Try catch",
+		"prefix": "try",
+		"body": [
+			"try",
+			"{",
+			"\t$1",
+			"}",
+			"catch (${2:Exception})",
+			"{",
+			"\t$0",
+			"\tthrow;",
+			"}"
+		]
+	}
+}
