@@ -89,10 +89,18 @@ return {
 		config = function()
 			local dotnet = require("easy-dotnet")
 			dotnet.setup({
-				auto_bootstrap_namespace = true,
-				csproj_mappings = true,
-				picker = "snacks",
+				auto_bootstrap_namespace = {
+					type = "file_scoped",
+					enabled = true,
+					use_clipboard_json = {
+						behavior = "prompt", --'auto' | 'prompt' | 'never',
+						register = "+", -- which register to check
+					},
+				},
+
 				background_scanning = true,
+
+				csproj_mappings = true,
 
 				-- Diagnostics
 				diagnostics = {
@@ -111,17 +119,7 @@ return {
 					config = {},
 				},
 
-				-- Notifications
-				notifications = {
-					handler = function(start_event)
-						local spinner = require("easy-dotnet.ui-modules.spinner").new()
-						spinner:start_spinner(start_event.job.name)
-						---@param finished_event JobEvent
-						return function(finished_event)
-							spinner:stop_spinner(finished_event.result.msg, finished_event.result.level)
-						end
-					end,
-				},
+				picker = "snacks",
 
 				-- Server
 				server = {
