@@ -73,6 +73,7 @@
 				}
 			],
 			"FileName": "com.spotify.Client",
+			"ProcessName": "spotify",
 			"Opacity": 90
 		},
 		{
