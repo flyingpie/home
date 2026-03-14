@@ -54,6 +54,30 @@ return {
 		},
 	},
 
+	-- lualine.nvim
+	-- Status line at the bottom.
+	-- https://github.com/nvim-lualine/lualine.nvim
+	{
+		"nvim-lualine/lualine.nvim",
+		version = "*",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			options = {
+				theme = "iceberg_dark",
+			},
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_c = { "filename" },
+				lualine_x = { "encoding", "fileformat", "filetype" },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
+			},
+		},
+	},
+
 	-- mini
 	{
 		"nvim-mini/mini.nvim",
