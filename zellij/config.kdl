@@ -235,10 +235,12 @@ ui {
 		hide_session_name true
 	}
 }
- 
-theme "tokyo-night-dark"
-// theme "catppuccin-macchiato"
- 
+
+// theme "tokyo-night-dark"
+theme "iceberg-dark"
+
+// theme "molokai-dark"
+
 mouse_mode true
 pane_frames false
 copy_on_select false
