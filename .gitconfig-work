@@ -1,3 +1,15 @@
 [user]
 	email = marco.vandenoever@datarotonde.com
 	name = Marco van den Oever
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Datarotonde/"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Datarotonde/_git/
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/BouwInstallatie/"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/BouwInstallatie/_git/
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/NewBusiness/"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/NewBusiness/_git/
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Woningcorporaties/"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Woningcorporaties/_git/

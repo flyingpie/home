@@ -79,6 +79,9 @@ ln -srf $H/nvim ~/.config/nvim
 # ln -srf $H/nvim ~/.var/app/io.neovim.nvim/config/nvim
 ln -srf $H/nvim/.ideavimrc ~/.ideavimrc
 
+rm -rf ~/.config/nvim-v3
+ln -srf $H/nvim-v3 ~/.config/nvim-v3
+
 # PowerShell
 rm -rf ~/.config/powershell
 ln -srf $H/ps ~/.config/powershell
