@@ -13,7 +13,9 @@
 			"HideOnFocusLost": "Never",
 			"OffScreenLocations": [
 				"Above"
-			]
+			],
+			"HorizontalScreenCoverage": 99,
+			"VerticalScreenCoverage": 98
 		},
 		{
 			"Name": "Dolphin",
