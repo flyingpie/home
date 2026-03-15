@@ -1,0 +1,70 @@
+local o = vim.opt
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+vim.g.autoformat = false -- Don't format on save
+
+o.clipboard = "unnamedplus"
+o.conceallevel = 0
+o.expandtab = false
+o.fileencoding = "utf-8"
+o.fillchars = {
+	vert = "▕",
+	fold = " ",
+	eob = " ",
+	diff = " ",
+	msgsep = "‾",
+	foldopen = "▾",
+	foldsep = "│",
+	foldclose = "▸",
+}
+o.fixeol = false
+o.hlsearch = true
+o.ignorecase = true
+o.list = true
+o.listchars = {
+	eol = "↲",
+	extends = "x",
+	nbsp = "␣",
+	precedes = ".",
+	space = ".",
+	tab = "·┈",
+	trail = "·",
+}
+o.mouse = "a"
+o.number = true
+o.numberwidth = 4
+o.relativenumber = true
+o.scroll = 15
+o.scrolloff = 2
+o.showmode = false
+o.sidescrolloff = 8
+o.signcolumn = "yes"
+o.smartcase = true
+o.smartindent = false
+o.spelllang = { "en", "nl" }
+o.splitbelow = true
+o.splitright = true
+o.statuscolumn = "%s %l  %r "
+o.swapfile = false
+o.tabstop = 4
+o.termguicolors = true
+o.timeoutlen = 300
+o.undofile = true
+o.updatetime = 300
+o.winborder = "rounded"
+o.wrap = false
+
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
+
+vim.filetype.add({
+	extension = {
+		json = "jsonc",
+		json5 = "jsonc",
+		jsonc = "jsonc",
+		props = "xml",
+		razor = "razor",
+	},
+})
