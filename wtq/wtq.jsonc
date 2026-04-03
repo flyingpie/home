@@ -11,11 +11,11 @@
 			],
 			"FileName": "wezterm-gui",
 			"HideOnFocusLost": "Never",
+			"HorizontalScreenCoverage": 99,
+			"VerticalScreenCoverage": 98,
 			"OffScreenLocations": [
 				"Above"
-			],
-			"HorizontalScreenCoverage": 99,
-			"VerticalScreenCoverage": 98
+			]
 		},
 		{
 			"Name": "Dolphin",
@@ -79,15 +79,15 @@
 			"Opacity": 90
 		},
 		{
-			"Name": "Discord",
+			"Name": "Vesktop",
 			"Hotkeys": [
 				{
 					"Modifiers": "Control",
 					"KeyChar": "6"
 				}
 			],
-			"FileName": "com.discordapp.Discord",
-			"AttachMode": "Find",
+			"FileName": "vesktop",
+			"AttachMode": "FindOrStart",
 			"AlwaysOnTop": true,
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 70,
