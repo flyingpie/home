@@ -85,8 +85,14 @@
 
 	"blender.executables": [
 		{
+			"name": "Blender 5.1.0",
+			"path": "/home/marco/apps/blender/stable/blender-5.0.1-stable.a3db93c5b259/blender",
+			"isDefault": true
+		},
+		{
 			"name": "Blender 5.0.1",
-			"path": "/home/marco/apps/blender/stable/blender-5.0.1-stable.a3db93c5b259/blender"
+			"path": "/home/marco/apps/blender/stable/blender-5.0.1-stable.a3db93c5b259/blender",
+			"isDefault": true
 		},
 		{
 			"name": "Blender 4.5",
