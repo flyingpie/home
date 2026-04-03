@@ -59,18 +59,22 @@ if $RUN_ALL || [ "$1" = "yay" ]; then
 fi
 
 #
-# Yay Packages
+# Yay Packages (update)
 #
 if $RUN_ALL || [ "$1" = "pkgs_upd" ]; then
 	echo "#########################################"
 	echo "# Updating packages"
 	echo "#########################################"
 
+	# Update database
+	yay -Syy
+
+	# Update installed packages
 	yay -Syu --noconfirm
 fi
 
 #
-# Yay Packages
+# Yay Packages (install)
 #
 if $RUN_ALL || [ "$1" = "pkgs_inst" ]; then
 	echo "#########################################"
