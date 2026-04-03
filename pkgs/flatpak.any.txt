@@ -2,13 +2,9 @@ com.github.zocker_160.SyncThingy
 com.moonlight_stream.Moonlight
 com.spotify.Client
 com.usebruno.Bruno
-com.valvesoftware.Steam
 io.dbeaver.DBeaverCommunity
-me.iepure.devtoolbox
 org.chromium.Chromium
 org.filezillaproject.Filezilla
-org.ghidra_sre.Ghidra
 org.kde.krita
-org.localsend.localsend_app
 org.onlyoffice.desktopeditors
 org.remmina.Remmina
