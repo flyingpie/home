@@ -47,6 +47,9 @@
 [includeIf "gitdir:~/workspace/github/"]
 	path = ~/.home/.gitconfig-personal
 
+[includeIf "gitdir:~/workspace/maddybang/"]
+	path = ~/.home/.gitconfig-personal
+
 [includeIf "gitdir:~/workspace/sandbox/"]
 	path = ~/.home/.gitconfig-personal
 
