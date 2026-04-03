@@ -4,20 +4,26 @@ return {
 	{
 		"saghen/blink.cmp",
 		version = "*",
-		opts = {
-			sources = {
-				default = { "lsp", "easy-dotnet", "path" },
-				providers = {
-					["easy-dotnet"] = {
-						name = "easy-dotnet",
-						enabled = true,
-						module = "easy-dotnet.completion.blink",
-						score_offset = 10000,
-						async = true,
+		config = function()
+			require("blink.cmp").setup({
+				fuzzy = { implementation = "prefer_rust_with_warning" },
+				keymap = {
+					preset = "enter",
+				},
+				sources = {
+					default = { "lsp", "easy-dotnet", "path" },
+					providers = {
+						["easy-dotnet"] = {
+							name = "easy-dotnet",
+							enabled = true,
+							module = "easy-dotnet.completion.blink",
+							score_offset = 10000,
+							async = true,
+						},
 					},
 				},
-			},
-		},
+			})
+		end,
 	},
 
 	-- bufferline
