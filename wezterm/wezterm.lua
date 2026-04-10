@@ -5,7 +5,7 @@ local config = {}
 
 -- Background
 config.window_background_image = wezterm.home_dir .. "/.home/img/bg.png"
-config.window_background_image_hsb = { brightness = 0.004 }
+config.window_background_image_hsb = { brightness = 0.002 }
 
 -- Color scheme
 -- config.color_scheme = "Cloud (terminal.sexy)"
