@@ -11,7 +11,7 @@ return {
 					preset = "enter",
 				},
 				sources = {
-					default = { "lsp", "easy-dotnet", "path" },
+					default = { "lsp", "easy-dotnet", "path", "snippets" },
 					providers = {
 						["easy-dotnet"] = {
 							name = "easy-dotnet",
