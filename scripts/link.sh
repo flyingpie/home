@@ -45,6 +45,9 @@ ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
 mkdir -p ~/.config/JetBrains/Rider2025.3
 ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.3/idea.properties
 
+mkdir -p ~/.config/JetBrains/Rider2026.1
+ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.1/idea.properties
+
 # JetBrains - RustRover
 mkdir -p ~/.config/JetBrains/RustRover2025.2/
 ln -srf $H/rider/idea.properties ~/.config/JetBrains/RustRover2025.2/idea.properties
