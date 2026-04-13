@@ -6,6 +6,8 @@
       <mapping ext="dep" type="PLAIN_TEXT" />
       <removed_mapping ext="inputactions" approved="true" type="JSON" />
       <removed_mapping ext="tps" approved="true" type="XML" />
+      <removed_mapping ext="usf" approved="true" type="C/C++" />
+      <removed_mapping ext="ush" approved="true" type="C/C++ Header" />
     </extensionMap>
   </component>
 </application>
