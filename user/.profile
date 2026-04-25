@@ -12,10 +12,9 @@ if [ -f $CARGO_ENV ]; then
 	. $CARGO_ENV
 fi
 
-# SSH Agent Socket for use by KeePassXC
+# SSH Agent socket
 # Only set if not set already (e.g. by SSH forwarding)
-if [[ ${SSH_AUTH_SOCK:-"unset"} == "unset" ]]
-then
+if [[ -z "${SSH_CONNECTION}" ]]; then
 	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
