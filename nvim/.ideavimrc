@@ -1,24 +1,32 @@
 " You can find a list of commands here: https://jb.gg/h38q75
 " Find more examples here: https://jb.gg/share-ideavimrc
 
+let mapleader=" "
+
 " Settings
 set clipboard^=unnamedplus,unnamed
 set guicursor+=a:blinkon0
-set ignorecase
 set incsearch			" Do incremental searching.
+" set hlsearch            " Highlight all matches
+set which-key
+
 set number
 set relativenumber
+
 set scroll=15
 set scrolloff=2
+
+set ignorecase
 set smartcase
+
 set timeout
 set timeoutlen=300
 set ttimeout
 set ttimeoutlen=50
 
 " Key mappings
-map \b <Action>(ToggleLineBreakpoint)
-map Q gq				" Don't use Ex mode, use Q for formatting.
+" map \b <Action>(ToggleLineBreakpoint)
+" map Q gq				" Don't use Ex mode, use Q for formatting.
 
 " nmap oo o<Esc>k
 " nmap OO O<Esc>j
@@ -27,7 +35,25 @@ map Q gq				" Don't use Ex mode, use Q for formatting.
 vnoremap > >gv
 vnoremap < <gv
 
+""" Mappings --------------------------------
+" map <leader>f <Plug>(easymotion-s)
+" map <leader>e <Plug>(easymotion-f)
+
+" map <leader>d <Action>(Debug)
+map <leader>r <Action>(RenameElement)
+" map <leader>c <Action>(Stop)
+" map <leader>z <Action>(ToggleDistractionFreeMode)
+
+" map <leader>s <Action>(SelectInProjectView)
+" map <leader>a <Action>(Annotate)
+" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+" map <S-Space> <Action>(GotoNextError)
+
+map <leader>db <Action>(ToggleLineBreakpoint)
+" map <leader>o <Action>(FileStructurePopup)
+
 " Plugins
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
+
