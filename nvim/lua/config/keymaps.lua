@@ -5,6 +5,8 @@ local kset = vim.keymap.set
 kset("",	"<Space>",				"<Nop>")
 
 kset("n",	"<A-z>",				":set wrap!<CR>")						-- Toggle line wrap
+kset("n",	"m",					":m +1<CR>", { desc = "Move line up" })
+kset("n",	",",					":m -2<CR>", { desc = "Move line down" })
 
 -- Remap delete/change to black hole register
 kset("n",	"d",					'"_d')									-- Delete, normal mode
