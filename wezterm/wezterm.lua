@@ -4,18 +4,22 @@ local wezterm = require("wezterm")
 local config = {}
 
 -- Background
-config.window_background_image = wezterm.home_dir .. "/.home/img/bg.png"
-config.window_background_image_hsb = { brightness = 0.002 }
+config.background = {
+	{
+		source = { Color = "#191920" },
+		opacity = 1,
+		height = "100%",
+		width = '100%',
+	},
+	{
+		source = { File = wezterm.home_dir .. "/.home/img/bg-12.jpg" },
+		opacity = 0.025
+	},
+}
+
 
 -- Color scheme
--- config.color_scheme = "Cloud (terminal.sexy)"
--- config.color_scheme = "Black Metal (Dark Funeral) (base16)"
--- config.color_scheme = "Blazer"
--- config.color_scheme = "Blue Matrix"
--- config.color_scheme = "carbonfox"
 config.color_scheme = "Rapture"
--- config.color_scheme = "tokyonight_night"
--- config.color_scheme_dirs = { os.getenv("HOME") .. "/.home/wezterm/colors" }
 
 -- Font
 config.font = wezterm.font("CaskaydiaMono Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
