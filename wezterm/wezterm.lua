@@ -6,14 +6,15 @@ local config = {}
 -- Background
 config.background = {
 	{
-		source = { Color = "#191920" },
+		-- source = { Color = "#171720" },
+		source = { Color = "101016" },
 		opacity = 1,
 		height = "100%",
 		width = '100%',
 	},
 	{
 		source = { File = wezterm.home_dir .. "/.home/img/bg-12.jpg" },
-		opacity = 0.025
+		opacity = 0.03
 	},
 }
 
