@@ -7,6 +7,10 @@ H="$H/.."
 # Turn relative path into absolute one:
 H=$(realpath $H)
 
+# Alacritty
+rm -rf ~/.config/alacritty
+ln -srf $H/alacritty ~/.config/alacritty
+
 # Bin
 rm -rf ~/.local/bin
 ln -s $H/bin ~/.local/bin
