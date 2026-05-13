@@ -1,0 +1,11 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/tokyo_night.toml"
+]
+
+[font]
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
+size = 10
+
+[window]
+decorations = "None"

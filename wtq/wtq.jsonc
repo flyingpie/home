@@ -9,7 +9,7 @@
 					"KeyChar": "1"
 				}
 			],
-			"FileName": "wezterm-gui",
+			"FileName": "alacritty",
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 99,
 			"VerticalScreenCoverage": 98,
@@ -133,9 +133,30 @@
 					"KeyChar": "9"
 				}
 			],
-			"FileName": "microsoft-edge",
-			"AttachMode": "Find",
-			"HideOnFocusLost": "Never"
+			"FileName": "flatpak",
+			"ArgumentList": [
+				{
+					"Argument": " run"
+				},
+				{
+					"Argument": "com.microsoft.Edge"
+				},
+				{
+					"Argument": "--app=https://teams.cloud.microsoft/"
+				}
+			],
+			"ProcessName": "msedge",
+			"AttachMode": "FindOrStart",
+			"WindowTitle": ".*\\| Microsoft Teams$",
+			"HideOnFocusLost": "Never",
+			"HorizontalScreenCoverage": 40,
+			"HorizontalAlign": "Right",
+			"OffScreenLocations": [
+				"Right",
+				"Above",
+				"Below",
+				"Left"
+			]
 		}
 	],
 	"Hotkeys": [
