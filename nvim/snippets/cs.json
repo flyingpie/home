@@ -13,7 +13,7 @@
 		"description": "Constructor",
 		"prefix": "ctor",
 		"body": [
-			"${1:public} ${2:$TM_FILENAME_BASE}(${3:Parameters}) sup sup sup",
+			"${1:public} ${2:$TM_FILENAME_BASE}(${3:Parameters})",
 			"{",
 			"\t$0",
 			"}"
@@ -34,6 +34,13 @@
 		"prefix": "prop",
 		"body": [
 			"public ${1:int} ${2:MyProperty} { get; set; }$0"
+		]
+	},
+	"inh": {
+		"description": "Inherit Doc",
+		"prefix": "inh",
+		"body": [
+			"/// <inheritdoc/>"
 		]
 	},
 	"sum": {
