@@ -29,9 +29,8 @@ ncdu						# Disk usage analyzer
 neovim
 nmap
 nodejs
-npm
-octopi
 perf
+pnpm
 powershell-bin
 qpwgraph					# Pipewire graph
 qt6-imageformats			# More image formats in Qt apps, like previews in file explorers
