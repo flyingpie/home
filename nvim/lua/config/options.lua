@@ -16,7 +16,7 @@ o.fillchars = {
 	foldsep = "│",
 	foldclose = "▸",
 }
-o.fixeol = false
+o.fixendofline = false
 o.hlsearch = true
 o.ignorecase = true
 o.list = true
