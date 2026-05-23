@@ -1,8 +1,9 @@
 git:
   diffContextSize: 5
   pagers:
-    - colorArg: always
-      pager: delta --dark --paging=never --side-by-side
+    #- colorArg: always
+    #  pager: delta --dark --paging=never --side-by-side
+    - externalDiffCommand: difft --color=always --tab-width=4 --display=side-by-side-show-both
 
 gui:
   authorColors:
