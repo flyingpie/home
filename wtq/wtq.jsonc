@@ -136,7 +136,7 @@
 			"FileName": "flatpak",
 			"ArgumentList": [
 				{
-					"Argument": " run"
+					"Argument": "run"
 				},
 				{
 					"Argument": "com.microsoft.Edge"
