@@ -45,10 +45,22 @@ kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not wi
 -- Find And Replace
 kset("n",	"<leader>fh",			":GrugFar<CR>")
 
+--------------------------------
 -- Diffview
-kset("n",	"<leader>do",			":DiffviewOpen<CR>",					{ desc = "Open diff view" })
+--------------------------------
+local function toggleDiffview()
+	if require("diffview.lib").get_current_view() then
+		vim.cmd("DiffviewClose")
+	else
+		vim.cmd("DiffviewOpen")
+	end
+end
 
+kset("n",	"<leader>do",			toggleDiffview,							{ desc = "Toggle diff view" })
+
+--------------------------------
 -- LSP
+--------------------------------
 kset("n",	"<leader>.",			vim.lsp.buf.code_action,				{ desc = "Code action" })				-- Bring up actions like namespace import and diagnostic fix
 kset("n",	"<F12>",				vim.lsp.buf.definition,					{ desc = "Go to definition" })					-- Go to definition (just get used to gd already)
 kset("n",	"<leader>r",			vim.lsp.buf.rename,						{ desc = "Rename" })						-- Rename
