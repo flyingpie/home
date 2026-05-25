@@ -139,6 +139,10 @@ ln -srf $H/wtq/wtq.jsonc ~/.config/wtq/wtq.jsonc
 mkdir -p ~/.var/app/nl.flyingpie.wtq/config/wtq
 ln -srf $H/wtq/wtq.jsonc ~/.var/app/nl.flyingpie.wtq/config/wtq/wtq.jsonc
 
+# User
+rm -rf  ~/.config/yazi
+ln -s $H/yazi ~/.config/yazi
+
 # Zed
 rm -rf ~/.config/zed
 ln -srf $H/zed ~/.config/zed
