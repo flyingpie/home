@@ -2,7 +2,7 @@
 	"$schema": "wtq.schema.json",
 	"Apps": [
 		{
-			"Name": "WezTerm",
+			"Name": "Alacritty",
 			"Hotkeys": [
 				{
 					"Modifiers": "Control",
@@ -12,7 +12,7 @@
 			"FileName": "alacritty",
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 99,
-			"VerticalScreenCoverage": 98,
+			"VerticalScreenCoverage": 97,
 			"OffScreenLocations": [
 				"Above"
 			]
@@ -79,21 +79,36 @@
 			"Opacity": 90
 		},
 		{
-			"Name": "Vesktop",
+			"Name": "Discord",
 			"Hotkeys": [
 				{
 					"Modifiers": "Control",
 					"KeyChar": "6"
 				}
 			],
-			"FileName": "vesktop",
+			"FileName": "flatpak",
+			"ArgumentList": [
+				{
+					"Argument": "run"
+				},
+				{
+					"Argument": "com.microsoft.Edge"
+				},
+				{
+					"Argument": "--app=https://discord.com/"
+				}
+			],
+			"ProcessName": "msedge",
 			"AttachMode": "FindOrStart",
-			"AlwaysOnTop": true,
+			"WindowTitle": "Discord",
 			"HideOnFocusLost": "Never",
-			"HorizontalScreenCoverage": 70,
+			"HorizontalScreenCoverage": 60,
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
-				"Below"
+				"Right",
+				"Above",
+				"Below",
+				"Left"
 			]
 		},
 		{
@@ -109,24 +124,7 @@
 			"HideOnFocusLost": "Never"
 		},
 		{
-			"Name": "Dev Toolbox",
-			"Hotkeys": [
-				{
-					"Modifiers": "Control",
-					"KeyChar": "8"
-				}
-			],
-			"FileName": "me.iepure.devtoolbox",
-			"AttachMode": "Find",
-			"Resize": "Never",
-			"HorizontalScreenCoverage": 70,
-			"HorizontalAlign": "Right",
-			"OffScreenLocations": [
-				"Right"
-			]
-		},
-		{
-			"Name": "Edge",
+			"Name": "Teams",
 			"Hotkeys": [
 				{
 					"Modifiers": "Control",
@@ -136,7 +134,7 @@
 			"FileName": "flatpak",
 			"ArgumentList": [
 				{
-					"Argument": " run"
+					"Argument": "run"
 				},
 				{
 					"Argument": "com.microsoft.Edge"
