@@ -102,7 +102,7 @@
 			"AttachMode": "FindOrStart",
 			"WindowTitle": "Discord",
 			"HideOnFocusLost": "Never",
-			"HorizontalScreenCoverage": 60,
+			"HorizontalScreenCoverage": 50,
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
 				"Right",
@@ -147,7 +147,7 @@
 			"AttachMode": "FindOrStart",
 			"WindowTitle": ".*\\| Microsoft Teams$",
 			"HideOnFocusLost": "Never",
-			"HorizontalScreenCoverage": 40,
+			"HorizontalScreenCoverage": 50,
 			"HorizontalAlign": "Right",
 			"OffScreenLocations": [
 				"Right",
