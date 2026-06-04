@@ -1,3 +1,5 @@
+local funcs = require("config._funcs")
+
 local o = vim.opt
 
 vim.g.autoformat = false -- Don't format on save
@@ -34,16 +36,18 @@ o.number = true
 o.numberwidth = 4
 o.relativenumber = true
 o.scroll = 15
-o.scrolloff = 2
+o.scrolloff = 15
+o.shiftwidth = 4
 o.showmode = false
 o.sidescrolloff = 8
 o.signcolumn = "yes"
 o.smartcase = true
 o.smartindent = false
+o.softtabstop = 4
 o.spelllang = { "en", "nl" }
 o.splitbelow = true
 o.splitright = true
-o.statuscolumn = "%s %l  %r "
+o.statuscolumn = "%s %l  %r %C "
 o.swapfile = false
 o.tabstop = 4
 o.termguicolors = true
@@ -53,8 +57,11 @@ o.updatetime = 300
 o.winborder = "rounded"
 o.wrap = false
 
+-- o.whichwrap:append({ "<", ">", "[", "]", "h", "l" })
+-- o.iskeyword:append("-")
+
 vim.cmd("set whichwrap+=<,>,[,],h,l")
-vim.cmd([[set iskeyword+=-]])
+-- vim.cmd([[set iskeyword+=-]])
 
 vim.filetype.add({
 	extension = {
@@ -65,3 +72,5 @@ vim.filetype.add({
 		razor = "razor",
 	},
 })
+
+vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter", "WinResized" }, { callback = funcs.on_scroll })

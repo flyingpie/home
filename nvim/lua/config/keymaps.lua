@@ -1,89 +1,64 @@
 -- stylua: ignore start
+local funcs = require("config._funcs")
 
 local kset = vim.keymap.set
 
+-- Unmap <Space> so we can use it as a leader
 kset("",	"<Space>",				"<Nop>")
 
-kset("n",	"<A-z>",				":set wrap!<CR>")						-- Toggle line wrap
-kset("n",	"m",					":m +1<CR>", { desc = "Move line up" })
-kset("n",	",",					":m -2<CR>", { desc = "Move line down" })
+kset("n",	"<A-z>",				"<cmd>set wrap!<CR>",						{ desc = "Toggle Line Wrap" })
+kset("n",	",",					"<cmd>m -2<CR>",							{ desc = "Move Line Up" })
+kset("n",	"m",					"<cmd>m +1<CR>",							{ desc = "Move Line Down" })
 
 -- Remap delete/change to black hole register
-kset("n",	"d",					'"_d')									-- Delete, normal mode
-kset("n",	"c", 					'"_c')									-- Copy, normal mode
-kset("v",	"d", 					'"_d')									-- Delete, visual mode
-kset("v",	"c", 					'"_c')									-- Copy, visual mode
-kset("n",	"<leader>p",			'"_dP')									-- Paste without putting selected stuff in register
-kset("v",	"<leader>p",			'"_dP')									-- Paste without putting selected stuff in register
+kset("v",	"c", 					'"_c',										{ desc = "Change Without Yank" })
+kset("v",	"d",					'"_d',										{ desc = "Delete Without Yank" })
+kset("x",	"<leader>p",			'"_dP',										{ desc = "Paste Without Yank" })
 
--- TODO: Currently disabled because it doesn't play nice with smooth scroll
--- kset("n",	"<C-d>",				"<C-d>zz");							-- Half page up, and center cursor
--- kset("n",	"<C-u>",				"<C-u>zz");							-- Half page up, and center cursor
--- kset("n",	"n",					"nzzzv");							-- Half page up, and center cursor
--- kset("n",	"N",					"Nzzzv");							-- Half page up, and center cursor
+kset("n",	"<C-d>",				funcs.move_line_down,						{ desc = "Move Down (Prefer No Scrolling)" })
+kset("n",	"<C-u>",				funcs.move_line_up,							{ desc = "Move Up (Prefer No Scrolling)" })
+
+-- kset("n",	"<C-w>",				funcs.close_buffer,							{ desc = "Close Buffer" })
+kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>",				{ desc = "Close Buffer" })
+kset("n",	"<leader>q",			"<C-w>q",									{ desc = "Close Window" })
 
 -- Window split
-kset("n",	"<leader>q",			"<C-w>q")								-- Unsplit
-kset("n", 	"<leader>-",			function() vim.cmd("split") end)		-- Split horizontal
-kset("n", 	"<leader>\\",			function() vim.cmd("vsplit") end)		-- Split vertical
+kset("n", 	"<leader>-",			"<cmd>split<CR>",							{ desc = "Split Horizontal" })
+kset("n", 	"<leader>\\",			"<cmd>vsplit<CR>",							{ desc = "Split Vertical" })
 
 -- Window navigation
-kset("n",	"<C-h>",				"<C-w>h")								-- Move left
-kset("n", 	"<C-j>", 				"<C-w>j")								-- Move down
-kset("n", 	"<C-k>", 				"<C-w>k")								-- Move up
-kset("n", 	"<C-l>", 				"<C-w>l")								-- Move right
+kset("n", 	"<C-j>", 				"<C-w>j",									{ desc = "Move To Down Window" })
+kset("n", 	"<C-k>", 				"<C-w>k",									{ desc = "Move To Up Window" })
+kset("n",	"<C-h>",				"<C-w>h",									{ desc = "Move To Left Window" })
+kset("n", 	"<C-l>", 				"<C-w>l",									{ desc = "Move To Right Window" })
 
 -- Window resize
-kset("n",	"<C-Up>",				":resize -4<CR>")
-kset("n",	"<C-Down>",				":resize +4<CR>")
-kset("n",	"<C-Left>",				":vertical resize -2<CR>")
-kset("n",	"<C-Right>",			":vertical resize +2<CR>")
-
-kset("n",	"<C-w>",				":bp<bar>sp<bar>bn<bar>bd<CR>")			-- Close tab, but not window
--- kset("n",	"<C-w>",				function() Snacks.bufdelete() end)			-- Close tab, but not window
+kset("n",	"<C-Up>",				"<cmd>resize -4<CR>",						{ desc = "Shrink Window Horizontally" })
+kset("n",	"<C-Down>",				"<cmd>resize +4<CR>",						{ desc = "Expand Window Horizontally" })
+kset("n",	"<C-Left>",				"<cmd>vertical resize -2<CR>",				{ desc = "Shrink Window Vertically" })
+kset("n",	"<C-Right>",			"<cmd>vertical resize +2<CR>",				{ desc = "Expand Window Vertically" })
 
 -- Find And Replace
-kset("n",	"<leader>fh",			":GrugFar<CR>")
-
---------------------------------
--- Diffview
---------------------------------
-local function toggleDiffview()
-	if require("diffview.lib").get_current_view() then
-		vim.cmd("DiffviewClose")
-	else
-		vim.cmd("DiffviewOpen")
-	end
-end
-
-kset("n",	"<leader>do",			toggleDiffview,							{ desc = "Toggle diff view" })
+kset("n",	"<leader>fh",			"<cmd>GrugFar<CR>",							{ desc = "Open GrugFar" })
 
 --------------------------------
 -- LSP
 --------------------------------
-kset("n",	"<leader>.",			vim.lsp.buf.code_action,				{ desc = "Code action" })				-- Bring up actions like namespace import and diagnostic fix
-kset("n",	"<F12>",				vim.lsp.buf.definition,					{ desc = "Go to definition" })					-- Go to definition (just get used to gd already)
-kset("n",	"<leader>r",			vim.lsp.buf.rename,						{ desc = "Rename" })						-- Rename
-kset("n",	"<C-Space>",			vim.lsp.buf.hover)						-- Rename
+kset("n",	"<leader>.",			vim.lsp.buf.code_action,					{ desc = "Code Actions" })
+kset("n",	"<leader>r",			vim.lsp.buf.rename,							{ desc = "Rename" })
+kset("n",	"<C-Space>",			vim.lsp.buf.hover,							{ desc = "Show LSP info" })
 
--- Outline
-kset("n",	"<leader>o",			function()
-	local outline = require("outline")
-	local minimap = require("mini.map")
+--------------------------------
+-- DotNet
+--------------------------------
 
-	-- If the outline is open, close it, and open the minimap
-	if outline.is_open() then
-		outline.close()
-		minimap.open()
-	-- Vice-versa
-	else
-		outline.open()
-		minimap.close()
-	end
-	end)
+kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",				{ desc = "Toggle DotNet Test Runner" })
+kset("n",	"<F6>",					"<cmd>Dotnet build solution quickfix<CR>",	{ desc = ".Net - Build Solution" })
 
-kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",			{ desc = "Toggle .Net test runner" })
+--------------------------------
+-- Misc
+--------------------------------
 
-kset("i",	"<C-l>",				function() Snacks.picker.actions.qflist_all(Snacks.picker()) end)
-
-kset("n",	"<F6>",					":Dotnet build solution quickfix<CR>",	{ desc = ".Net - Build Solution" })
+kset("n",	"<leader>do",			funcs.toggle_diffview,						{ desc = "Toggle Diff View" })
+kset("n",	"<leader>o",			funcs.toggle_outline,						{ desc = "Toggle Between Minimap And Outline" })
+kset("i",	"<C-l>",				funcs.send_to_quicklist,					{ desc = "Send FZF Items To Quicklist" })
