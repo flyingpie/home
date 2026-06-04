@@ -19,6 +19,27 @@
 			"}"
 		]
 	},
+	"guard": {
+		"description": "Guard.Against.Null()",
+		"prefix": "guard",
+		"body": [
+			"Guard.Against.Null(${1:$Name});"
+		]
+	},
+	"guarde": {
+		"description": "Guard.Against.NullOrEmpty()",
+		"prefix": "guarde",
+		"body": [
+			"Guard.Against.NullOrEmpty(${1:$Name});"
+		]
+	},
+	"guardw": {
+		"description": "Guard.Against.NullOrWhiteSpace()",
+		"prefix": "guardw",
+		"body": [
+			"Guard.Against.NullOrWhiteSpace(${1:$Name});"
+		]
+	},
 	"iface": {
 		"description": "Interface",
 		"prefix": "iface",
