@@ -110,6 +110,7 @@ alias ws="cd ~/workspace"
 alias wsf="cd ~/workspace/flyingpie"
 alias wsg="cd ~/workspace/github"
 alias wsi="cd ~/workspace/isres"
+alias wsm="cd ~/workspace/maddybang"
 alias wss="cd ~/workspace/sandbox"
 
 # Locations - Projects
@@ -203,32 +204,58 @@ chpwd() { clear; ls }
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
+# Zsh plugins
 source ~/.home/zsh/antidote/antidote.zsh
 antidote load ~/.home/zsh/.zsh_plugins.txt
 
+# P10k
 source ~/.home/zsh/.p10k.zsh
-
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # zsh parameter completion for the dotnet CLI
 _dotnet_zsh_complete()
 {
-  local completions=("$(dotnet complete "$words")")
+	local completions=("$(dotnet complete "$words")")
 
-  # If the completion list is empty, just continue with filename selection
-  if [ -z "$completions" ]
-  then
+	# If the completion list is empty, just continue with filename selection
+	if [ -z "$completions" ]
+	then
 	_arguments '*::arguments: _normal'
 	return
-  fi
+	fi
 
-  # This is not a variable assignment, don't remove spaces!
-  _values = "${(ps:\n:)completions}"
+	# This is not a variable assignment, don't remove spaces!
+	_values = "${(ps:\n:)completions}"
 }
 
 compdef _dotnet_zsh_complete dotnet
+
+####################################
+# Zellij
+####################################
+
+# Set the pane name to the current working directory
+function _zellij_auto_rename() {
+	# Check that we're actually running in Zellij
+	[[ -z "$ZELLIJ" ]] && return
+
+	# Now set the pane name to the current working directory
+	zellij action rename-pane $(pwd)
+}
+
+# Tell Zsh to run _zellij_auto_rename right after executing a command
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd _zellij_auto_rename
+
+autoload -U add-zsh-hook
+
+####################################
+# FZF
+####################################
+source <(fzf --zsh)
+
+# Bind key in a precmd hook, as doing so directly seems to be overridden
+setup_fzf_bindings() {
+	bindkey '^R' fzf-history-widget
+}
+
+add-zsh-hook precmd setup_fzf_bindings
