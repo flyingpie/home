@@ -1,0 +1,101 @@
+layout {
+	default_tab_template {
+		// the default zellij tab-bar and status bar plugins
+		pane size=1 borderless=true {
+			plugin location="zellij:tab-bar"
+		}
+		children
+		pane size=1 borderless=true {
+			plugin location="zellij:status-bar"
+		}
+	}
+	swap_tiled_layout name="1-4" {
+		tab {
+			pane split_direction="vertical" {
+				pane size="70%"
+				pane split_direction="horizontal" {
+					pane
+					pane
+					pane
+					pane
+					pane
+					pane
+				}
+			}
+		}
+	}
+	swap_tiled_layout name="2-4" {
+		tab {
+			pane split_direction="vertical" {
+				pane split_direction="horizontal" size="70%" {
+					pane size="80%"
+					pane split_direction="vertical" {
+						pane
+						pane
+					}
+				}
+				pane split_direction="horizontal" {
+					pane
+					pane
+					pane
+					pane
+				}
+			}
+		}
+	}
+	swap_tiled_layout name="1-2-2" {
+		tab {
+			pane split_direction="vertical" {
+				pane split_direction="horizontal" size="60%" {
+					pane size="80%"
+					pane split_direction="vertical" {
+						pane
+						pane
+					}
+				}
+				pane split_direction="horizontal" {
+					pane size="80%"
+					pane
+				}
+				pane split_direction="horizontal" {
+					pane size="80%"
+					pane
+				}
+			}
+		}
+	}
+	swap_tiled_layout name="stack" {
+		tab {
+			pane stacked=true {
+				pane
+				pane
+				pane
+				pane
+				pane
+				pane
+			}
+		}
+	}
+	swap_tiled_layout name="horizontal" {
+		tab {
+			pane
+			pane
+			pane
+			pane
+			pane
+			pane
+		}
+	}
+	swap_tiled_layout name="vertical" {
+		tab {
+			pane split_direction="vertical" {
+				pane
+				pane
+				pane
+				pane
+				pane
+				pane
+			}
+		}
+	}
+}
