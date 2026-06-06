@@ -148,8 +148,9 @@ rm -rf ~/.config/zed
 ln -srf $H/zed ~/.config/zed
 
 # Zellij
-mkdir -p ~/.config/zellij
-ln -srf $H/zellij/config.kdl ~/.config/zellij/config.kdl
+rm -rf ~/.config/zellij
+# mkdir -p ~/.config/zellij
+ln -srf $H/zellij/ ~/.config/zellij
 
 # Zsh
 ln -srf $H/zsh/.zshrc ~/.zshrc
