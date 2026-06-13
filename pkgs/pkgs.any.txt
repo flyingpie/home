@@ -15,6 +15,7 @@ fzf
 git
 git-delta
 git-lfs
+harper
 htop
 imhex-bin
 jetbrains-toolbox
