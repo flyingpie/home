@@ -239,7 +239,7 @@ function _zellij_auto_rename() {
 	[[ -z "$ZELLIJ" ]] && return
 
 	# Now set the pane name to the current working directory
-	zellij action rename-pane $(pwd)
+	zellij action rename-pane "$(pwd)"
 }
 
 # Tell Zsh to run _zellij_auto_rename right after executing a command
