@@ -65,6 +65,11 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 
 vim.filetype.add({
 	extension = {
+		-- HPL
+		ent = "xml",
+		hps = "csharp",
+
+		-- General
 		json = "jsonc",
 		json5 = "jsonc",
 		jsonc = "jsonc",
