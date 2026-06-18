@@ -39,6 +39,7 @@ ripgrep
 rsync
 simdjson
 solaar						# Logitech device manager
+sshfs
 strace
 sysstat
 tailscale
