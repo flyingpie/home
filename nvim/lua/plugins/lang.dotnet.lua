@@ -81,8 +81,11 @@ return {
 
 	-- easy-dotnet
 	{
-		"GustavEikaas/easy-dotnet.nvim",
-		branch = "main",
+		-- "GustavEikaas/easy-dotnet.nvim", -- GitHub version
+		-- branch = "main",
+
+		dir = "~/.home/vendor/easy-dotnet.nvim", -- Local version
+
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},

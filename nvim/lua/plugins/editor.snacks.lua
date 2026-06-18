@@ -2,7 +2,10 @@ return {
 
 	-- snacks
 	{
-		"folke/snacks.nvim",
+		-- "folke/snacks.nvim", -- GitHub version
+
+		dir = "~/.home/vendor/snacks.nvim", -- Local version
+
 		---@type snacks.Config
 		opts = {
 			---@class snacks.dashboard.Config

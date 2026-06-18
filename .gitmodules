@@ -6,3 +6,9 @@
 	path = zsh/antidote
 	url = https://github.com/mattmc3/antidote.git
 	branch = main
+[submodule "vendor/easy-dotnet.nvim"]
+	path = vendor/easy-dotnet.nvim
+	url = git@github.com:flyingpie/easy-dotnet.nvim.git
+[submodule "vendor/snacks.nvim"]
+	path = vendor/snacks.nvim
+	url = git@github.com:flyingpie/snacks.nvim.git
