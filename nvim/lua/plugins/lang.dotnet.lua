@@ -81,10 +81,12 @@ return {
 
 	-- easy-dotnet
 	{
-		-- "GustavEikaas/easy-dotnet.nvim", -- GitHub version
-		-- branch = "main",
+		"GustavEikaas/easy-dotnet.nvim", -- GitHub version
+		branch = "main",
+		-- branch = "feat/testrunner-redesign",
 
-		dir = "~/.home/vendor/easy-dotnet.nvim", -- Local version
+		-- dir = "~/.home/vendor/easy-dotnet.nvim", -- Local version
+		-- dir = "~/workspace/github/easy-dotnet.nvim",
 
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -132,6 +134,9 @@ return {
 
 				-- Test Runner
 				test_runner = {
+
+					-- neotest_integration = true,
+
 					viewmode = "vsplit",
 					vsplit_width = 60,
 					enable_buffer_test_execution = true, --Experimental, run tests directly from buffer
@@ -141,7 +146,7 @@ return {
 					mappings = {
 						close					= { lhs = "q",				desc = "close testrunner"					},
 						collapse_all			= { lhs = "W",				desc = "collapse all"						},
-						debug_test				= { lhs = "<leader>d",		desc = "debug test"							},
+						debug_test				= { lhs = "<leader>rd",		desc = "debug test"							},
 						expand					= { lhs = "o",				desc = "expand"								},
 						expand_all				= { lhs = "-",				desc = "expand all"							},
 						expand_node				= { lhs = "E",				desc = "expand node"						},
@@ -149,7 +154,7 @@ return {
 						go_to_file				= { lhs = "g",				desc = "got to file"						},
 						peek_stacktrace			= { lhs = "<leader>p",		desc = "peek stacktrace of failed test"		},
 						refresh_testrunner		= { lhs = "<C-r>",			desc = "refresh testrunner"					},
-						run						= { lhs = "<leader>r",		desc = "run test"							},
+						run						= { lhs = "<leader>tr",		desc = "run test"							},
 						run_all					= { lhs = "<leader>R",		desc = "run all tests"						},
 						run_test_from_buffer	= { lhs = "<leader>r",		desc = "run test from buffer"				},
 					},
@@ -159,4 +164,33 @@ return {
 			})
 		end,
 	},
+
+	-- {
+	-- 	"nvim-neotest/neotest",
+	-- 	dependencies = {
+	-- 		"nvim-neotest/nvim-nio",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"antoinemadec/FixCursorHold.nvim",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"GustavEikaas/easy-dotnet.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("neotest").setup({
+	-- 			adapters = {
+	-- 				require("easy-dotnet.neotest"),
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
+	-- -- Make sure easy-dotnet is configured with neotest_integration = true
+	-- {
+	-- 	"GustavEikaas/easy-dotnet.nvim",
+	-- 	config = function()
+	-- 		require("easy-dotnet").setup({
+	-- 			test_runner = {
+	-- 				neotest_integration = true,
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 }
