@@ -52,8 +52,15 @@ kset("n",	"<C-Space>",			vim.lsp.buf.hover,							{ desc = "Show LSP info" })
 -- DotNet
 --------------------------------
 
-kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",				{ desc = "Toggle DotNet Test Runner" })
 kset("n",	"<F6>",					"<cmd>Dotnet build solution quickfix<CR>",	{ desc = ".Net - Build Solution" })
+kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",				{ desc = ".Net - Toggle Test Runner" })
+
+-- kset("n",	"<leader>tr",			function() require("neotest").run.run() end,						{ desc = "Run nearest test" })
+-- kset("n",	"<leader>td",			function() require("neotest").run.run({strategy = "dap"}) end,		{ desc = "Debug the nearest test" })
+-- kset("n",	"<leader>tf",			function() require("neotest").run.run(vim.fn.expand("%")) end,		{ desc = "Run current file" })
+--
+-- kset("n",	"<leader>te",			function() require("neotest").summary.toggle() end,		{ desc = "Toggle test explorer" })
+-- kset("n",	"<leader>to",			function() require("neotest").output.open() end,		{ desc = "Toggle test explorer" })
 
 --------------------------------
 -- Misc
