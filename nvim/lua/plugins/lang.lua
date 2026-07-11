@@ -17,7 +17,6 @@ return {
 				"css-lsp",
 				"editorconfig-checker",
 				"eslint-lsp",
-				"harper-ls",
 				"html-lsp",
 				"json-lsp",
 				"lua-language-server",
