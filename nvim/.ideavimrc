@@ -24,6 +24,8 @@ set timeoutlen=300
 set ttimeout
 set ttimeoutlen=50
 
+set VimEverywhere
+
 " Key mappings
 " map \b <Action>(ToggleLineBreakpoint)
 " map Q gq				" Don't use Ex mode, use Q for formatting.
