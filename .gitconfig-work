@@ -2,14 +2,29 @@
 	email = marco.vandenoever@datarotonde.com
 	name = Marco van den Oever
 
-[url "git@ssh.dev.azure.com:v3/datarotonde/Datarotonde/"]
-	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Datarotonde/_git/
+[url "git@ssh.dev.azure.com:v3/datarotonde/Datarotonde/cibseven"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Datarotonde/_git/cibseven
 
-[url "git@ssh.dev.azure.com:v3/datarotonde/BouwInstallatie/"]
-	insteadOf = https://datarotonde@dev.azure.com/datarotonde/BouwInstallatie/_git/
+[url "git@ssh.dev.azure.com:v3/datarotonde/Datarotonde/feel-scala"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Datarotonde/_git/feel-scala
 
-[url "git@ssh.dev.azure.com:v3/datarotonde/NewBusiness/"]
-	insteadOf = https://datarotonde@dev.azure.com/datarotonde/NewBusiness/_git/
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/BuildTemplates"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/BuildTemplates
 
-[url "git@ssh.dev.azure.com:v3/datarotonde/Woningcorporaties/"]
-	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Woningcorporaties/_git/
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/Camunda"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/Camunda
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/IntegrationTests"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/IntegrationTests
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/Monitoring"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/Monitoring
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/Phoenix"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/Phoenix
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/Utils"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/Utils
+
+[url "git@ssh.dev.azure.com:v3/datarotonde/Platform/VM"]
+	insteadOf = https://datarotonde@dev.azure.com/datarotonde/Platform/_git/VM

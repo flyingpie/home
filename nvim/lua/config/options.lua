@@ -63,8 +63,14 @@ o.wrap = false
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 -- vim.cmd([[set iskeyword+=-]])
 
+-- Configure custom filetype mappings
 vim.filetype.add({
 	extension = {
+		-- DotNet
+		props = "xml",
+		razor = "razor",
+		targets = "xml",
+
 		-- HPL
 		ent = "xml",
 		hps = "csharp",
@@ -74,9 +80,8 @@ vim.filetype.add({
 		json = "jsonc",
 		json5 = "jsonc",
 		jsonc = "jsonc",
-		props = "xml",
-		razor = "razor",
 	},
 })
 
+-- Set the scroll size (see funcs.on_scroll).
 vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter", "WinResized" }, { callback = funcs.on_scroll })
