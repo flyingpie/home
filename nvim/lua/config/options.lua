@@ -65,6 +65,11 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 
 vim.filetype.add({
 	extension = {
+		-- DotNet
+		props = "xml",
+		razor = "razor",
+		targets = "xml",
+
 		-- HPL
 		ent = "xml",
 		hps = "csharp",
@@ -73,8 +78,6 @@ vim.filetype.add({
 		json = "jsonc",
 		json5 = "jsonc",
 		jsonc = "jsonc",
-		props = "xml",
-		razor = "razor",
 	},
 })
 
