@@ -25,6 +25,7 @@ krdc
 kubectl
 lazygit
 luarocks
+meld						# Diff tool (file/folder/vcs-level)
 meson
 ncdu						# Disk usage analyzer
 neovim
