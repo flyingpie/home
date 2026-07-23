@@ -68,6 +68,7 @@ vim.filetype.add({
 		-- HPL
 		ent = "xml",
 		hps = "csharp",
+		mat = "xml",
 
 		-- General
 		json = "jsonc",
