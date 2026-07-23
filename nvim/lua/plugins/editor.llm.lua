@@ -10,10 +10,10 @@ return {
 			local cwd = vim.uv.cwd()
 			local basename = vim.fs.basename(cwd)
 			_99.setup({
-				-- provider = _99.Providers.ClaudeCodeProvider,
-				provider = _99.Providers.OpenCodeProvider,
+				provider = _99.Providers.ClaudeCodeProvider,
+				-- provider = _99.Providers.OpenCodeProvider,
 				-- model is optional, overrides the provider's default
-				model = "deepseek-v4-flash-free",
+				-- model = "deepseek-v4-flash-free",
 
 				-- provider = _99.Providers.ClaudeCodeProvider,  -- default: OpenCodeProvider
 				logger = {
