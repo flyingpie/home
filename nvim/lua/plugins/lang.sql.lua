@@ -1,7 +1,7 @@
 return {
 
 	{
-		dir = "~/workspace/sandbox/nsql/nsql.nvim", -- Local version
+		dir = "~/workspace/flyingpie/nsql.nvim", -- Local version
 	},
 
 	{
