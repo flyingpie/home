@@ -166,6 +166,8 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	dotnet tool install --global ilspycmd
 	dotnet tool install --global roslynator.dotnet.cli
 	# dotnet tool update --global --all --ignore-failed-sources
+
+	sudo dotnet workload update
 fi
 
 #
