@@ -59,6 +59,7 @@ alias ts="tailscale"
 alias vim="nvim"
 alias vimx="NVIM_APPNAME=nvim-v3 nvim"
 alias vm="cd ~/vm"
+alias x="xdg-open"
 alias z="zellij attach -c"
 
 alias sc="systemctl"
