@@ -8,6 +8,10 @@
         <option value="intellij.webpack" />
         <option value="fr.socolin.awesomeLogViewer" />
         <option value="com.jetbrains.opentelemetry" />
+        <option value="com.intellij.angularjs" />
+        <option value="com.intellij.react" />
+        <option value="intellij.prettierJS" />
+        <option value="Karma" />
       </list>
     </option>
   </component>

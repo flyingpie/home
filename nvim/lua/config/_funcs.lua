@@ -44,14 +44,6 @@ M.move_line_up = function()
 	vim.cmd("normal! " .. n .. "k")
 end
 
-M.toggle_diffview = function()
-	if require("diffview.lib").get_current_view() then
-		vim.cmd("DiffviewClose")
-	else
-		vim.cmd("DiffviewOpen")
-	end
-end
-
 M.toggle_outline = function()
 	local outline = require("outline")
 	local minimap = require("mini.map")
@@ -71,6 +63,9 @@ M.send_to_quicklist = function()
 	Snacks.picker.actions.qflist_all(Snacks.picker())
 end
 
+-- Sets the scroll size (how many lines to scroll using CTRL-U and CTRL-D).
+-- Defaults to 15 lines, but shrinks that when the window is too small,
+-- since we get errors if we set it to a value higher than the window can actually show.
 M.on_scroll = function()
 	local height = vim.api.nvim_win_get_height(0)
 
