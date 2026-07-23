@@ -86,19 +86,7 @@
 					"KeyChar": "6"
 				}
 			],
-			"FileName": "flatpak",
-			"ArgumentList": [
-				{
-					"Argument": "run"
-				},
-				{
-					"Argument": "com.microsoft.Edge"
-				},
-				{
-					"Argument": "--app=https://discord.com/"
-				}
-			],
-			"ProcessName": "msedge",
+			"FileName": "discord",
 			"AttachMode": "FindOrStart",
 			"WindowTitle": "Discord",
 			"HideOnFocusLost": "Never",
