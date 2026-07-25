@@ -31,3 +31,5 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US
 export LC_ALL=en_US.UTF-8
+
+systemctl --user restart opentabletdriver.service
