@@ -17,7 +17,7 @@ return {
 			-- stylua: ignore
 			color_overrides = {
 				vscCursorDarkDark = "#101020",		-- Selected line background (includes selected file in file browser)
-				vscPopupBack = "#101020",			-- Modal background (includes minimap)
+				vscPopupBack = "#101020",			-- Modal background (includes mini map)
 				vscWhitespace = "#333355",			-- Whitespace chars, including tabs and spaces
 				vscNonText = "#333355",				-- End of lines, LSP inlays, and some other stuff
 

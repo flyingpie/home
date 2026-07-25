@@ -107,7 +107,11 @@ return {
 						picker:refresh()
 					end,
 				},
-
+				formatters = {
+					file = {
+						git_status_hl = false,
+					},
+				},
 				sources = {
 					explorer = {
 						layout = {
