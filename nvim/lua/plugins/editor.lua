@@ -339,15 +339,15 @@ return {
 		},
 	},
 
-	-- smear-cursor
-	{
-		"sphamba/smear-cursor.nvim",
-		event = "VeryLazy",
-		opts = {
-			hide_target_hack = true,
-			cursor_color = "none",
-		},
-	},
+	-- -- smear-cursor
+	-- {
+	-- 	"sphamba/smear-cursor.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		hide_target_hack = true,
+	-- 		cursor_color = "none",
+	-- 	},
+	-- },
 
 	-- trouble
 	{
