@@ -2,14 +2,14 @@
 	"$schema": "wtq.schema.json",
 	"Apps": [
 		{
-			"Name": "Alacritty",
+			"Name": "Ghostty",
 			"Hotkeys": [
 				{
 					"Modifiers": "Control",
 					"KeyChar": "1"
 				}
 			],
-			"FileName": "alacritty",
+			"FileName": "ghostty",
 			"HideOnFocusLost": "Never",
 			"HorizontalScreenCoverage": 99,
 			"VerticalScreenCoverage": 97,
