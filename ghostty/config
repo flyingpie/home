@@ -52,7 +52,7 @@ custom-shader = shaders/cursor_warp.glsl
 # background = 1a1b26
 background = 000000
 background-image = ~/.home/img/bg-14.jpg
-background-image-opacity = 0.03
+background-image-opacity = 0.01
 background-image-fit = cover
 
 window-decoration = none
