@@ -1,5 +1,9 @@
 %YAML 1.3
 ---
+- Key: [Smart Shift, pressed]
+- Execute: powerprofile-next
+...
+---
 - Key: [Mouse Gesture Button, pressed]
 - Execute: [media, toggle]
 ...
