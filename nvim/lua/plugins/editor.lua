@@ -262,14 +262,6 @@ return {
 		config = function(_, opts)
 			local mini_map = require("mini.map")
 			mini_map.setup(opts)
-			mini_map.open()
-
-			local mini_test = require("mini.test")
-			mini_test.setup({
-				collect = {
-					emulated_busted = true,
-				},
-			})
 		end,
 	},
 
