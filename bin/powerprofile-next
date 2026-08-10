@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# Cycle to the next available power profile via power-profiles-daemon (D-Bus).
+set -euo pipefail
+
+SERVICE="net.hadess.PowerProfiles"
+OBJECT="/net/hadess/PowerProfiles"
+IFACE="net.hadess.PowerProfiles"
+
+# Fallback to the newer freedesktop name if the legacy one is not present.
+if ! busctl --system introspect "$SERVICE" "$OBJECT" &>/dev/null; then
+	SERVICE="org.freedesktop.UPower.PowerProfiles"
+	OBJECT="/org/freedesktop/UPower/PowerProfiles"
+	IFACE="org.freedesktop.UPower.PowerProfiles"
+fi
+
+# Available profiles, in daemon order (e.g. performance balanced power-saver).
+mapfile -t profiles < <(
+	busctl --system get-property "$SERVICE" "$OBJECT" "$IFACE" Profiles |
+		grep -oP '"Profile"\s+s\s+"\K[^"]+'
+)
+
+if [[ ${#profiles[@]} -eq 0 ]]; then
+	echo "No power profiles found." >&2
+	exit 1
+fi
+
+# Currently active profile.
+current=$(busctl --system get-property "$SERVICE" "$OBJECT" "$IFACE" ActiveProfile |
+	awk -F'"' '{print $2}')
+
+# Find current index, pick next (wrap around).
+next="${profiles[0]}"
+for i in "${!profiles[@]}"; do
+	if [[ "${profiles[$i]}" == "$current" ]]; then
+		next="${profiles[$(((i + 1) % ${#profiles[@]}))]}"
+		break
+	fi
+done
+
+busctl --system set-property "$SERVICE" "$OBJECT" "$IFACE" ActiveProfile s "$next"
+echo "Power profile: $current -> $next"
