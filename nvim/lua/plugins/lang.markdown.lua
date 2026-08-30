@@ -1,8 +1,5 @@
 return {
 
-	-- -- touchup
-	-- { "noisesfromspace/touchup.nvim", opts = {} },
-
 	-- markdown
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
