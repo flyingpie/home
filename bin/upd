@@ -151,7 +151,6 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 	# Also part of pkgs.txt, but just to be sure
 	yay -S --needed --noconfirm dotnet-host
 
-	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 6.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 8.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 9.0
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 10.0
