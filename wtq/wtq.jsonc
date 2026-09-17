@@ -143,6 +143,18 @@
 				"Below",
 				"Left"
 			]
+		},
+		{
+			"Name": "Waydroid",
+			"Hotkeys": [
+				{
+					"Modifiers": "Control, Shift",
+					"KeyChar": "("
+				}
+			],
+			"FileName": "waydroid",
+			"HorizontalAlign": "Right",
+			"HorizontalScreenCoverage": 25
 		}
 	],
 	"Hotkeys": [
