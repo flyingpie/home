@@ -1,8 +1,8 @@
 return {
 
-	{
-		dir = "~/workspace/flyingpie/nsql.nvim", -- Local version
-	},
+	-- {
+	-- 	dir = "~/workspace/flyingpie/nsql.nvim", -- Local version
+	-- },
 
 	{
 		"xemptuous/sqlua.nvim",
