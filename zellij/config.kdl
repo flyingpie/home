@@ -31,6 +31,7 @@ keybinds clear-defaults=true {
 		bind "Ctrl p" { SwitchToMode "normal"; }
 		bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
 		bind "z" { TogglePaneFrames; SwitchToMode "normal"; }
+		bind "x" { CloseFocus; SwitchToMode "normal"; }
 	}
 
 	// Tab
