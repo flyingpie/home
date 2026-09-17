@@ -228,3 +228,4 @@ mouse_mode true
 // pane_frames false
 copy_on_select false
 show_startup_tips false
+nested_session_handling "never"
