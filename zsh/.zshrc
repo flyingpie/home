@@ -62,6 +62,9 @@ alias vm="cd ~/vm"
 alias x="xdg-open"
 alias z="zellij attach -c"
 
+alias claude="pnpx @anthropic-ai/sandbox-runtime --settings ~/.claude/.srt-settings.json claude"
+alias uclaude="/usr/bin/claude"
+
 alias sc="systemctl"
 alias jc="journalctl"
 
@@ -162,8 +165,10 @@ alias gitws='git commit -m "Workspace"'
 alias gitcm='git commit -m'
 alias gitu='git config list | grep -i user'
 
+# K8s
 #alias k='kubectl --kubeconfig ~/.kube/local'
 alias k='kubectl'
+alias k9='k9s -A'
 alias kc='kubectl config current-context'
 alias ku='kubectl config use-context'
 
