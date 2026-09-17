@@ -1,0 +1,1 @@
+../../../nvim/lua/config/_funcs.lua

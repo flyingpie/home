@@ -257,7 +257,7 @@ autoload -U add-zsh-hook
 ####################################
 # FZF
 ####################################
-source <(fzf --zsh)
+source ~/.home/zsh/fzf.zsh
 
 # Bind key in a precmd hook, as doing so directly seems to be overridden
 setup_fzf_bindings() {
@@ -265,8 +265,3 @@ setup_fzf_bindings() {
 }
 
 add-zsh-hook precmd setup_fzf_bindings
-
-ezdbg() {
-	export EASY_DOTNET_PIPE_NAME="EasyDotnet_ROcrjwn9kiox3tKvRWcQg"
-	export EASY_DOTNET_DEBUGGER_BIN_PATH="/home/marco/.dotnet/tools/.store/easydotnet/3.4.0/easydotnet/3.4.0/tools/netcoredbg/linux-x64/netcoredbg"
-}

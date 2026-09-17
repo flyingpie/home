@@ -1,0 +1,32 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[merge]
+	conflictStyle = zdiff3
+
+[includeIf "gitdir:~/.home/"]
+	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/flyingpie/"]
+	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/github/"]
+	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/maddybang/"]
+	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/sandbox/"]
+	path = ~/.home/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/isres/"] # TODO: Remove
+	path = ~/.home/.gitconfig-work
+
+[includeIf "gitdir:~/workspace/work/"]
+	path = ~/.home/.gitconfig-work
+
+[includeIf "gitdir:/ws/"]
+	path = ~/.home/.gitconfig-work
