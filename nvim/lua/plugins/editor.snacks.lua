@@ -8,6 +8,10 @@ return {
 
 		---@type snacks.Config
 		opts = {
+			bigfile = {
+				size = 5 * 1024 * 1024, -- 5MB
+				line_length = 20000,
+			},
 			---@class snacks.dashboard.Config
 			dashboard = {
 				-- These settings are used by some built-in sections
