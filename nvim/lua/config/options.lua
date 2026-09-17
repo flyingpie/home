@@ -74,6 +74,7 @@ vim.filetype.add({
 		-- HPL
 		ent = "xml",
 		hps = "csharp",
+		lang = "xml",
 		mat = "xml",
 
 		-- General
