@@ -4,6 +4,20 @@ local o = vim.opt
 
 vim.g.autoformat = false -- Don't format on save
 
+local osc52 = require("vim.ui.clipboard.osc52")
+
+vim.g.clipboard = {
+	name = "OSC 52 (Copy only)",
+	copy = {
+		["+"] = osc52.copy("+"),
+		["*"] = osc52.copy("*"),
+	},
+	paste = {
+		["+"] = function() end,
+		["*"] = function() end,
+	},
+}
+
 o.clipboard = "unnamedplus"
 o.conceallevel = 0
 o.expandtab = false
