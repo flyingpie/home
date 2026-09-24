@@ -52,6 +52,8 @@ kset("n",	"<C-Space>",			vim.lsp.buf.hover,									{ desc = "Show LSP info" })
 -- DotNet
 --------------------------------
 kset("n",	"<F6>",					"<cmd>Dotnet build solution quickfix<CR>",			{ desc = ".Net - Build Solution" })
+kset("n",	"<leader>B",			"<cmd>Dotnet build solution quickfix<CR>",			{ desc = ".Net - Build Solution" })
+kset("n",	"<leader>R",			"<cmd>Dotnet _server restart<CR>",					{ desc = ".Net - Restart LSP" })
 kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",						{ desc = ".Net - Toggle Test Runner" })
 
 -- kset("n",	"<leader>tr",			function() require("neotest").run.run() end,						{ desc = "Run nearest test" })
