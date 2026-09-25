@@ -230,3 +230,4 @@ mouse_mode true
 copy_on_select false
 show_startup_tips false
 nested_session_handling "never"
+dangerously_enable_paste_buffer_read true

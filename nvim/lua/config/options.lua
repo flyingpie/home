@@ -4,21 +4,37 @@ local o = vim.opt
 
 vim.g.autoformat = false -- Don't format on save
 
+------------------------------------------
+-- Clipboard
 local osc52 = require("vim.ui.clipboard.osc52")
+local is_remote = vim.env.SSH_TTY ~= nil or vim.env.SSH_CONNECTION ~= nil
+
+local function wl_paste(primary)
+	return function()
+		local cmd = { "wl-paste", "--no-newline" }
+		if primary then
+			cmd[#cmd + 1] = "--primary"
+		end
+		return vim.fn.systemlist(cmd, { "" }, 1)
+	end
+end
 
 vim.g.clipboard = {
-	name = "OSC 52 (Copy only)",
+	name = is_remote and "osc52 (remote)" or "wl-clipboard + osc52 copy",
 	copy = {
 		["+"] = osc52.copy("+"),
 		["*"] = osc52.copy("*"),
 	},
 	paste = {
-		["+"] = function() end,
-		["*"] = function() end,
+		["+"] = is_remote and osc52.paste("+") or wl_paste(false),
+		["*"] = is_remote and osc52.paste("*") or wl_paste(true),
 	},
 }
 
 o.clipboard = "unnamedplus"
+-- /Clipboard
+------------------------------------------
+
 o.conceallevel = 0
 o.expandtab = false
 o.fileencoding = "utf-8"
