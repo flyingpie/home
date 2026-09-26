@@ -18,6 +18,8 @@ if [[ -z "${SSH_CONNECTION}" ]]; then
 	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
+export TERM=xterm-256color
+
 # PATH additions
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="$PATH:$HOME/.home/bin"
