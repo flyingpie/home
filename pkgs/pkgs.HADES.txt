@@ -1,9 +1,20 @@
 blender-launcher-v2-bin
 coolercontrol
+firefox
+flatpak
 heroic-games-launcher-bin
 it87-dkms-git
+keepassxc
+krdc
+meld						# Diff tool (file/folder/vcs-level)
 pureref
-quickemu-git
 rust-analyzer
 rustup
+solaar						# Logitech device manager
+visual-studio-code-bin
+webkit2gtk-4.1
+wireshark-qt
+wl-clipboard				# Wayland clipboard support in terminals
+xdg-desktop-portal-gtk
+xdg-desktop-portal-kde
 yt-dlp
