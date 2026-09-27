@@ -2,10 +2,7 @@ return {
 
 	-- snacks
 	{
-		"folke/snacks.nvim", -- GitHub version
-
-		-- dir = "~/.home/vendor/snacks.nvim", -- Local version
-
+		"folke/snacks.nvim",
 		---@type snacks.Config
 		opts = {
 			bigfile = {
