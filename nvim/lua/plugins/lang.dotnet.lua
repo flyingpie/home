@@ -116,12 +116,26 @@ return {
 				-- LSP
 				lsp = {
 					enabled = true, -- Enable builtin roslyn lsp
-					preload_roslyn = true, -- Start loading roslyn before any buffer is opened
-					roslynator_enabled = true, -- Automatically enable roslynator analyzer
-					easy_dotnet_analyzer_enabled = true, -- Enable roslyn analyzer from easy-dotnet-server
-					auto_refresh_codelens = true,
 					analyzer_assemblies = {}, -- Any additional roslyn analyzers you might use like SonarAnalyzer.CSharp
+					auto_refresh_codelens = true,
 					config = {},
+					create_type_from_usage = false, -- code action for creating class from unresolved symbol in a separate file
+					easy_dotnet_analyzer_enabled = true, -- Enable roslyn analyzer from easy-dotnet-server
+					easy_dotnet_extension_enabled = false, -- Needs to be true for enhanced_rename and create_type_from_usage
+					enhanced_rename = false, -- auto rename file when renaming class
+					preload_roslyn = true, -- Start loading roslyn before any buffer is opened
+					restart_roslyn_on_branch_change = false, -- Restart Roslyn when Git HEAD changes
+					roslynator_enabled = true, -- Automatically enable roslynator analyzer
+					set_fold_expr = false,
+					suggest_updates = true, -- Periodically suggest roslyn-language-server updates
+					razor = {
+						enabled = true,
+						html = {
+							enabled = true,
+							cmd = nil, -- Auto-detect project node_modules/.bin/vscode-html-language-server, then PATH
+							request_timeout = 5000,
+						},
+					},
 				},
 
 				picker = "snacks",
