@@ -112,10 +112,6 @@ sudo cp -f $H/solaar/udev.rules /etc/udev/rules.d/42-logitech-unify-permissions.
 sudo chown $USER /dev/uinput
 sudo udevadm control --reload-rules
 
-# SSH Agent
-mkdir -p ~/.config/systemd/user
-ln -srf $H/ssh/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
-
 # TMux
 ln -srf $H/tmux/.tmux.conf ~/.tmux.conf
 
