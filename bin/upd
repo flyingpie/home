@@ -86,7 +86,7 @@ if $RUN_ALL || [ "$1" = "pkgs_inst" ]; then
 
 	HOSTNAME=$(hostname)
 	COMMON_FILE="../pkgs/pkgs.any.txt"
-	HOST_FILE="../pkgs/pkgs.${HOSTNAME}.txt"
+	HOST_FILE="../pkgs/pkgs.${HOSTNAME^^}.txt"
 
 	function install_from_file() {
 		local file="$1"
