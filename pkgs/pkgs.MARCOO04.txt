@@ -1,10 +1,12 @@
 aws-cli-v2
 aws-session-manager-plugin
 camunda-modeler
+ghostty
 helm
 jdtls
 k9s
 kubectl
 maven
 powershell-bin
+solaar						# Logitech device manager
 terraform

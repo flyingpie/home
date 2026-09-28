@@ -2,6 +2,7 @@ blender-launcher-v2-bin
 coolercontrol
 firefox
 flatpak
+ghostty
 heroic-games-launcher-bin
 it87-dkms-git
 keepassxc
