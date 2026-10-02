@@ -10,3 +10,4 @@ maven
 powershell-bin
 solaar						# Logitech device manager
 terraform
+wl-clipboard				# Wayland clipboard support in terminals
