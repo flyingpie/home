@@ -35,22 +35,23 @@ rm -rf ~/.config/htop
 ln -srf $H/htop ~/.config/htop
 
 # JetBrains - DataGrip
-mkdir -p ~/.config/JetBrains/DataGrip2025.1
-ln -srf $H/datagrip/idea.properties ~/.config/JetBrains/DataGrip2025.1/idea.properties
+mkdir -p ~/.config/JetBrains/DataGrip2026.2
+#ln -srf $H/datagrip/idea.properties ~/.config/JetBrains/DataGrip2026.2/idea.properties
+ln -srf $H/datagrip/idea.properties ~/.var/app/com.jetbrains.DataGrip/config/JetBrains/DataGrip2026.2
 
-# JetBrains - IDEA
-mkdir -p ~/.config/JetBrains/IntelliJIdea2025.2
-ln -srf $H/idea/idea.properties ~/.config/JetBrains/IntelliJIdea2025.2/idea.properties
+# # JetBrains - IDEA
+# mkdir -p ~/.config/JetBrains/IntelliJIdea2025.2
+# ln -srf $H/idea/idea.properties ~/.config/JetBrains/IntelliJIdea2025.2/idea.properties
 
 # JetBrains - Rider
-mkdir -p ~/.config/JetBrains/Rider2025.2
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
+# mkdir -p ~/.config/JetBrains/Rider2025.2
+# ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.2/idea.properties
 
-mkdir -p ~/.config/JetBrains/Rider2025.3
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.3/idea.properties
+# mkdir -p ~/.config/JetBrains/Rider2025.3
+# ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2025.3/idea.properties
 
-mkdir -p ~/.config/JetBrains/Rider2026.1
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.1/idea.properties
+# mkdir -p ~/.config/JetBrains/Rider2026.1
+# ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.1/idea.properties
 
 mkdir -p ~/.config/JetBrains/Rider2026.2
 ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.2/idea.properties
@@ -59,8 +60,8 @@ mkdir -p ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.2
 ln -srf $H/rider/idea.properties ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.2
 
 # JetBrains - RustRover
-mkdir -p ~/.config/JetBrains/RustRover2025.2/
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/RustRover2025.2/idea.properties
+# mkdir -p ~/.config/JetBrains/RustRover2025.2/
+# ln -srf $H/rider/idea.properties ~/.config/JetBrains/RustRover2025.2/idea.properties
 
 # Kando
 mkdir -p ~/.config/kando
