@@ -12,6 +12,7 @@
         <option value="com.intellij.react" />
         <option value="intellij.prettierJS" />
         <option value="Karma" />
+        <option value="com.intellij.resharper.StructuredLogging" />
       </list>
     </option>
   </component>
