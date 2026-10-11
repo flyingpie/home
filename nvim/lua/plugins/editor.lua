@@ -254,7 +254,7 @@ return {
 			max_width = nil,
 			max_height = nil,
 			max_width_window_percentage = nil,
-			max_height_window_percentage = 50,
+			max_height_window_percentage = 30,
 			scale_factor = 1.0,
 			kitty_direct_chunk_size = 4096, -- chunk size for direct Kitty graphics protocol transmission
 			window_overlap_clear_enabled = false, -- toggles images when windows are overlapped

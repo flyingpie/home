@@ -73,4 +73,14 @@ M.on_scroll = function()
 	vim.opt_local.scroll = math.max(1, math.min(15, height - 1))
 end
 
+M.toggle_images = function()
+	local image = require("image")
+
+	if image.is_enabled() then
+		image.disable()
+	else
+		image.enable()
+	end
+end
+
 return M

@@ -69,6 +69,7 @@ kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",						{ desc = ".Net - To
 kset("n",	"<leader>do",			"<cmd>CodeDiff<CR>",								{ desc = "Toggle Diff View" })
 kset("n",	"<leader>o",			funcs.toggle_outline,								{ desc = "Toggle Between Minimap And Outline" })
 kset("i",	"<C-l>",				funcs.send_to_quicklist,							{ desc = "Send FZF Items To Quicklist" })
+kset("n",	"<leader>ui",			funcs.toggle_images,								{ desc = "Toggle images" })
 
 --------------------------------
 -- NSql
