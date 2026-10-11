@@ -19,7 +19,6 @@ com.intellij.grpc
 com.intellij.ja
 com.intellij.jsonpath
 com.intellij.ko
-com.intellij.kubernetes
 com.intellij.marketplace.ml
 com.intellij.mcpServer
 com.intellij.microservices.ui
