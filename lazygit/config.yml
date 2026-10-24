@@ -6,8 +6,6 @@ git:
     - command: difft --color=always --tab-width=4 --display=side-by-side-show-both
       type: extDiff
 gui:
-  authorColors:
-    '*': '#b4befe'
   border: single
   expandedSidePanelWeight: 100
   expandFocusedSidePanel: true
@@ -34,6 +32,8 @@ gui:
       - '#cdd6f4'
     searchingActiveBorderColor:
       - '#f9e2af'
+    authorColors:
+      '*': '#b4befe'
 keybinding:
   universal:
     prevBlock-alt: ""
