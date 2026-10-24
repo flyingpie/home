@@ -45,6 +45,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Aliases
 ####################################
 # Misc
+alias aa="cd ~/syncthing/work/aws/"
 alias b="./build.sh"
 alias c="clear"
 alias cat="bat --tabs 2"
