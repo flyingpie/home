@@ -83,11 +83,6 @@ return {
 	{
 		"GustavEikaas/easy-dotnet.nvim", -- GitHub version
 		branch = "main",
-		-- branch = "feat/testrunner-redesign",
-
-		-- dir = "~/.home/vendor/easy-dotnet.nvim", -- Local version
-		-- dir = "~/workspace/github/easy-dotnet.nvim",
-
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
@@ -178,33 +173,4 @@ return {
 			})
 		end,
 	},
-
-	-- {
-	-- 	"nvim-neotest/neotest",
-	-- 	dependencies = {
-	-- 		"nvim-neotest/nvim-nio",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"antoinemadec/FixCursorHold.nvim",
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"GustavEikaas/easy-dotnet.nvim",
-	-- 	},
-	-- 	config = function()
-	-- 		require("neotest").setup({
-	-- 			adapters = {
-	-- 				require("easy-dotnet.neotest"),
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
-	-- -- Make sure easy-dotnet is configured with neotest_integration = true
-	-- {
-	-- 	"GustavEikaas/easy-dotnet.nvim",
-	-- 	config = function()
-	-- 		require("easy-dotnet").setup({
-	-- 			test_runner = {
-	-- 				neotest_integration = true,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
 }

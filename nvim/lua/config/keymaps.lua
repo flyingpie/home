@@ -42,13 +42,6 @@ kset("n",	"<C-Right>",			"<cmd>vertical resize +2<CR>",						{ desc = "Expand Wi
 kset("n",	"<leader>fh",			"<cmd>GrugFar<CR>",									{ desc = "Open GrugFar" })
 
 --------------------------------
--- LSP
---------------------------------
-kset("n",	"<leader>.",			vim.lsp.buf.code_action,							{ desc = "Code Actions" })
-kset("n",	"<leader>r",			vim.lsp.buf.rename,									{ desc = "Rename" })
-kset("n",	"<C-Space>",			vim.lsp.buf.hover,									{ desc = "Show LSP info" })
-
---------------------------------
 -- DotNet
 --------------------------------
 kset("n",	"<F6>",					"<cmd>Dotnet build solution quickfix<CR>",			{ desc = ".Net - Build Solution" })
@@ -62,6 +55,13 @@ kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",						{ desc = ".Net - To
 
 -- kset("n",	"<leader>te",			function() require("neotest").summary.toggle() end,		{ desc = "Toggle test explorer" })
 -- kset("n",	"<leader>to",			function() require("neotest").output.open() end,		{ desc = "Toggle test explorer" })
+
+--------------------------------
+-- LSP
+--------------------------------
+kset("n",	"<leader>.",			vim.lsp.buf.code_action,							{ desc = "Code Actions" })
+kset("n",	"<leader>r",			vim.lsp.buf.rename,									{ desc = "Rename" })
+kset("n",	"<C-Space>",			vim.lsp.buf.hover,									{ desc = "Show LSP info" })
 
 --------------------------------
 -- Misc

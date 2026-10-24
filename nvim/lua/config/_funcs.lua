@@ -73,6 +73,7 @@ M.on_scroll = function()
 	vim.opt_local.scroll = math.max(1, math.min(15, height - 1))
 end
 
+-- Enable/disable images, especially when viewing Markdown files.
 M.toggle_images = function()
 	local image = require("image")
 
