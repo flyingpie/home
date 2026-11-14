@@ -1,0 +1,7 @@
+com.intellij.ja
+com.intellij.ko
+com.intellij.mcpServer
+com.intellij.platform.acp
+com.intellij.settingsSync
+com.intellij.zh
+org.jetbrains.completion.full.line

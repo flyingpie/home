@@ -1,62 +1,5 @@
 return {
 
-	-- image
-	{
-		"3rd/image.nvim",
-		opts = {
-			backend = "kitty", -- or "ueberzug" or "sixel"
-			processor = "magick_cli", -- or "magick_rock"
-			integrations = {
-				markdown = {
-					enabled = true,
-					clear_in_insert_mode = false,
-					download_remote_images = true,
-					only_render_image_at_cursor = false,
-					only_render_image_at_cursor_mode = "popup", -- or "inline"
-					floating_windows = false, -- if true, images will be rendered in floating markdown windows
-					filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here
-				},
-				asciidoc = {
-					enabled = true,
-					clear_in_insert_mode = false,
-					download_remote_images = true,
-					only_render_image_at_cursor = false,
-					only_render_image_at_cursor_mode = "popup",
-					floating_windows = false,
-					filetypes = { "asciidoc", "adoc" },
-				},
-				neorg = {
-					enabled = true,
-					filetypes = { "norg" },
-				},
-				rst = {
-					enabled = true,
-				},
-				typst = {
-					enabled = true,
-					filetypes = { "typst" },
-				},
-				html = {
-					enabled = false,
-				},
-				css = {
-					enabled = false,
-				},
-			},
-			max_width = nil,
-			max_height = nil,
-			max_width_window_percentage = nil,
-			max_height_window_percentage = 50,
-			scale_factor = 1.0,
-			kitty_direct_chunk_size = 4096, -- chunk size for direct Kitty graphics protocol transmission
-			window_overlap_clear_enabled = false, -- toggles images when windows are overlapped
-			window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "snacks_notif", "scrollview", "scrollview_sign" },
-			editor_only_render_when_focused = false, -- auto show/hide images when the editor gains/looses focus
-			tmux_show_only_in_active_window = false, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
-			hijack_file_patterns = { "*.png", "*.jpg", "*.jpeg", "*.gif", "*.webp", "*.avif" }, -- render image files as images when opened
-		},
-	},
-
 	-- mason
 	{
 		"mason-org/mason.nvim",
@@ -91,21 +34,81 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		version = "*",
+		init = function()
+			----------------------------------------------------------
+			-- Align CodeLens text to line indentation.
+			-- https://github.com/neovim/neovim/issues/39477#issuecomment-5490683939
+			----------------------------------------------------------
+			local codelens = vim.lsp.codelens
+
+			-- Provider is private in 0.12, so retrieve it from codelens.get().
+			local Provider
+			for i = 1, 20 do
+				local name, value = debug.getupvalue(codelens.get, i)
+
+				if not name then
+					break
+				end
+
+				if name == "Provider" then
+					Provider = value
+					break
+				end
+			end
+
+			assert(Provider, "Could not find vim.lsp.codelens Provider")
+
+			if not Provider._indent_alignment_patched then
+				local original_on_win = Provider.on_win
+
+				Provider.on_win = function(self, toprow, botrow)
+					local original_range_lsp = vim.range.lsp
+
+					-- codelens.on_win() uses range.start_col as the amount of
+					-- padding before the virtual-line text. Replace that value
+					-- with the indentation width of the actual source line.
+					vim.range.lsp = function(bufnr, lsp_range, encoding)
+						local range = original_range_lsp(bufnr, lsp_range, encoding)
+
+						local row = lsp_range.start.line
+						local line = vim.api.nvim_buf_get_lines(bufnr, row, row + 1, false)[1] or ""
+
+						local indent = line:match("^%s*") or ""
+
+						range.start_col = vim.fn.strdisplaywidth(indent)
+
+						return range
+					end
+
+					-- Make sure vim.range.lsp is restored even if rendering fails.
+					local ok, err = xpcall(function()
+						original_on_win(self, toprow, botrow)
+					end, debug.traceback)
+
+					vim.range.lsp = original_range_lsp
+
+					if not ok then
+						error(err)
+					end
+				end
+
+				Provider._indent_alignment_patched = true
+			end
+			----------------------------------------------------------
+		end,
 	},
 
 	-- obsidian
 	{
-		"epwalsh/obsidian.nvim",
+		"obsidian-nvim/obsidian.nvim",
 		version = "*",
 		lazy = true,
 		ft = "markdown",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
 		opts = {
-			ui = {
-				enable = false,
-			},
+			legacy_commands = false,
+			-- ui = {
+			-- 	enable = false,
+			-- },
 			workspaces = {
 				{
 					name = "notes",

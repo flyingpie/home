@@ -86,7 +86,7 @@ keybinds clear-defaults=true {
 		bind "s" { SwitchToMode "entersearch"; SearchInput 0; }
 	}
 
-	// 
+	// Search
 	search {
 		bind "c" { SearchToggleOption "CaseSensitivity"; }
 		bind "n" { Search "down"; }
@@ -94,6 +94,8 @@ keybinds clear-defaults=true {
 		bind "p" { Search "up"; }
 		bind "w" { SearchToggleOption "Wrap"; }
 	}
+
+	// Session
 	session {
 		bind "Ctrl o" { SwitchToMode "normal"; }
 		bind "w" {
@@ -129,15 +131,19 @@ keybinds clear-defaults=true {
 	shared_except "locked" "session" {
 		// bind "Ctrl o" { SwitchToMode "session"; }
 	}
+
 	shared_except "locked" "scroll" "search" "tmux" {
 		bind "Ctrl b" { SwitchToMode "tmux"; }
 	}
+
 	shared_except "locked" "scroll" "search" {
 		bind "Ctrl s" { SwitchToMode "scroll"; }
 	}
+
 	shared_except "locked" "tab" {
 		bind "Ctrl t" { SwitchToMode "tab"; }
 	}
+
 	shared_except "locked" "pane" {
 		bind "Ctrl p" { SwitchToMode "pane"; }
 	}
@@ -177,20 +183,25 @@ keybinds clear-defaults=true {
 		bind "Ctrl s" { SwitchToMode "normal"; } // Exit mode (pressing "Esc" also works)
 		bind "Ctrl [" { SwitchToMode "normal"; } // Exit mode (pressing "Esc" also works)
 	}
+
 	entersearch {
 		bind "Ctrl c" { SwitchToMode "scroll"; }
 		bind "esc" { SwitchToMode "scroll"; }
 		bind "enter" { SwitchToMode "search"; }
 	}
+
 	renametab {
 		bind "esc" { UndoRenameTab; SwitchToMode "tab"; }
 	}
+
 	shared_among "renametab" "renamepane" {
 		bind "Ctrl c" { SwitchToMode "normal"; }
 	}
+
 	renamepane {
 		bind "esc" { UndoRenamePane; SwitchToMode "pane"; }
 	}
+
 	shared_among "session" "tmux" {
 		bind "d" { Detach; }
 	}
@@ -223,11 +234,10 @@ ui {
 	}
 }
 
-theme "iceberg-dark-custom"
-
-mouse_mode true
 // pane_frames false
 copy_on_select false
-show_startup_tips false
-nested_session_handling "never"
 dangerously_enable_paste_buffer_read true
+mouse_mode true
+nested_session_handling "never"
+show_startup_tips false
+theme "iceberg-dark-custom"
