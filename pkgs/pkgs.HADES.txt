@@ -1,9 +1,22 @@
 blender-launcher-v2-bin
 coolercontrol
+firefox
+flatpak
 heroic-games-launcher-bin
 it87-dkms-git
+jetbrains-toolbox
+keepassxc
+krdc
+meld						# Diff tool (file/folder/vcs-level)
 pureref
+qpwgraph					# Pipewire graph
+qt6-imageformats			# More image formats in Qt apps, like previews in file explorers
 quickemu-git
 rust-analyzer
 rustup
+solaar						# Logitech device manager
+visual-studio-code-bin
+webkit2gtk-4.1
+wezterm
+wireshark-qt
 yt-dlp
