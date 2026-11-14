@@ -2,9 +2,8 @@ blender-launcher-v2-bin
 coolercontrol
 firefox
 flatpak
-heroic-games-launcher-bin
+ghostty
 it87-dkms-git
-jetbrains-toolbox
 keepassxc
 krdc
 meld						# Diff tool (file/folder/vcs-level)
