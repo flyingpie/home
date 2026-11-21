@@ -180,13 +180,12 @@ if $RUN_ALL || [ "$1" = "flatpak" ]; then
 		echo "flatpak is not installed. Skipping."
 	else
 		# Update packages
-		flatpak update --system --assumeyes
-		flatpak update --user --assumeyes
+		sudo flatpak update --assumeyes
 
 		mapfile -t packages < <(collect_pkgs flatpak)
 		if [[ ${#packages[@]} -gt 0 ]]; then
 			echo "Installing flatpak packages: ${packages[*]}"
-			flatpak install --system --assumeyes --or-update "${packages[@]}"
+			sudo flatpak install --system --assumeyes --or-update "${packages[@]}"
 		else
 			echo "No flatpak packages for host '$HOST'."
 		fi
@@ -210,8 +209,8 @@ if $RUN_ALL || [ "$1" = "firmware" ]; then
 	echo "#########################################"
 	echo "Updating firmware"
 	echo "#########################################"
-	fwupdmgr refresh
-	fwupdmgr get-updates
+	sudo fwupdmgr refresh
+	sudo fwupdmgr get-updates
 fi
 
 #
