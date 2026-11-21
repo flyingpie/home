@@ -53,11 +53,11 @@ ln -srf $H/datagrip/idea.properties ~/.var/app/com.jetbrains.DataGrip/config/Jet
 # mkdir -p ~/.config/JetBrains/Rider2026.1
 # ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.1/idea.properties
 
-mkdir -p ~/.config/JetBrains/Rider2026.2
-ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.2/idea.properties
+mkdir -p ~/.config/JetBrains/Rider2026.3
+ln -srf $H/rider/idea.properties ~/.config/JetBrains/Rider2026.3/idea.properties
 
-mkdir -p ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.2
-ln -srf $H/rider/idea.properties ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.2
+mkdir -p ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.3
+ln -srf $H/rider/idea.properties ~/.var/app/com.jetbrains.Rider/config/JetBrains/Rider2026.3
 
 # JetBrains - RustRover
 # mkdir -p ~/.config/JetBrains/RustRover2025.2/
