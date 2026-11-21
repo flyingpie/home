@@ -10,7 +10,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 pushd "$SCRIPT_DIR" >/dev/null
 
 # Package list, and the current host (lowercase, to match section names)
-PKG_FILE="$SCRIPT_DIR/../pkgs/packages.ini"
+PKG_FILE="$SCRIPT_DIR/../packages.ini"
 HOST="$(hostname | tr '[:upper:]' '[:lower:]')"
 
 # Print all packages for a manager ("pacman" or "flatpak") that apply to
@@ -146,7 +146,7 @@ if $RUN_ALL || [ "$1" = "dotnet" ]; then
 		chmod +x $FILENAME
 	fi
 
-	# Also part of pkgs.txt, but just to be sure
+	# Also part of packages.ini, but just to be sure
 	yay -S --needed --noconfirm dotnet-host
 
 	sudo ./dotnet-install.sh --install-dir /usr/share/dotnet --channel 8.0
