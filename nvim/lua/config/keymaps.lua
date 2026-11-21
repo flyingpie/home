@@ -53,7 +53,7 @@ kset("n",	"<C-Space>",			vim.lsp.buf.hover,									{ desc = "Show LSP info" })
 --------------------------------
 kset("n",	"<F6>",					"<cmd>Dotnet build solution quickfix<CR>",			{ desc = ".Net - Build Solution" })
 kset("n",	"<leader>B",			"<cmd>Dotnet build solution quickfix<CR>",			{ desc = ".Net - Build Solution" })
-kset("n",	"<leader>R",			"<cmd>Dotnet _server restart<CR>",					{ desc = ".Net - Restart LSP" })
+-- kset("n",	"<leader>R",			"<cmd>Dotnet _server restart<CR>",					{ desc = ".Net - Restart LSP" })
 kset("n",	"<leader>te",			"<cmd>Dotnet testrunner<CR>",						{ desc = ".Net - Toggle Test Runner" })
 
 -- kset("n",	"<leader>tr",			function() require("neotest").run.run() end,						{ desc = "Run nearest test" })
@@ -77,3 +77,8 @@ kset("n",	"<leader>ui",			funcs.toggle_images,								{ desc = "Toggle images" }
 kset("n",	"<leader>Nr",			"<cmd>Lazy reload nsql.nvim<CR>",					{ desc = "Reload NSql plugin" })
 kset("n",	"<leader>Ne",			"<cmd>NSql<CR>",									{ desc = "NSql Execute" })
 kset("n",	"<leader>Nx",			"<cmd>Lazy reload nsql.nvim<CR><cmd>NSql<CR>",		{ desc = "Reload NSql plugin" })
+
+--------------------------------
+-- Rest
+--------------------------------
+kset("n",	"<leader>Rr",			"<cmd>Rest run<CR>",								{ desc = "HTTP - Run" })
