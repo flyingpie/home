@@ -1,2 +1,0 @@
-org.ghidra_sre.Ghidra
-org.localsend.localsend_app

@@ -9,6 +9,33 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Push into that directory
 pushd "$SCRIPT_DIR" >/dev/null
 
+# Package list, and the current host (lowercase, to match section names)
+PKG_FILE="$SCRIPT_DIR/../pkgs/packages.ini"
+HOST="$(hostname | tr '[:upper:]' '[:lower:]')"
+
+# Print all packages for a manager ("pacman" or "flatpak") that apply to
+# "any" plus the current host
+collect_pkgs() {
+	local manager="$1" section="" line
+	local -a out=()
+
+	while IFS= read -r line || [[ -n "$line" ]]; do
+		line="${line%%#*}"                      # strip comment
+		line="${line#"${line%%[![:space:]]*}"}" # trim leading whitespace
+		line="${line%"${line##*[![:space:]]}"}" # trim trailing whitespace
+		[[ -z "$line" ]] && continue
+
+		if [[ "$line" =~ ^\[([^]]+)\]$ ]]; then
+			section="${BASH_REMATCH[1],,}"
+		elif [[ "$section" == "$manager.any" || "$section" == "$manager.$HOST" ]]; then
+			out+=("$line")
+		fi
+	done <"$PKG_FILE"
+
+	[[ ${#out[@]} -gt 0 ]] && printf '%s\n' "${out[@]}"
+	return 0
+}
+
 # If no argument is provided, run all tasks
 RUN_ALL=false
 if [ $# -eq 0 ]; then
@@ -18,9 +45,12 @@ fi
 # Help
 if [ "$1" = "--help" ]; then
 	echo "dotnet"
+	echo "firmware"
+	echo "flatpak"
 	echo "nvim"
-	echo "pkgs_upd"
 	echo "pkgs_inst"
+	echo "pkgs_upd"
+	echo "tldr"
 	echo "yay"
 fi
 
@@ -84,44 +114,12 @@ if $RUN_ALL || [ "$1" = "pkgs_inst" ]; then
 	# Update database
 	yay -Syy
 
-	HOSTNAME=$(hostname)
-	COMMON_FILE="../pkgs/pkgs.any.txt"
-	HOST_FILE="../pkgs/pkgs.${HOSTNAME^^}.txt"
-
-	function install_from_file() {
-		local file="$1"
-
-		if [[ ! -f "$file" ]]; then
-			echo "Skipping missing file: $file"
-			return
-		fi
-
-		echo "Processing: $file"
-
-		local packages=()
-		while IFS= read -r line; do
-			# Strip comments and trim
-			clean_line=$(echo "$line" | sed 's/#.*//' | xargs)
-			[[ -z "$clean_line" ]] && continue
-			packages+=("$clean_line")
-		done <"$file"
-
-		if [[ ${#packages[@]} -gt 0 ]]; then
-			echo "Installing packages from $file: ${packages[*]}"
-			yay -S --needed --noconfirm "${packages[@]}"
-		else
-			echo "No packages to install in $file."
-		fi
-	}
-
-	# Install common packages
-	install_from_file "$COMMON_FILE"
-
-	# Install host-specific packages, if applicable
-	if [[ -f "$HOST_FILE" ]]; then
-		install_from_file "$HOST_FILE"
+	mapfile -t packages < <(collect_pkgs pacman)
+	if [[ ${#packages[@]} -gt 0 ]]; then
+		echo "Installing pacman packages: ${packages[*]}"
+		yay -S --needed --noconfirm "${packages[@]}"
 	else
-		echo "No host-specific package file found for hostname '$HOSTNAME'."
+		echo "No pacman packages for host '$HOST'."
 	fi
 fi
 
@@ -174,52 +172,23 @@ fi
 #
 if $RUN_ALL || [ "$1" = "flatpak" ]; then
 	echo "#########################################"
-	echo "Updating Flatpak packages"
+	echo "# Updating Flatpak packages"
 	echo "#########################################"
 
-	# Update packages
-	flatpak update --system --assumeyes
-	flatpak update --user --assumeyes
+	if ! command -v flatpak &>/dev/null; then
+		echo "flatpak is not installed. Skipping."
+	else
+		# Update packages
+		flatpak update --system --assumeyes
+		flatpak update --user --assumeyes
 
-	HOSTNAME=$(hostname)
-	COMMON_FILE="../pkgs/flatpak.any.txt"
-	HOST_FILE="../pkgs/flatpak.${HOSTNAME}.txt"
-
-	function install_from_file() {
-		local file="$1"
-
-		if [[ ! -f "$file" ]]; then
-			echo "Skipping missing file: $file"
-			return
-		fi
-
-		echo "Processing: $file"
-
-		local packages=()
-		while IFS= read -r line; do
-			# Strip comments and trim
-			clean_line=$(echo "$line" | sed 's/#.*//' | xargs)
-			[[ -z "$clean_line" ]] && continue
-			packages+=("$clean_line")
-		done <"$file"
-
+		mapfile -t packages < <(collect_pkgs flatpak)
 		if [[ ${#packages[@]} -gt 0 ]]; then
-			echo "Installing packages from $file: ${packages[*]}"
-			# yay -S --needed --noconfirm "${packages[@]}"
+			echo "Installing flatpak packages: ${packages[*]}"
 			flatpak install --system --assumeyes --or-update "${packages[@]}"
 		else
-			echo "No packages to install in $file."
+			echo "No flatpak packages for host '$HOST'."
 		fi
-	}
-
-	# Install common packages
-	install_from_file "$COMMON_FILE"
-
-	# Install host-specific packages, if applicable
-	if [[ -f "$HOST_FILE" ]]; then
-		install_from_file "$HOST_FILE"
-	else
-		echo "No host-specific package file found for hostname '$HOSTNAME'."
 	fi
 fi
 
