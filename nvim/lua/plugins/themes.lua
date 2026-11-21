@@ -10,8 +10,6 @@ return {
 	-- VSCode
 	{
 		"flyingpie/vscode.nvim", -- Remote version
-		-- name = "vscode.nvim",
-		-- dir = "~/workspace/flyingpie/vscode.nvim", -- Local version
 		branch = "custom",
 		opts = {
 			-- stylua: ignore
