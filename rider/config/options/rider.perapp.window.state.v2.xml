@@ -39,7 +39,7 @@
           "order": 1,
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.11497396,
+          "weight": 0.18984374,
           "sideWeight": 0.50024295
         },
         {
@@ -196,10 +196,9 @@
           "id": "Project",
           "order": 0,
           "anchor": "RIGHT",
-          "contentUiType": "COMBO",
           "isActiveOnStart": true,
           "isVisible": true,
-          "weight": 0.107421875
+          "weight": 0.1731771
         },
         {
           "id": "Notifications",
@@ -241,29 +240,35 @@
           "weight": 0.25
         },
         {
-          "id": "Unit Tests Coverage",
+          "id": "CSharp15InRider",
           "order": 7,
+          "anchor": "RIGHT",
+          "weight": 0.25
+        },
+        {
+          "id": "Unit Tests Coverage",
+          "order": 8,
           "anchor": "RIGHT",
           "weight": 0.21015625
         },
         {
           "id": "Monitoring",
-          "order": 8,
+          "order": 9,
           "anchor": "RIGHT",
           "weight": 0.17089844
         },
         {
           "id": "IL",
-          "order": 9,
+          "order": 10,
           "anchor": "RIGHT",
           "weight": 0.22213542
         }
       ],
       "unifiedWeights": {
         "top": 0.33,
-        "left": 0.11497396,
+        "left": 0.18984374,
         "bottom": 0.108787596,
-        "right": 0.107421875
+        "right": 0.1731771
       }
     }
   }

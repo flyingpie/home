@@ -1,4 +1,8 @@
 <keymap version="1" name="vs2022_custom" parent="Visual Studio 2022">
+  <action id="ActivateBookmarksToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="w" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl w" />
+  </action>
   <action id="ChangesView.Rename" />
   <action id="CloseActiveTab" />
   <action id="CloseContent">
@@ -38,6 +42,7 @@
   </action>
   <action id="RiderUnitTestRunContextSplitAction" />
   <action id="RiderUnitTestRunContextTwAction" />
+  <action id="RunAnything" />
   <action id="SearchEverywhere">
     <keyboard-shortcut first-keystroke="ctrl p" />
   </action>
