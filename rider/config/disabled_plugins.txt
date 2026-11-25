@@ -10,6 +10,7 @@ W3Validators
 XPathView
 com.deadlock.scsyntax
 com.dmarcotte.handlebars
+com.intellij.air
 com.intellij.azureDevops
 com.intellij.cmake
 com.intellij.completion.ml.ranking
